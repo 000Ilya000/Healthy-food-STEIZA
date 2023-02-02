@@ -2,7 +2,7 @@
 import './assets/styles/App.css';
 import GlobalStyle from './assets/styles/GlobalStyle';
 import styled from 'styled-components';
-import Title from './pages/MainPage';
+import Main from './pages/MainPage';
 
 
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <Title/>
+      <Main/>
     </>
   );
 }

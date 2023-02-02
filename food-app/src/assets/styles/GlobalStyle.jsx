@@ -7,6 +7,8 @@ export default createGlobalStyle`
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0px;
+        padding: 0px;
     }
 
     html {
@@ -14,7 +16,7 @@ export default createGlobalStyle`
     }
 
     p, a{
-        // font-family: "HelveticaNeueRegular";
+        font-family: "HelveticaNeueRegular";
         text-decoration: none;
     };
 `;
