@@ -12,24 +12,28 @@ function Main () {
             <MainScreen>    
                 <MainHeader>
                     <Logo>
-                        <Link to="/">
+                        <LogoLink to="/">
                             <img src={logo} alt="logo" />
                             <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
-                        </Link>
+                        </LogoLink>
                     </Logo>
                     
                     <MainNav>
                         <ul>
-                            <li><a to="/">Menu</a></li>
+                            <li><Link to="/">Menu</Link></li>
                             <li><Link to="/">Recipes</Link></li>
                             <li><Link to="/">Chefs</Link></li>
                             <li><Link to="/">Contacts</Link></li>   
                         </ul>
                     </MainNav>
-                    <Line>
-                        <img src={line} alt="line"/>
-                    </Line>
                 </MainHeader>
+                <Line>
+                        <img src={line} alt="line"/>
+                </Line>
+                <Title>
+                    Your favourite food
+                    delivered hot & fresh
+                </Title>
             </MainScreen>
         </>
     )
@@ -43,16 +47,21 @@ const MainScreen = styled.div`
     height: 1080px;
     background: url('${bgImg}') no-repeat center center;
     background-size:cover; 
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const MainHeader = styled.div`
     height:90px;
     display: flex;
     align-items: center;
+    width:100%;
+    justify-content: space-between;
 `;
 
 const Line = styled.div`
@@ -73,13 +82,34 @@ const Logo = styled.div`
 `;
 
 const MainNav = styled.div`
+    display:flex;
+
     ul {
         list-style: none;
+        font-family: "HelveticaNeueRegular";
+        font-style: normal;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 90px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        width:100%;
+        margin-right:130px
     }
 
+    ul li {
+        margin-right:45px;
+        cursor: pointer;
+    }
+
+    ul li:hover {
+        color: #34C759;
+        transition: 0.4s;
+    }
 `;
 
-const Link = styled.a`
+const LogoLink = styled.a`
     margin-left: 165px;
     display:flex;
     width:200px;
@@ -90,4 +120,20 @@ const Link = styled.a`
         margin-top: 10px;
         margin-left: 9px;
     }
+`;
+
+const Link = styled.a`
+`;
+
+const Title = styled.p`
+    max-width: 1100px;
+    display:flex;
+    font-family: "HelveticaNeueRegular";
+    font-size: 72px;
+    line-height: 84px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-top:80px;
 `;
