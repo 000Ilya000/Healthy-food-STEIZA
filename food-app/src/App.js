@@ -1,0 +1,18 @@
+// import logo from './logo.svg';
+import './assets/styles/App.css';
+import GlobalStyle from './assets/styles/GlobalStyle';
+import styled from 'styled-components';
+import Title from './pages/MainPage';
+
+
+
+function App() {
+  return (
+    <>
+      <GlobalStyle/>
+      <Title/>
+    </>
+  );
+}
+
+export default App;

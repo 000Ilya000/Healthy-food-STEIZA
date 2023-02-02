@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: url("../Fonts/HelveticaNeue/HelveticaNeueRegular/HelveticaNeueCyr-Roman.eot") format("embedded-opentype");
+  
+
+  src: url("../Fonts/HelveticaNeue/HelveticaNeueRegular/HelveticaNeueCyr-Roman.woff") format("woff"),
+          url("../Fonts/HelveticaNeue/HelveticaNeueRegular/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("../Fonts/HelveticaNeue/HelveticaNeueBold/HelveticaNeueCyr-Bold.eot") format("embedded-opentype");
+  src: url("../Fonts/HelveticaNeue/HelveticaNeueBold/HelveticaNeueCyr-Bold.woff") format("woff"),
+          url("../Fonts/HelveticaNeue/HelveticaNeueBold/HelveticaNeueCyr-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: Bold;
+}
+
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("../Fonts/HelveticaNeue/HelveticaNeueMedium/HelveticaNeueCyr-Medium.eot") format("embedded-opentype");
+  src: url("../Fonts/HelveticaNeue/HelveticaNeueMedium/HelveticaNeueCyr-Medium.woff") format("woff"),
+          url("../Fonts/HelveticaNeue/HelveticaNeueMedium/HelveticaNeueCyr-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: Medium;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
