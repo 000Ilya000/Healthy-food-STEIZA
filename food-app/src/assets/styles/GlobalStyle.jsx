@@ -9,6 +9,7 @@ export default createGlobalStyle`
         justify-content: center;
         margin: 0px;
         padding: 0px;
+        background: #1A1A1A;
     }
 
     html {
