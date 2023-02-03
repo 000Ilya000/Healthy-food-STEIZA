@@ -12,7 +12,7 @@ function Main () {
             <MainScreen>    
                 <MainHeader>
                     <Logo>
-                        <LogoLink to="#">
+                        <LogoLink to="/">
                             <img src={logo} alt="logo" />
                             <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
                         </LogoLink>
@@ -20,10 +20,10 @@ function Main () {
                     
                     <MainNav>
                         <ul>
-                            <li><Link to="#">Menu</Link></li>
-                            <li><Link to="#">Recipes</Link></li>
-                            <li><Link to="#">Chefs</Link></li>
-                            <li><Link to="#">Contacts</Link></li>   
+                            <li><Link to="/">Menu</Link></li>
+                            <li><Link to="/">Recipes</Link></li>
+                            <li><Link to="/">Chefs</Link></li>
+                            <li><Link to="/">Contacts</Link></li>   
                         </ul>
                     </MainNav>
                 </MainHeader>
