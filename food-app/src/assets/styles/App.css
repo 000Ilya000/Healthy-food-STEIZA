@@ -1,8 +1,6 @@
 @font-face {
   font-family: "HelveticaNeueRegular";
   src: url("../Fonts/HelveticaNeue/HelveticaNeueRegular/HelveticaNeueCyr-Roman.eot") format("embedded-opentype");
-  
-
   src: url("../Fonts/HelveticaNeue/HelveticaNeueRegular/HelveticaNeueCyr-Roman.woff") format("woff"),
           url("../Fonts/HelveticaNeue/HelveticaNeueRegular/HelveticaNeueCyr-Roman.ttf") format("truetype");
   font-style: normal;

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-// import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import bgImg from '../assets/img/placeholder.svg';
-import line from '../assets/img/line.svg'
-import logo from '../assets/img/Logo.svg'
-import HEALTHYSWITCHER from '../assets/img/HEALTHY SWITCHER.svg'
+import line from '../assets/img/line.svg';
+import logo from '../assets/img/Logo.svg';
+import HEALTHYSWITCHER from '../assets/img/HEALTHY SWITCHER.svg';
 
 function Main () {
     return (
@@ -12,7 +12,7 @@ function Main () {
             <MainScreen>    
                 <MainHeader>
                     <Logo>
-                        <LogoLink to="/">
+                        <LogoLink to="#">
                             <img src={logo} alt="logo" />
                             <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
                         </LogoLink>
@@ -20,10 +20,10 @@ function Main () {
                     
                     <MainNav>
                         <ul>
-                            <li><Link to="/">Menu</Link></li>
-                            <li><Link to="/">Recipes</Link></li>
-                            <li><Link to="/">Chefs</Link></li>
-                            <li><Link to="/">Contacts</Link></li>   
+                            <li><Link to="#">Menu</Link></li>
+                            <li><Link to="#">Recipes</Link></li>
+                            <li><Link to="#">Chefs</Link></li>
+                            <li><Link to="#">Contacts</Link></li>   
                         </ul>
                     </MainNav>
                 </MainHeader>
@@ -34,6 +34,10 @@ function Main () {
                     Your favourite food
                     delivered hot & fresh
                 </Title>
+                <Descr>
+                    HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & 
+                    marinating, so you can cook a fresh homemade dinner in just 15 minutes.
+                </Descr>
             </MainScreen>
         </>
     )
@@ -122,10 +126,10 @@ const LogoLink = styled.a`
     }
 `;
 
-const Link = styled.a`
-`;
+// const Link = styled.a`
+// `;
 
-const Title = styled.p`
+const Title = styled.h1`
     max-width: 1100px;
     display:flex;
     font-family: "HelveticaNeueRegular";
@@ -136,4 +140,22 @@ const Title = styled.p`
     text-transform: capitalize;
     color: #FFFFFF;
     margin-top:80px;
+    margin-bottom: 0px;
+`;
+
+const Descr = styled.p`
+    width: 35%;
+    height: 52px;
+    // top: 350px;
+
+    font-family: "HelveticaNeueRegular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.2px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.7;
 `;
