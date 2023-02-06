@@ -10,6 +10,10 @@ import icon_time from '../assets/img/icon_time.svg';
 import icon_adress from '../assets/img/icon_adress.svg';
 import icon_call from '../assets/img/icon_call.svg';
 import placeholderabout from '../assets/img/ABOUT.svg';
+import placeholderwork from '../assets/img/WORK.svg';
+import Basicfood1 from '../assets/img/BasicFOOD1.svg';
+import Basicfood2 from '../assets/img/BasicFOOD2.svg';
+import WorkLine from '../assets/img/WorkLine1.svg';
 
 function Main () {
     return (
@@ -69,7 +73,41 @@ function Main () {
                         In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate est. 
                         Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
                     </AboutDiscr>
+                    <AboutImg>
+                        <img src={Basicfood1} alt="img1" />
+                        <img src={Basicfood2} alt="img2" />
+                    </AboutImg>
                 </PlaceholderAbout>
+                <HowItWork>
+                    <WorkTitle>how it works</WorkTitle>
+                    <img src={WorkLine} alt="line" />
+                    <WorkCards>
+                        <WorkCard>
+                            <WorkCardTitle>Pick Meals</WorkCardTitle>
+                            <CardLine></CardLine>
+                            <WorkCardDescr>Choose your meals from our diverse weekly menu. Find gluten or dairy free, 
+                            low carb & veggie options.</WorkCardDescr>
+                        </WorkCard>
+                        <WorkCard>
+                            <WorkCardTitle>Choose How Often</WorkCardTitle>
+                            <CardLine></CardLine>
+                            <WorkCardDescr>Our team of chefs do the prep work - no more chopping, measuring, 
+                            or sink full of dishes!</WorkCardDescr>
+                        </WorkCard>
+                        <WorkCard>
+                            <WorkCardTitle>Fast Deliveries</WorkCardTitle>
+                            <CardLine></CardLine>
+                            <WorkCardDescr>Your freshly prepped 15-min dinner kits arrive on your doorstep 
+                            in a refrigerated box.</WorkCardDescr>
+                        </WorkCard>
+                        <WorkCard>
+                            <WorkCardTitle>Tasty Meals</WorkCardTitle>
+                            <CardLine></CardLine>
+                            <WorkCardDescr>Gobble makes cooking fast, so you have more time 
+                            to unwind and be with family.</WorkCardDescr>
+                        </WorkCard>
+                    </WorkCards>
+                </HowItWork>
             </MainScreen>
         </>
     )
@@ -162,12 +200,6 @@ const MainNav = styled.div`
     }
 `;
 
-// const LogoLink = styled.a`
-// `;
-
-// const Link = styled.a`
-// `;
-
 const Title = styled.h1`
     max-width: 1100px;
     display:flex;
@@ -239,7 +271,7 @@ const CardDescr = styled.p`
 const PlaceholderAbout = styled.div`
     // position: absolute;
     margin-top: 150px;
-    min-height: 736px;
+    max-height: 736px;
     width: 80%;
     background: #252525;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -247,6 +279,7 @@ const PlaceholderAbout = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
 `;
 
 const AboutTitle = styled.p`
@@ -273,4 +306,108 @@ const AboutDiscr = styled.p`
     line-height: 30px;
     text-align: center;
     color: #A6A6A6;
+    margin-bottom: 90px;
+`;
+
+const AboutImg = styled.div`
+    display: flex;
+    min-width: 61%;
+    justify-content: space-between;
+    margin-bottom: 90px;
+`;
+
+const HowItWork = styled.div`
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+`;
+
+const WorkTitle = styled.p`
+    min-height:150px;
+    min-width:308px;
+    display: flex;
+    background: url('${placeholderwork}') no-repeat center center;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    // line-height: 90px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+    color: #D9D9D9;
+    padding-bottom: 6px;
+    margin-top: 61px;
+    margin-bottom: 0px;
+`;
+
+const WorkCards = styled.div`
+    display: flex;
+    width:100%;
+    div:last-child {
+        margin-right:0px;
+    }
+    justify-content: center;
+    margin-top:60px;
+`;
+
+
+const WorkCard = styled.div`
+    height: 206px;
+    Width: 255px;
+    margin-right:30px;
+
+    background: #252525;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    transition: 0.4s;
+
+    :hover {
+        background: #34C759;
+        p {
+            color: #191919;
+        }
+        div {
+            background: #191919;
+        }
+    }
+`;
+
+const WorkCardTitle = styled.p`
+    height: 32px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.275px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-top: 24px;
+    margin-left: 24px;
+    color: #FFFFFF;
+    transition: 0.4s;
+`;
+
+const CardLine = styled.div`
+    height: 2px;
+    max-width: 56px;
+    background: #34C759;
+    margin-left: 24px;
+    transition: 0.4s;
+`;
+
+const WorkCardDescr = styled.p`
+    max-width: 207px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 24px;
+    margin-left: 24px;
+    line-height: 18px;
+    transition: 0.4s;
+    letter-spacing: -0.1625px;
+
+    color: rgba(255, 255, 255, 0.5);
 `;
