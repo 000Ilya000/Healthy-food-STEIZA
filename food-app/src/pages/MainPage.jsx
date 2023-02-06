@@ -13,7 +13,9 @@ import placeholderabout from '../assets/img/ABOUT.svg';
 import placeholderwork from '../assets/img/WORK.svg';
 import Basicfood1 from '../assets/img/BasicFOOD1.svg';
 import Basicfood2 from '../assets/img/BasicFOOD2.svg';
-import WorkLine from '../assets/img/WorkLine1.svg';
+// import WorkLine from '../assets/img/WorkLine1.svg';
+import ArrowLeft from '../assets/img/Arrowleft.svg';
+import ArrowRight from '../assets/img/ArrowRight.svg';
 
 function Main () {
     return (
@@ -75,14 +77,23 @@ function Main () {
                                 Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
                             </AboutDiscr>
                             <AboutImg>
+                                <Link to="/">
+                                    <Arrow>
+                                            <img src={ArrowLeft} alt="arrow1" />
+                                    </Arrow>
+                                </Link>
                                 <img src={Basicfood1} alt="img1" />
                                 <img src={Basicfood2} alt="img2" />
+                                <Link to="/">
+                                    <Arrow>
+                                            <img src={ArrowRight} alt="arrow2" />
+                                    </Arrow>
+                                </Link>
                             </AboutImg>
                         </PlaceholderAbout>
                     </About>
                     <HowItWork>
                         <WorkTitle>how it works</WorkTitle>
-                        <img src={WorkLine} alt="line" />
                         <WorkCards>
                             <WorkCard>
                                 <WorkCardTitle>Pick Meals</WorkCardTitle>
@@ -261,9 +272,7 @@ const Title = styled.h1`
 `;
 
 const Descr = styled.p`
-    width: 35%;
-    height: 52px;
-    // top: 350px;
+    max-width: 35%;
     margin-bottom: 0px;
     font-family: "HelveticaNeueRegular";
     font-style: normal;
@@ -320,6 +329,7 @@ const About = styled.div`
     width: 100%;
     align-content: center;
     justify-content: center;
+    align-items: center;
 `;
 
 const PlaceholderAbout = styled.div`
@@ -350,6 +360,23 @@ const AboutTitle = styled.p`
     color: #D9D9D9;
 `;
 
+const Arrow = styled.div`
+    min-width: 60px;
+    min-height: 60px;
+    border: 2px solid #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    transition: 0.4s;
+
+
+    :hover {
+        background: #34C759;
+    }
+`;
+
+
 const AboutDiscr = styled.p`
     max-width: 734px;
     // height: 60px;
@@ -364,9 +391,10 @@ const AboutDiscr = styled.p`
 
 const AboutImg = styled.div`
     display: flex;
-    min-width: 61%;
+    min-width: 75%;
     justify-content: space-between;
     margin-bottom: 90px;
+    align-items: center;
 `;
 
 const HowItWork = styled.div`
@@ -396,8 +424,18 @@ const WorkTitle = styled.p`
     text-transform: capitalize;
     color: #D9D9D9;
     padding-bottom: 6px;
-    margin-top: 61px;
     margin-bottom: 0px;
+    flex-direction: column;
+
+    ::after {
+        height: 2px;
+        max-width: 100%;
+        background: #34C759;
+        color: #34C759;
+        content: ' ';
+        min-width:56px;
+        // margin-top:40px;
+    }
 `;
 
 const WorkCards = styled.div`
@@ -468,3 +506,4 @@ const WorkCardDescr = styled.p`
 
     color: rgba(255, 255, 255, 0.5);
 `;
+
