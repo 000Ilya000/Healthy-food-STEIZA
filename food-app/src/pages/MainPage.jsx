@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import bgImg from '../assets/img/placeholder.svg';
-import line from '../assets/img/line.svg';
+// import line from '../assets/img/line.svg';
 import logo from '../assets/img/Logo.svg';
 import HEALTHYSWITCHER from '../assets/img/HEALTHY SWITCHER.svg';
 import Button from '../components/Button';
@@ -18,96 +18,99 @@ import WorkLine from '../assets/img/WorkLine1.svg';
 function Main () {
     return (
         <>
-            <MainScreen>    
-                <MainHeader>
-                    <Logo>
-                        <Link to="/">
-                            <img src={logo} alt="logo" />
-                            <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
-                        </Link>
-                    </Logo>
-                    
-                    <MainNav>
-                        <ul>
-                            <li><Link to="/">Menu</Link></li>
-                            <li><Link to="/">Recipes</Link></li>
-                            <li><Link to="/">Chefs</Link></li>
-                            <li><Link to="/">Contacts</Link></li>   
-                        </ul>
-                    </MainNav>
-                </MainHeader>
-                <Line>
-                        <img src={line} alt="line"/>
-                </Line>
-                <Title>
-                    Your favourite food
-                    delivered hot & fresh
-                </Title>
-                <Descr>
-                    HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & 
-                    marinating, so you can cook a fresh homemade dinner in just 15 minutes.
-                </Descr>
-                <Button/>
-                <CardCont>
-                    <Card>
-                        <img src={icon_time} alt="time" />
-                        <CardTitle>Today 10:00 am - 7:00 pm</CardTitle>
-                        <CardDescr>Working hours</CardDescr>
-                    </Card>
-                    <Card>
-                        <img src={icon_adress} alt="time" />
-                        <CardTitle>Velyka Vasylkivska 100</CardTitle>
-                        <CardDescr>Get Directions</CardDescr>
-                    </Card>
-                    <Card>
-                        <img src={icon_call} alt="time" />
-                        <CardTitle>+38 (063)833 24 15</CardTitle>
-                        <CardDescr>Call Online</CardDescr>
-                    </Card>
-                </CardCont>
-                <PlaceholderAbout>
-                    <AboutTitle>
-                        The Basics Of Healthy Food
-                    </AboutTitle>
-                    <AboutDiscr>
-                        In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate est. 
-                        Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
-                    </AboutDiscr>
-                    <AboutImg>
-                        <img src={Basicfood1} alt="img1" />
-                        <img src={Basicfood2} alt="img2" />
-                    </AboutImg>
-                </PlaceholderAbout>
-                <HowItWork>
-                    <WorkTitle>how it works</WorkTitle>
-                    <img src={WorkLine} alt="line" />
-                    <WorkCards>
-                        <WorkCard>
-                            <WorkCardTitle>Pick Meals</WorkCardTitle>
-                            <CardLine></CardLine>
-                            <WorkCardDescr>Choose your meals from our diverse weekly menu. Find gluten or dairy free, 
-                            low carb & veggie options.</WorkCardDescr>
-                        </WorkCard>
-                        <WorkCard>
-                            <WorkCardTitle>Choose How Often</WorkCardTitle>
-                            <CardLine></CardLine>
-                            <WorkCardDescr>Our team of chefs do the prep work - no more chopping, measuring, 
-                            or sink full of dishes!</WorkCardDescr>
-                        </WorkCard>
-                        <WorkCard>
-                            <WorkCardTitle>Fast Deliveries</WorkCardTitle>
-                            <CardLine></CardLine>
-                            <WorkCardDescr>Your freshly prepped 15-min dinner kits arrive on your doorstep 
-                            in a refrigerated box.</WorkCardDescr>
-                        </WorkCard>
-                        <WorkCard>
-                            <WorkCardTitle>Tasty Meals</WorkCardTitle>
-                            <CardLine></CardLine>
-                            <WorkCardDescr>Gobble makes cooking fast, so you have more time 
-                            to unwind and be with family.</WorkCardDescr>
-                        </WorkCard>
-                    </WorkCards>
-                </HowItWork>
+            <MainScreen>  
+                <MainM>
+                    <MainHeader className='header'>
+                        <Logo>
+                            <Link to="/">
+                                <img src={logo} alt="logo" />
+                                <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
+                            </Link>
+                        </Logo>
+                        
+                        <MainNav>
+                            <ul>
+                                <li><Link to="/">Menu</Link></li>
+                                <li><Link to="/">Recipes</Link></li>
+                                <li><Link to="/">Chefs</Link></li>
+                                <li><Link to="/">Contacts</Link></li>   
+                            </ul>
+                        </MainNav>
+                    </MainHeader>
+                    <FirstScreen>
+                        <Title>
+                            Your favourite food
+                            delivered hot & fresh
+                        </Title>
+                        <Descr>
+                            HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & 
+                            marinating, so you can cook a fresh homemade dinner in just 15 minutes.
+                        </Descr>
+                        <Button/>
+                        <CardCont>
+                            <Card>
+                                <img src={icon_time} alt="time" />
+                                <CardTitle>Today 10:00 am - 7:00 pm</CardTitle>
+                                <CardDescr>Working hours</CardDescr>
+                            </Card>
+                            <Card>
+                                <img src={icon_adress} alt="time" />
+                                <CardTitle>Velyka Vasylkivska 100</CardTitle>
+                                <CardDescr>Get Directions</CardDescr>
+                            </Card>
+                            <Card>
+                                <img src={icon_call} alt="time" />
+                                <CardTitle>+38 (063)833 24 15</CardTitle>
+                                <CardDescr>Call Online</CardDescr>
+                            </Card>
+                        </CardCont>
+                    </FirstScreen>
+                    <About>
+                        <PlaceholderAbout>
+                            <AboutTitle>
+                                The Basics Of Healthy Food
+                            </AboutTitle>
+                            <AboutDiscr>
+                                In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate est. 
+                                Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
+                            </AboutDiscr>
+                            <AboutImg>
+                                <img src={Basicfood1} alt="img1" />
+                                <img src={Basicfood2} alt="img2" />
+                            </AboutImg>
+                        </PlaceholderAbout>
+                    </About>
+                    <HowItWork>
+                        <WorkTitle>how it works</WorkTitle>
+                        <img src={WorkLine} alt="line" />
+                        <WorkCards>
+                            <WorkCard>
+                                <WorkCardTitle>Pick Meals</WorkCardTitle>
+                                <CardLine/>
+                                <WorkCardDescr>Choose your meals from our diverse weekly menu. Find gluten or dairy free, 
+                                low carb & veggie options.</WorkCardDescr>
+                            </WorkCard>
+                            <WorkCard>
+                                <WorkCardTitle>Choose How Often</WorkCardTitle>
+                                <CardLine/>
+                                <WorkCardDescr>Our team of chefs do the prep work - no more chopping, measuring, 
+                                or sink full of dishes!</WorkCardDescr>
+                            </WorkCard>
+                            <WorkCard>
+                                <WorkCardTitle>Fast Deliveries</WorkCardTitle>
+                                <CardLine/>
+                                <WorkCardDescr>Your freshly prepped 15-min dinner kits arrive on your doorstep 
+                                in a refrigerated box.</WorkCardDescr>
+                            </WorkCard>
+                            <WorkCard>
+                                <WorkCardTitle>Tasty Meals</WorkCardTitle>
+                                <CardLine/>
+                                <WorkCardDescr>Gobble makes cooking fast, so you have more time 
+                                to unwind and be with family.</WorkCardDescr>
+                            </WorkCard>
+                        </WorkCards>
+                    </HowItWork>
+                </MainM>  
             </MainScreen>
         </>
     )
@@ -116,11 +119,18 @@ function Main () {
 
 export default Main;
 
+window.onscroll = function showHeader() {
+    var header = document.querySelector('.header');
+
+    if(window.pageYOffset > 0) {
+        header.classList.add('header_fixed');
+    } else {
+        header.classList.remove('header_fixed');
+    }
+}
+
 
 const MainScreen = styled.div`
-    height: 1080px;
-    background: url('${bgImg}') no-repeat center center;
-    background-size:cover; 
     position: absolute;
     top: 0;
     left: 0;
@@ -128,6 +138,38 @@ const MainScreen = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .header_fixed {
+        background: rgba(26, 26, 26, 1);
+        position: fixed;
+        z-index: 2;
+        top:0;
+        left:0;
+    }
+`;
+
+const MainM = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const FirstScreen = styled.div`
+    // min-height: 950px;
+    height:100vh;
+    // height: 100%;
+    // height: 100vh;
+    background: url('${bgImg}') no-repeat center center;
+    background-size: cover; 
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
 `;
 
 const MainHeader = styled.div`
@@ -136,6 +178,10 @@ const MainHeader = styled.div`
     align-items: center;
     width:100%;
     justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+    background: none;
+    position: fixed;
 `;
 
 const Line = styled.div`
@@ -210,8 +256,8 @@ const Title = styled.h1`
     letter-spacing: 0.1em;
     text-transform: capitalize;
     color: #FFFFFF;
-    margin-top:80px;
     margin-bottom: 0px;
+    margin-top: 0px;
 `;
 
 const Descr = styled.p`
@@ -268,9 +314,17 @@ const CardDescr = styled.p`
     opacity: 0.5;
 `;
 
+const About = styled.div`
+    min-height: 100vh;
+    display flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+`;
+
 const PlaceholderAbout = styled.div`
     // position: absolute;
-    margin-top: 150px;
+    // margin-top: 150px;
     max-height: 736px;
     width: 80%;
     background: #252525;
@@ -279,7 +333,6 @@ const PlaceholderAbout = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
 `;
 
 const AboutTitle = styled.p`
@@ -321,6 +374,10 @@ const HowItWork = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+
+    min-height: 100vh;
+    align-content: center;
+    justify-content: center;
 `;
 
 const WorkTitle = styled.p`
