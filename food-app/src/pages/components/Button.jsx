@@ -15,9 +15,9 @@ function Button () {
 }
 
 const MainBut = styled.div`
-    margin-top: 40px;
 
     a {
+        margin-top: 40px;
         display: flex;
         font-weight: 600;
         text-decoration: none;
