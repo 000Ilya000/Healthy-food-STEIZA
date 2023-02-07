@@ -99,7 +99,7 @@ const MainM = styled.div`
 `;
 
 const FirstScreen = styled.div`
-    height:100vh;
+    height:1024px;
     background: url('${bgImg}') no-repeat center center;
     background-size: cover; 
     top: 0;

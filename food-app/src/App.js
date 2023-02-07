@@ -10,6 +10,7 @@ import Main from './pages/mainPage/MainPage';
 import DishesScreen from './pages/components/Dishes';
 import Work from './pages/components/Work';
 import AboutScreen from './pages/components/About';
+import Chefs from './pages/components/Chefs';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <AboutScreen/>
         <Work/>
         <DishesScreen/>
+        <Chefs/>
         <Routes>
             {/* <Route path="#dishes" element={<DishesScreen />}/> */}
             {/* <Route path="/About" element={<AboutScreen />}/>

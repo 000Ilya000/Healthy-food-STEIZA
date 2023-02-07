@@ -146,6 +146,8 @@ const Dishes = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    justify-content: center;
 `;
 
 const DishesTitle = styled.p`
