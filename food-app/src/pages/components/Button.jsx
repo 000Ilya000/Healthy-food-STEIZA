@@ -30,11 +30,13 @@ const MainBut = styled.div`
         font-family: "HelveticaNeueRegular";
         font-size: 20px;
         background: #34C759;
+        border: 1px solid #34C759;   
     }
 
     a:hover {
         color: #34C759;
-        background: black;
+        background: none;
+        border: 1px solid #34C759;   
     }
 `
 export default Button;
