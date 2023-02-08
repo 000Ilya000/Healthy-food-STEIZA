@@ -12,6 +12,7 @@ import Work from './pages/components/Work';
 import AboutScreen from './pages/components/About';
 import Chefs from './pages/components/Chefs';
 import Recipes from './pages/components/Recipes';
+import Social from './pages/components/Social';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <DishesScreen/>
         <Chefs/>
         <Recipes/>
+        <Social/>
         <Routes>
             {/* <Route path="#dishes" element={<DishesScreen />}/> */}
             {/* <Route path="/About" element={<AboutScreen />}/>
