@@ -44,7 +44,7 @@ const About = styled.div`
     width: 100%;
     align-content: center;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 `;
 
 const PlaceholderAbout = styled.div`

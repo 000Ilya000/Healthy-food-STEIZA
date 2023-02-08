@@ -77,6 +77,10 @@ function Chefs () {
 export default Chefs;
 
 const ChefsScreen = styled.div`
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
 `;
 
 const ChefsTitle = styled.p`
@@ -89,7 +93,6 @@ const ChefsTitle = styled.p`
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    // line-height: 90px;
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: capitalize;
@@ -105,7 +108,6 @@ const ChefsTitle = styled.p`
         color: #34C759;
         content: ' ';
         min-width:56px;
-        // margin-top:40px;
     }
 `;
 
@@ -116,36 +118,48 @@ const MainChefs = styled.div`
 `;
 
 const Chef = styled.div`
-    // width: 100%;
     min-width:350px;
     margin-right:2%;
+    :last-child {
+        margin-right: 0%;
+    }
 `;
 
 const ChefText = styled.div`
     display: flex;
     flex-direction: column;
+    margin-left: 24px;
+    font-style: normal;
+    font-weight: 400;
 `;
 
 const ChefName = styled.div`
+    height: 21px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: -0.225px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
 `;
 
 const ChefDiscr = styled.div`
+    height: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: -0.15px;
+    color: rgba(255, 255, 255, 0.5);
 `;
 
 const AboutChef = styled.div`
     display: flex;
     align-items: center;
+    margin-bottom: 24px;
 `;
 
 const ChefFoods = styled.div`
-    // img {
-    //     margin-right: 8%;
-    // }
-
     display: flex;
-
-
-    // width:100%;
     #firstChefImg {
         margin-right: 8%;
     }
