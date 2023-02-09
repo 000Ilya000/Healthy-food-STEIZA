@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import Button from './Button';
-import SOCIAL from '../../assets/img/SOCIAL.svg';
+import Button from '../Button/Button';
+import SOCIAL from './Social(img)/SOCIAL.svg';
 
 
 function Social () {
@@ -62,6 +62,7 @@ function Social () {
 export default Social;
 
 const MainSocial = styled.div`
+min-height: 100vh;
 `;
 
 const SocialTitle = styled.p`

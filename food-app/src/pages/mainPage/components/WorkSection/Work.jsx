@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import placeholderwork from '../../assets/img/WORK.svg';
+import placeholderwork from './Work(img)/WORK.svg';
 
 
 

@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import bgImg from '../../assets/img/placeholder.svg';
 import logo from '../../assets/img/Logo.svg';
 import HEALTHYSWITCHER from '../../assets/img/HEALTHY SWITCHER.svg';
-import Button from '../components/Button';
+import Button from './components/Button/Button';
 import icon_time from '../../assets/img/icon_time.svg';
 import icon_adress from '../../assets/img/icon_adress.svg';
 import icon_call from '../../assets/img/icon_call.svg';
@@ -91,7 +91,7 @@ const MainM = styled.div`
 
     .header_fixed {
         background: rgba(26, 26, 26, 1);
-        position: fixed;
+        // position: stiky;
         z-index: 2;
         top:0;
         left:0;
@@ -99,7 +99,7 @@ const MainM = styled.div`
 `;
 
 const FirstScreen = styled.div`
-    height:100vh;
+    min-height:100vh;
     background: url('${bgImg}') no-repeat center center;
     background-size: cover; 
     top: 0;

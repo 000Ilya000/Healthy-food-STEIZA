@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import RECIPES from "../../assets/img/RECIPES.svg";
-import FirstBlockRecipePlactholder from "../../assets/img/FirstBlockRecipePlactholder.svg";
-import VievesFirstBlock from "../../assets/img/VievesFirstBlock.svg";
-import CommFirstBlock from "../../assets/img/CommFirstBlock.svg";
-import ArrowLeft from '../../assets/img/Arrowleft.svg';
-import WhiteArrowLeft from '../../assets/img/WhiteArrowLeft.svg'
-import placeholder10 from '../../assets/img/placeholder (10).svg'
+import RECIPES from "./Recipes(img)/RECIPES.svg";
+import FirstBlockRecipePlactholder from "./Recipes(img)/FirstBlockRecipePlactholder.svg";
+import VievesFirstBlock from "./Recipes(img)/VievesFirstBlock.svg";
+import CommFirstBlock from "./Recipes(img)/CommFirstBlock.svg";
+// import ArrowLeft from './Recipes(img)/Arrowleft.svg';
+import WhiteArrowLeft from './Recipes(img)/WhiteArrowLeft.svg'
+import placeholder10 from './Recipes(img)/placeholder (10).svg'
 
 
 
@@ -89,7 +89,7 @@ export default Recipes;
 
 const MainRecipes = styled.div`
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: center;
 `;

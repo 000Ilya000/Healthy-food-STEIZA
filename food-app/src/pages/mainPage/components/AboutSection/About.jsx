@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import Basicfood1 from '../../assets/img/BasicFOOD1.svg';
-import Basicfood2 from '../../assets/img/BasicFOOD2.svg';
-import ArrowLeft from '../../assets/img/Arrowleft.svg';
-import ArrowRight from '../../assets/img/ArrowRight.svg';
-import placeholderabout from '../../assets/img/ABOUT.svg';
+import Basicfood1 from './About(img)/BasicFOOD1.svg';
+import Basicfood2 from './About(img)/BasicFOOD2.svg';
+import ArrowLeft from './About(img)/Arrowleft.svg';
+import ArrowRight from './About(img)/ArrowRight.svg';
+import placeholderabout from './About(img)/ABOUT.svg';
 
 
 function AboutScreen () {
@@ -39,6 +39,7 @@ function AboutScreen () {
 export default AboutScreen;
 
 const About = styled.div`
+    position: relative;
     min-height: 100vh;
     display flex;
     width: 100%;

@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import DISHES from '../../assets/img/DISHES.svg';
-import Button from './Button';
-import imgDishes1 from '../../assets/img/imgDishes1.svg';
-import imgDishes2 from '../../assets/img/imgDishes2.svg';
-import imgDishes3 from '../../assets/img/imgDishes3.svg';
-import imgDishes4 from '../../assets/img/imgDishes4.svg';
-import imgDishes5 from '../../assets/img/imgDishes5.svg';
-import imgDishes6 from '../../assets/img/imgDishes6.svg';
-import stars from '../../assets/img/stars.svg';
+import DISHES from './Dishes(img)/DISHES.svg';
+import Button from '../Button/Button';
+import imgDishes1 from './Dishes(img)/imgDishes1.svg';
+import imgDishes2 from './Dishes(img)/imgDishes2.svg';
+import imgDishes3 from './Dishes(img)/imgDishes3.svg';
+import imgDishes4 from './Dishes(img)/imgDishes4.svg';
+import imgDishes5 from './Dishes(img)/imgDishes5.svg';
+import imgDishes6 from './Dishes(img)/imgDishes6.svg';
+import stars from './Dishes(img)/stars.svg';
+import WhiteARR from './Dishes(img)/WhiteARR.svg';
 
+function changeColor(e) {
+    const btn = document.getElementsByClassName('MainButton')
+    btn.className.add("active");     
+};
 
 
 function DishesScreen () {
@@ -20,6 +25,7 @@ function DishesScreen () {
                 <DishesTitle>Dish Of The Day</DishesTitle>
                 <ThreeCards>
                     <DishCard>
+                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                         <img src={imgDishes1} alt="imgDishes1" />
                         <CardContent>
                             <DishesCardTitle>
@@ -33,12 +39,13 @@ function DishesScreen () {
                                 <DishesReiting>
                                     <img src={stars} alt="stars" />
                                 </DishesReiting>
-                                <Button/>
+                                    <button onClick={changeColor} className='MainButton'>ORDER</button>
                             </DishesCardFoot>
                         </CardContent>
                     </DishCard>
                     
                     <DishCard>
+                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                         <img src={imgDishes2} alt="imgDishes2" />
                         <CardContent>
                             <DishesCardTitle>
@@ -52,12 +59,13 @@ function DishesScreen () {
                                 <DishesReiting>
                                     <img src={stars} alt="stars" />
                                 </DishesReiting>
-                                <Button/>
+                                <button onClick={changeColor} className='MainButton'>ORDER</button>
                             </DishesCardFoot>
                         </CardContent>
                     </DishCard>
                     
                     <DishCard>
+                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                         <img src={imgDishes3} alt="imgDishes3" />
                         <CardContent>
                             <DishesCardTitle>
@@ -71,13 +79,14 @@ function DishesScreen () {
                                 <DishesReiting>
                                     <img src={stars} alt="stars" />
                                 </DishesReiting>
-                                <Button/>
+                                <button onClick={changeColor} className='MainButton'>ORDER</button>
                             </DishesCardFoot>
                         </CardContent>
                     </DishCard>
                 </ThreeCards>
                 <ThreeCards>
                     <DishCard>
+                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                         <img src={imgDishes4} alt="imgDishes4" />
                         <CardContent>
                             <DishesCardTitle>
@@ -91,12 +100,13 @@ function DishesScreen () {
                                 <DishesReiting>
                                     <img src={stars} alt="stars" />
                                 </DishesReiting>
-                                <Button/>
+                                <button onClick={changeColor} className='MainButton'>ORDER</button>
                             </DishesCardFoot>
                         </CardContent>
                     </DishCard>
                     
                     <DishCard>
+                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                         <img src={imgDishes5} alt="imgDishes5" />
                         <CardContent>
                             <DishesCardTitle>
@@ -110,12 +120,13 @@ function DishesScreen () {
                                 <DishesReiting>
                                     <img src={stars} alt="stars" />
                                 </DishesReiting>
-                                <Button/>
+                                <button onClick={changeColor} className='MainButton'>ORDER</button>
                             </DishesCardFoot>
                         </CardContent>
                     </DishCard>
                     
                     <DishCard>
+                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                         <img src={imgDishes6} alt="imgDishes6" />
                         <CardContent>
                             <DishesCardTitle>
@@ -129,7 +140,7 @@ function DishesScreen () {
                                 <DishesReiting>
                                     <img src={stars} alt="stars" />
                                 </DishesReiting>
-                                <Button/>
+                                <button onClick={changeColor} className='MainButton'>ORDER</button>
                             </DishesCardFoot>
                         </CardContent>
                     </DishCard>
@@ -139,8 +150,10 @@ function DishesScreen () {
     )
 }
 
-export default DishesScreen;
+const MainBut = styled.div`
+`;
 
+export default DishesScreen;
 
 const Dishes = styled.div`
     display:flex;
@@ -196,12 +209,46 @@ const DishCard = styled.div`
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+    :hover {
+        a {
+            opacity: 100%
+        }
+    }
 
     img {
         width:100%;
     }
 
+    a img {
+        max-width:24px;
+    }
+
+    a {
+        margin-top: 24px;
+        margin-right: 24px;
+        position: absolute;
+        min-width:40px;
+        min-height: 40px;
+        display: flex;
+        opacity:0%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 60px;
+        transition: 0.4s;
+        background: rgba(0, 0, 0, 0.3);
+
+        :hover {
+            background: #34C759;
+        }
+    }
 `;
+
+
 
 const DishesCardTitle = styled.div`
 `;
@@ -249,13 +296,12 @@ const DishesDescr = styled.p`
 `;
 
 const DishesCardFoot = styled.div`
-    a {
-        // max-width: 20%;
-        // max-height: 20%;
-        font-size: 10px;
-        padding: 15px 25px;
-        justify-content: center;
-        margin-top: 0px;
+    button {
+        margin-left:11%;
+    }
+
+    .active {
+        background-color: red;
     }
 
     div:last-child {

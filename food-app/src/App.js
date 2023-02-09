@@ -7,12 +7,12 @@ import styled from 'styled-components';
 import React from 'react';
 import {BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 import Main from './pages/mainPage/MainPage';
-import DishesScreen from './pages/components/Dishes';
-import Work from './pages/components/Work';
-import AboutScreen from './pages/components/About';
-import Chefs from './pages/components/Chefs';
-import Recipes from './pages/components/Recipes';
-import Social from './pages/components/Social';
+import DishesScreen from './pages/mainPage/components/DishesSection/Dishes';
+import Work from './pages/mainPage/components/WorkSection/Work';
+import AboutScreen from './pages/mainPage/components/AboutSection/About';
+import Chefs from './pages/mainPage/components/ChefsSection/Chefs';
+import Recipes from './pages/mainPage/components/RecipesSection/Recipes';
+import Social from './pages/mainPage/components/SocialSection/Social';
 
 
 function App() {
