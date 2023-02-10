@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import CHEFS from "./Chefs(img)/CHEFS.svg";
+// import CHEFS from "./Chefs(img)/CHEFS.svg";
 import ChefAvatar1 from "./Chefs(img)/ChefAvatar1.svg";
 import ChefAvatar2 from "./Chefs(img)/ChefAvatar2.svg";
 import ChefAvatar3 from "./Chefs(img)/ChefAvatar3.svg";
@@ -14,63 +14,65 @@ import ChefImg6 from "./Chefs(img)/ChefImg6.svg"
 import ChefImg7 from "./Chefs(img)/ChefImg7.svg"
 import ChefImg8 from "./Chefs(img)/ChefImg8.svg"
 import ChefImg9 from "./Chefs(img)/ChefImg9.svg"
-
-
-
-
+import { MainTitle } from '../AboutSection/About';
+import { Title } from '../AboutSection/About';
+import { BackgroundTitle } from '../AboutSection/About';
 
 function Chefs () {
     return (
-        <>
-            <ChefsScreen>
-                <ChefsTitle>This month's chefs</ChefsTitle>
-                <MainChefs>
-                    <Chef>
-                        <AboutChef>
-                            <img src={ChefAvatar1} alt="ChefAvatar1" />
-                            <ChefText>
-                                <ChefName>Gregory Flores</ChefName>
-                                <ChefDiscr>Chef of the cold</ChefDiscr>
-                            </ChefText>
-                        </AboutChef>
+        <ChefsScreen>
+            <MainTitle>
+                <Title>
+                    This Month's Chefs
+                </Title>
+                <BackgroundTitle className='bgtitle'>CHEFS</BackgroundTitle>
+            </MainTitle>
+            <MainChefs>
+                <Chef>
+                    <AboutChef>
+                        <img src={ChefAvatar1} alt="ChefAvatar1" />
+                        <ChefText>
+                            <ChefName>Gregory Flores</ChefName>
+                            <ChefDiscr>Chef of the cold</ChefDiscr>
+                        </ChefText>
+                    </AboutChef>
 
-                        <ChefFoods> 
-                            <img src={ChefImg1} alt="ChefImg1" id='firstChefImg'/>
-                            <img src={ChefImg2} alt="ChefImg2" id='firstChefImg'/>
-                            <img src={ChefImg3} alt="ChefImg3" id='firstChefImg'/>
-                        </ChefFoods>
-                    </Chef>
-                    <Chef>
-                        <AboutChef>
-                            <img src={ChefAvatar2} alt="ChefAvatar2" />
-                            <ChefText>
-                                <ChefName>Annette Cooper</ChefName>
-                                <ChefDiscr>Chef of the hot</ChefDiscr>
-                            </ChefText>
-                        </AboutChef>
-                        <ChefFoods> 
-                            <img src={ChefImg4} alt="ChefImg4" id='firstChefImg'/>
-                            <img src={ChefImg5} alt="ChefImg5" id='firstChefImg'/>
-                            <img src={ChefImg6} alt="ChefImg6" id='firstChefImg'/>
-                        </ChefFoods>
-                    </Chef>
-                    <Chef>
-                        <AboutChef>
-                            <img src={ChefAvatar3} alt="ChefAvatar3 " />
-                            <ChefText>
-                                <ChefName>Greg Fox</ChefName>
-                                <ChefDiscr>Сhef macro kitchen</ChefDiscr>
-                            </ChefText>
-                        </AboutChef>
-                        <ChefFoods> 
-                            <img src={ChefImg7} alt="ChefImg7" id='firstChefImg'/>
-                            <img src={ChefImg8} alt="ChefImg8" id='firstChefImg'/>
-                            <img src={ChefImg9} alt="ChefImg9" />
-                        </ChefFoods>
-                    </Chef>
-                </MainChefs>
-            </ChefsScreen>
-        </>
+                    <ChefFoods> 
+                        <img src={ChefImg1} alt="ChefImg1" id='firstChefImg'/>
+                        <img src={ChefImg2} alt="ChefImg2" id='firstChefImg'/>
+                        <img src={ChefImg3} alt="ChefImg3" id='firstChefImg'/>
+                    </ChefFoods>
+                </Chef>
+                <Chef>
+                    <AboutChef>
+                        <img src={ChefAvatar2} alt="ChefAvatar2" />
+                        <ChefText>
+                            <ChefName>Annette Cooper</ChefName>
+                            <ChefDiscr>Chef of the hot</ChefDiscr>
+                        </ChefText>
+                    </AboutChef>
+                    <ChefFoods> 
+                        <img src={ChefImg4} alt="ChefImg4" id='firstChefImg'/>
+                        <img src={ChefImg5} alt="ChefImg5" id='firstChefImg'/>
+                        <img src={ChefImg6} alt="ChefImg6" id='firstChefImg'/>
+                    </ChefFoods>
+                </Chef>
+                <Chef>
+                    <AboutChef>
+                        <img src={ChefAvatar3} alt="ChefAvatar3 " />
+                        <ChefText>
+                            <ChefName>Greg Fox</ChefName>
+                            <ChefDiscr>Сhef macro kitchen</ChefDiscr>
+                        </ChefText>
+                    </AboutChef>
+                    <ChefFoods> 
+                        <img src={ChefImg7} alt="ChefImg7" id='firstChefImg'/>
+                        <img src={ChefImg8} alt="ChefImg8" id='firstChefImg'/>
+                        <img src={ChefImg9} alt="ChefImg9" />
+                    </ChefFoods>
+                </Chef>
+            </MainChefs>
+        </ChefsScreen>
     )
 }
 
@@ -83,38 +85,11 @@ const ChefsScreen = styled.div`
     flex-direction: column;
 `;
 
-const ChefsTitle = styled.p`
-    min-height:150px;
-    min-width:400px;
-    display: flex;
-    background: url('${CHEFS}') no-repeat center center;
-    align-items: center;
-    justify-content: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    text-align: center;
-    letter-spacing: 0.2em;
-    text-transform: capitalize;
-    color: #D9D9D9;
-    padding-bottom: 6px;
-    margin-bottom: 24px;
-    flex-direction: column;
-
-    ::after {
-        height: 2px;
-        max-width: 100%;
-        background: #34C759;
-        color: #34C759;
-        content: ' ';
-        min-width:56px;
-    }
-`;
-
 const MainChefs = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-top: 36px;
 `;
 
 const Chef = styled.div`

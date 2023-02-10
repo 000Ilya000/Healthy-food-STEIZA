@@ -20,6 +20,8 @@ export default createGlobalStyle`
     p, a{
         font-family: "HelveticaNeueRegular";
         text-decoration: none;
+        margin-top:0px;
+        margin-bottom:0px;
     };
 
     .MainButton {
@@ -43,5 +45,28 @@ export default createGlobalStyle`
         color: #34C759;
         background: none;
         border: 1px solid #34C759;
+    }
+
+    .bgtitle {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        ::after {
+            height: 2px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            background: #34C759;
+            color: #34C759;
+            content: ' ';
+            min-width: 56px;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .firstthreecards {
+        padding-top:30px;
     }
 `;

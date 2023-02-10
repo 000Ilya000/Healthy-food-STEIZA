@@ -1,87 +1,115 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import RECIPES from "./Recipes(img)/RECIPES.svg";
 import FirstBlockRecipePlactholder from "./Recipes(img)/FirstBlockRecipePlactholder.svg";
-import VievesFirstBlock from "./Recipes(img)/VievesFirstBlock.svg";
-import CommFirstBlock from "./Recipes(img)/CommFirstBlock.svg";
-// import ArrowLeft from './Recipes(img)/Arrowleft.svg';
 import WhiteArrowLeft from './Recipes(img)/WhiteArrowLeft.svg'
+import WhiteEye from './Recipes(img)/WhiteEye.svg'
+import WhiteComm from './Recipes(img)/WhiteComm.svg'
 import placeholder10 from './Recipes(img)/placeholder (10).svg'
+import { MainTitle } from '../AboutSection/About';
+import { Title } from '../AboutSection/About';
+import { BackgroundTitle } from '../AboutSection/About';
 
 
 
 function Recipes () {
     return (
-        <>
-            <MainRecipes>
-                <TitleRecipes>Recipes From Our Chefs</TitleRecipes>
-                <RecipesBlocks>
-                    <FirstRecipeBlock>
-                        <ContentFirstRecipeBlock>
-                            <TypeOfFoodRecipe>BREAKFAST</TypeOfFoodRecipe>
-                            <DateRcipe>05 Jul 2016</DateRcipe>
-                            <TitleFirstBlockRecipe>Lorem ipsum dolor sit amet, consectetur adipiscing elit</TitleFirstBlockRecipe>
-                            <AutorOfRecipe>Jason Keller</AutorOfRecipe>
-                            <VievsAndComm>
-                                <VievsRecipe><img src={VievesFirstBlock} alt="VievesFirstBlock" /></VievsRecipe>
-                                <CommentsRecipe><img src={CommFirstBlock} alt="CommFirstBlock" /></CommentsRecipe>
-                            </VievsAndComm>
-                        </ContentFirstRecipeBlock>
-                        <Link to="#">
-                            <img src={WhiteArrowLeft} alt="arrow1" />
-                        </Link>
-                    </FirstRecipeBlock>
-                    <SecondRecipesBlocks>
-                        <Recipe>
-                            <SecondMainCont>
-                                <SecondRecipesBlocksTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</SecondRecipesBlocksTitle>
-                                <SecondRecipesBloksFooter>
-                                    <TypeAndDate>
-                                        <TypeOfFoodRecipe className='type'>lunch</TypeOfFoodRecipe>
-                                        <DateRcipe>07 Jan 2016</DateRcipe>
-                                    </TypeAndDate>
-                                    <SecondCommAndVievs>
-                                        <SecondVievs><img src={VievesFirstBlock} alt="VievesFirstBlock" /></SecondVievs>
-                                        <SecondComm><img src={CommFirstBlock} alt="CommFirstBlock" /></SecondComm>
-                                    </SecondCommAndVievs>
-                                </SecondRecipesBloksFooter>
-                            </SecondMainCont>
-                        </Recipe>
-                        <Recipe className='withimg'>
-                            <SecondMainCont>
-                                <SecondRecipesBlocksTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</SecondRecipesBlocksTitle>
-                                <SecondRecipesBloksFooter>
-                                    <TypeAndDate>
-                                        <TypeOfFoodRecipe className='type'>dinner</TypeOfFoodRecipe>
-                                        <DateRcipe>07 Jan 2016</DateRcipe>
-                                    </TypeAndDate>
-                                    <SecondCommAndVievs>
-                                        <SecondVievs><img src={VievesFirstBlock} alt="VievesFirstBlock" /></SecondVievs>
-                                        <SecondComm><img src={CommFirstBlock} alt="CommFirstBlock" /></SecondComm>
-                                    </SecondCommAndVievs>
-                                </SecondRecipesBloksFooter>
-                            </SecondMainCont>
-                        </Recipe>
-                        <Recipe>
-                            <SecondMainCont>
-                                <SecondRecipesBlocksTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </SecondRecipesBlocksTitle>
-                                <SecondRecipesBloksFooter>
-                                    <TypeAndDate>
-                                        <TypeOfFoodRecipe className='type'>sweets</TypeOfFoodRecipe>
-                                        <DateRcipe>10 Oct 2017</DateRcipe>
-                                    </TypeAndDate>
-                                    <SecondCommAndVievs>
-                                        <SecondVievs><img src={VievesFirstBlock} alt="VievesFirstBlock" /></SecondVievs>
-                                        <SecondComm><img src={CommFirstBlock} alt="CommFirstBlock" /></SecondComm>
-                                    </SecondCommAndVievs>
-                                </SecondRecipesBloksFooter>
-                            </SecondMainCont>
-                        </Recipe>
-                    </SecondRecipesBlocks>
-                </RecipesBlocks>
-            </MainRecipes>
-        </>
+        <MainRecipes>
+            <MainTitle>
+                <Title>
+                    Recipes From Our Chefs
+                </Title>
+                <BackgroundTitle className='bgtitle'>RECIPES</BackgroundTitle>
+            </MainTitle>
+            <RecipesBlocks>
+                <FirstRecipeBlock>
+                    <ContentFirstRecipeBlock>
+                        <TypeOfFoodRecipe>BREAKFAST</TypeOfFoodRecipe>
+                        <DateRcipe>05 Jul 2016</DateRcipe>
+                        <TitleFirstBlockRecipe>Lorem ipsum dolor sit amet, consectetur adipiscing elit</TitleFirstBlockRecipe>
+                        <AutorOfRecipe>Jason Keller</AutorOfRecipe>
+                        <VievsAndComm>
+                            <Vievs>
+                                <img src={WhiteEye} alt="WhiteEye" />
+                                <Quantity>275</Quantity>
+                            </Vievs>
+                            <Comm>
+                                <img src={WhiteComm} alt="WhiteComm" />
+                                <Quantity>275</Quantity>
+                            </Comm>
+                        </VievsAndComm>
+                    </ContentFirstRecipeBlock>
+                    <Link to="#">
+                        <img src={WhiteArrowLeft} alt="arrow1" />
+                    </Link>
+                </FirstRecipeBlock>
+                <SecondRecipesBlocks>
+                    <Recipe>
+                        <SecondMainCont>
+                            <SecondRecipesBlocksTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</SecondRecipesBlocksTitle>
+                            <SecondRecipesBloksFooter>
+                                <TypeAndDate>
+                                    <TypeOfFoodRecipe className='type'>lunch</TypeOfFoodRecipe>
+                                    <DateRcipe>07 Jan 2016</DateRcipe>
+                                </TypeAndDate>
+                                <SecondCommAndVievs>
+                                    <Vievs>
+                                        <img src={WhiteEye} alt="WhiteEye" />
+                                        <Quantity className='qua'>275</Quantity>
+                                    </Vievs>
+                                    <Comm>
+                                       <img src={WhiteComm} alt="WhiteComm" />
+                                        <Quantity className='qua'>275</Quantity>
+                                    </Comm>
+                                </SecondCommAndVievs>
+                            </SecondRecipesBloksFooter>
+                        </SecondMainCont>
+                    </Recipe>
+                    <Recipe className='withimg'>
+                        <SecondMainCont>
+                            <SecondRecipesBlocksTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</SecondRecipesBlocksTitle>
+                            <SecondRecipesBloksFooter>
+                                <TypeAndDate>
+                                    <TypeOfFoodRecipe className='type'>dinner</TypeOfFoodRecipe>
+                                    <DateRcipe>07 Jan 2016</DateRcipe>
+                                </TypeAndDate>
+                                <SecondCommAndVievs>
+                                    <Vievs>
+                                        <img src={WhiteEye} alt="WhiteEye" />
+                                        <Quantity className='qua'>275</Quantity>
+                                    </Vievs>
+                                    <Comm>
+                                        <img src={WhiteComm} alt="WhiteComm" />
+                                        <Quantity className='qua'>275</Quantity>
+                                    </Comm>
+                                </SecondCommAndVievs>
+                            </SecondRecipesBloksFooter>
+                        </SecondMainCont>
+                    </Recipe>
+                    <Recipe>
+                        <SecondMainCont>
+                            <SecondRecipesBlocksTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </SecondRecipesBlocksTitle>
+                            <SecondRecipesBloksFooter>
+                                <TypeAndDate>
+                                    <TypeOfFoodRecipe className='type'>sweets</TypeOfFoodRecipe>
+                                    <DateRcipe>10 Oct 2017</DateRcipe>
+                                </TypeAndDate>
+                                <SecondCommAndVievs>
+                                    <Vievs>
+                                        <img src={WhiteEye} alt="WhiteEye" />
+                                        <Quantity className='qua'>275</Quantity>
+                                    </Vievs>
+                                    <Comm>
+                                        <img src={WhiteComm} alt="WhiteComm" />
+                                        <Quantity className='qua'>275</Quantity>
+                                    </Comm>
+                                </SecondCommAndVievs>
+                            </SecondRecipesBloksFooter>
+                        </SecondMainCont>
+                    </Recipe>
+                </SecondRecipesBlocks>
+            </RecipesBlocks>
+        </MainRecipes>
     )
 }
 
@@ -94,38 +122,11 @@ const MainRecipes = styled.div`
     justify-content: center;
 `;
 
-const TitleRecipes = styled.p`
-    min-height:150px;
-    min-width:308px;
-    display: flex;
-    background: url('${RECIPES}') no-repeat center center;
-    align-items: center;
-    justify-content: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    text-align: center;
-    letter-spacing: 0.2em;
-    text-transform: capitalize;
-    color: #D9D9D9;
-    padding-bottom: 6px;
-    margin-bottom: 0px;
-    flex-direction: column;
-
-    ::after {
-        height: 2px;
-        max-width: 100%;
-        background: #34C759;
-        color: #34C759;
-        content: ' ';
-        min-width:56px;
-        // margin-top:40px;
-    }
-`;
 
 const RecipesBlocks = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: center;    
+    margin-top: 60px;
 `;
 
 const FirstRecipeBlock = styled.div`
@@ -133,15 +134,11 @@ const FirstRecipeBlock = styled.div`
     display: flex;
     background: url('${FirstBlockRecipePlactholder}') no-repeat center center;
     max-width: 540px;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // color: #FFFFFF;
-
-
-    // font-style: normal;
-    // font-weight: 400;
-    // font-size: 14px;
+    :hover {
+        a {
+            opacity:100%;
+        }
+    }
 
     a {
         margin-top: 30px;
@@ -156,6 +153,7 @@ const FirstRecipeBlock = styled.div`
         border-radius: 60px;
         transition: 0.4s;
         background: rgba(0, 0, 0, 0.3);
+        opacity:0%;
     
     
         :hover {
@@ -225,12 +223,27 @@ const VievsAndComm = styled.div`
     display: flex;
     min-width: 140px;
     justify-content: space-between;
+    font-size: 12px;
 `;
 
-const VievsRecipe = styled.div`
+const Vievs = styled.div`
+    display: flex;
+    align-items: center;
+    img {
+        display:flex;
+    }
 `;
 
-const CommentsRecipe = styled.div`
+const Comm = styled.div`
+    display: flex;
+    align-items: center;
+    img {
+        display:flex;
+    }
+`;
+
+const Quantity = styled.p`
+    margin-left: 12px;
 `;
 
 const SecondRecipesBlocks = styled.div`
@@ -268,6 +281,10 @@ const Recipe = styled.div`
             transition: 0.4s;
         }
 
+        .qua {
+            color:white;
+        }
+
         .type {
             background: black;
         }
@@ -302,7 +319,7 @@ const SecondRecipesBlocksTitle = styled.p`
 const TypeAndDate = styled.div`
     display: flex;
     align-items: center;
-    min-width:150px;
+    min-width:160px;
     justify-content: space-between;
     p:first-child {
         color: white;
@@ -327,10 +344,8 @@ const SecondMainCont = styled.div`
 const SecondCommAndVievs = styled.div`
     display: flex;
     // width:100%;
-`;
-
-const SecondVievs = styled.div`
-`;
-
-const SecondComm = styled.div`
+    min-width: 140px;
+    justify-content: space-between;
+    color: white;
+    font-size: 12px;
 `;

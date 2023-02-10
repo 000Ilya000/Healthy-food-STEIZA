@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: "HelveticalNeueCondensend";
+  src: url("../Fonts/HelveticaNeue/HelveticalNeueCondensend/HelveticaNeueBoldCondensed.eot") format("embedded-opentype");
+  src: url("../Fonts/HelveticaNeue/HelveticalNeueCondensend/HelveticaNeueBoldCondensed.woff") format("woff"),
+          url("../Fonts/HelveticaNeue/HelveticalNeueCondensend/HelveticaNeueBoldCondensed.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
   font-family: "HelveticaNeueBold";
   src: url("../Fonts/HelveticaNeue/HelveticaNeueBold/HelveticaNeueCyr-Bold.eot") format("embedded-opentype");
   src: url("../Fonts/HelveticaNeue/HelveticaNeueBold/HelveticaNeueCyr-Bold.woff") format("woff"),

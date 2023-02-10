@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import DISHES from './Dishes(img)/DISHES.svg';
-import Button from '../Button/Button';
+// import DISHES from './Dishes(img)/DISHES.svg';
 import imgDishes1 from './Dishes(img)/imgDishes1.svg';
 import imgDishes2 from './Dishes(img)/imgDishes2.svg';
 import imgDishes3 from './Dishes(img)/imgDishes3.svg';
@@ -11,6 +10,9 @@ import imgDishes5 from './Dishes(img)/imgDishes5.svg';
 import imgDishes6 from './Dishes(img)/imgDishes6.svg';
 import stars from './Dishes(img)/stars.svg';
 import WhiteARR from './Dishes(img)/WhiteARR.svg';
+import { MainTitle } from '../AboutSection/About';
+import { Title } from '../AboutSection/About';
+import { BackgroundTitle } from '../AboutSection/About';
 
 function changeColor(e) {
     const btn = document.getElementsByClassName('MainButton')
@@ -20,138 +22,139 @@ function changeColor(e) {
 
 function DishesScreen () {
     return (
-        <>
-            <Dishes id='dishes'>
-                <DishesTitle>Dish Of The Day</DishesTitle>
-                <ThreeCards>
-                    <DishCard>
-                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
-                        <img src={imgDishes1} alt="imgDishes1" />
-                        <CardContent>
-                            <DishesCardTitle>
-                                <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
-                                <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
-                            </DishesCardTitle>
-                            <DishesDescr>
-                                Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
-                            </DishesDescr>
-                            <DishesCardFoot>
-                                <DishesReiting>
-                                    <img src={stars} alt="stars" />
-                                </DishesReiting>
-                                    <button onClick={changeColor} className='MainButton'>ORDER</button>
-                            </DishesCardFoot>
-                        </CardContent>
-                    </DishCard>
-                    
-                    <DishCard>
-                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
-                        <img src={imgDishes2} alt="imgDishes2" />
-                        <CardContent>
-                            <DishesCardTitle>
-                                <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
-                                <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
-                            </DishesCardTitle>
-                            <DishesDescr>
-                                Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
-                            </DishesDescr>
-                            <DishesCardFoot>
-                                <DishesReiting>
-                                    <img src={stars} alt="stars" />
-                                </DishesReiting>
+        <Dishes id='dishes'>
+            <MainTitle>
+                <Title>
+                    Dish Of The Day
+                </Title>
+                <BackgroundTitle className='bgtitle'>DISHES</BackgroundTitle>
+            </MainTitle>
+            <ThreeCards className='firstthreecards'>
+                <DishCard>
+                    <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
+                    <img src={imgDishes1} alt="imgDishes1" />
+                    <CardContent>
+                        <DishesCardTitle>
+                            <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
+                            <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
+                        </DishesCardTitle>
+                        <DishesDescr>
+                            Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
+                        </DishesDescr>
+                        <DishesCardFoot>
+                            <DishesReiting>
+                                <img src={stars} alt="stars" />
+                            </DishesReiting>
                                 <button onClick={changeColor} className='MainButton'>ORDER</button>
-                            </DishesCardFoot>
-                        </CardContent>
-                    </DishCard>
-                    
-                    <DishCard>
-                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
-                        <img src={imgDishes3} alt="imgDishes3" />
-                        <CardContent>
-                            <DishesCardTitle>
-                                <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
-                                <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
-                            </DishesCardTitle>
-                            <DishesDescr>
-                                Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
-                            </DishesDescr>
-                            <DishesCardFoot>
-                                <DishesReiting>
-                                    <img src={stars} alt="stars" />
-                                </DishesReiting>
-                                <button onClick={changeColor} className='MainButton'>ORDER</button>
-                            </DishesCardFoot>
-                        </CardContent>
-                    </DishCard>
-                </ThreeCards>
-                <ThreeCards>
-                    <DishCard>
-                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
-                        <img src={imgDishes4} alt="imgDishes4" />
-                        <CardContent>
-                            <DishesCardTitle>
-                                <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
-                                <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
-                            </DishesCardTitle>
-                            <DishesDescr>
-                                Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
-                            </DishesDescr>
-                            <DishesCardFoot>
-                                <DishesReiting>
-                                    <img src={stars} alt="stars" />
-                                </DishesReiting>
-                                <button onClick={changeColor} className='MainButton'>ORDER</button>
-                            </DishesCardFoot>
-                        </CardContent>
-                    </DishCard>
-                    
-                    <DishCard>
-                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
-                        <img src={imgDishes5} alt="imgDishes5" />
-                        <CardContent>
-                            <DishesCardTitle>
-                                <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
-                                <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
-                            </DishesCardTitle>
-                            <DishesDescr>
-                                Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
-                            </DishesDescr>
-                            <DishesCardFoot>
-                                <DishesReiting>
-                                    <img src={stars} alt="stars" />
-                                </DishesReiting>
-                                <button onClick={changeColor} className='MainButton'>ORDER</button>
-                            </DishesCardFoot>
-                        </CardContent>
-                    </DishCard>
-                    
-                    <DishCard>
-                        <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
-                        <img src={imgDishes6} alt="imgDishes6" />
-                        <CardContent>
-                            <DishesCardTitle>
-                                <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
-                                <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
-                            </DishesCardTitle>
-                            <DishesDescr>
-                                Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
-                            </DishesDescr>
-                            <DishesCardFoot>
-                                <DishesReiting>
-                                    <img src={stars} alt="stars" />
-                                </DishesReiting>
-                                <button onClick={changeColor} className='MainButton'>ORDER</button>
-                            </DishesCardFoot>
-                        </CardContent>
-                    </DishCard>
-                </ThreeCards>
-            </Dishes>
-        </>
+                        </DishesCardFoot>
+                    </CardContent>
+                </DishCard>
+                
+                <DishCard>
+                    <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
+                    <img src={imgDishes2} alt="imgDishes2" />
+                    <CardContent>
+                        <DishesCardTitle>
+                            <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
+                            <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
+                        </DishesCardTitle>
+                        <DishesDescr>
+                            Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
+                        </DishesDescr>
+                        <DishesCardFoot>
+                            <DishesReiting>
+                                <img src={stars} alt="stars" />
+                            </DishesReiting>
+                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                        </DishesCardFoot>
+                    </CardContent>
+                </DishCard>
+                
+                <DishCard>
+                    <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
+                    <img src={imgDishes3} alt="imgDishes3" />
+                    <CardContent>
+                        <DishesCardTitle>
+                            <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
+                            <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
+                        </DishesCardTitle>
+                        <DishesDescr>
+                            Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
+                        </DishesDescr>
+                        <DishesCardFoot>
+                            <DishesReiting>
+                                <img src={stars} alt="stars" />
+                            </DishesReiting>
+                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                        </DishesCardFoot>
+                    </CardContent>
+                </DishCard>
+            </ThreeCards>
+            <ThreeCards>
+                <DishCard>
+                    <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
+                    <img src={imgDishes4} alt="imgDishes4" />
+                    <CardContent>
+                        <DishesCardTitle>
+                            <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
+                            <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
+                        </DishesCardTitle>
+                        <DishesDescr>
+                            Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
+                        </DishesDescr>
+                        <DishesCardFoot>
+                            <DishesReiting>
+                                <img src={stars} alt="stars" />
+                            </DishesReiting>
+                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                        </DishesCardFoot>
+                    </CardContent>
+                </DishCard>
+                
+                <DishCard>
+                    <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
+                    <img src={imgDishes5} alt="imgDishes5" />
+                    <CardContent>
+                        <DishesCardTitle>
+                            <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
+                            <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
+                        </DishesCardTitle>
+                        <DishesDescr>
+                            Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
+                        </DishesDescr>
+                        <DishesCardFoot>
+                            <DishesReiting>
+                                <img src={stars} alt="stars" />
+                            </DishesReiting>
+                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                        </DishesCardFoot>
+                    </CardContent>
+                </DishCard>
+                
+                <DishCard>
+                    <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
+                    <img src={imgDishes6} alt="imgDishes6" />
+                    <CardContent>
+                        <DishesCardTitle>
+                            <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
+                            <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
+                        </DishesCardTitle>
+                        <DishesDescr>
+                            Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...
+                        </DishesDescr>
+                        <DishesCardFoot>
+                            <DishesReiting>
+                                <img src={stars} alt="stars" />
+                            </DishesReiting>
+                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                        </DishesCardFoot>
+                    </CardContent>
+                </DishCard>
+            </ThreeCards>
+        </Dishes>
     )
 }
 
-const MainBut = styled.div`
-`;
 
 export default DishesScreen;
 
@@ -163,41 +166,9 @@ const Dishes = styled.div`
     justify-content: center;
 `;
 
-const DishesTitle = styled.p`
-    min-height:150px;
-    min-width:400px;
-    display: flex;
-    background: url('${DISHES}') no-repeat center center;
-    align-items: center;
-    justify-content: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    // line-height: 90px;
-    text-align: center;
-    letter-spacing: 0.2em;
-    text-transform: capitalize;
-    color: #D9D9D9;
-    padding-bottom: 6px;
-    margin-bottom: 24px;
-    flex-direction: column;
-
-    ::after {
-        height: 2px;
-        max-width: 100%;
-        background: #34C759;
-        color: #34C759;
-        content: ' ';
-        min-width:56px;
-        // margin-top:40px;
-    }
-`;
-
-
 
 const ThreeCards = styled.div`
     display: flex;
-    margin-top: 54px;
     width: 80%;
     justify-content: space-evenly;
     margin-top: 30px;

@@ -5,36 +5,38 @@ import Basicfood1 from './About(img)/BasicFOOD1.svg';
 import Basicfood2 from './About(img)/BasicFOOD2.svg';
 import ArrowLeft from './About(img)/Arrowleft.svg';
 import ArrowRight from './About(img)/ArrowRight.svg';
-import placeholderabout from './About(img)/ABOUT.svg';
+// import placeholderabout from './About(img)/ABOUT.svg';
 
 
 function AboutScreen () {
     return (
-        <>
-            <About>
-                <PlaceholderAbout>
-                    <AboutTitle>
+        <About>
+            <PlaceholderAbout>
+                <MainTitle>
+                    <Title>
                         The Basics Of Healthy Food
-                    </AboutTitle>
-                    <AboutDiscr>
-                        In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate est. 
-                        Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
-                    </AboutDiscr>
-                    <AboutImg>
-                        <Link to="#">
-                            <img src={ArrowLeft} alt="arrow1" />
-                        </Link>
-                        <img src={Basicfood1} alt="img1" />
-                        <img src={Basicfood2} alt="img2" />
-                        <Link to="#">
-                            <img src={ArrowRight} alt="arrow2" />
-                        </Link>
-                    </AboutImg>
-                </PlaceholderAbout>
-            </About>
-        </>
+                    </Title>
+                    <BackgroundTitle>ABOUT</BackgroundTitle>
+                </MainTitle>
+                <AboutDiscr>
+                    In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate est. 
+                    Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
+                </AboutDiscr>
+                <AboutImg>
+                    <Link to="#">
+                        <img src={ArrowLeft} alt="arrow1" />
+                    </Link>
+                    <img src={Basicfood1} alt="img1" />
+                    <img src={Basicfood2} alt="img2" />
+                    <Link to="#">
+                        <img src={ArrowRight} alt="arrow2" />
+                    </Link>
+                </AboutImg>
+            </PlaceholderAbout>
+        </About>
     )
 }
+
 
 export default AboutScreen;
 
@@ -49,8 +51,6 @@ const About = styled.div`
 `;
 
 const PlaceholderAbout = styled.div`
-    // position: absolute;
-    // margin-top: 150px;
     max-height: 736px;
     width: 80%;
     background: #252525;
@@ -61,14 +61,29 @@ const PlaceholderAbout = styled.div`
     align-items: center;
 `;
 
-const AboutTitle = styled.p`
+export const MainTitle = styled.div`
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content: center;
+    margin-top:60px;
+`;
+
+export const BackgroundTitle = styled.p`
+    font-family: "HelveticalNeueCondensend";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 150px;
+    letter-spacing: 0.2em;
+    color: #303030;
+`;
+
+export const Title = styled.p`
+    position: absolute;
     min-height:150px;
     display: flex;
     align-items: center;
-    margin-top: 60px;
-    margin-bottom: 0px;
-    flex-direction: row;
-    background: url('${placeholderabout}') no-repeat center center;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;

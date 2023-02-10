@@ -1,43 +1,49 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import placeholderwork from './Work(img)/WORK.svg';
+// import placeholderwork from './Work(img)/WORK.svg';
+import { MainTitle } from '../AboutSection/About';
+import { Title } from '../AboutSection/About';
+import { BackgroundTitle } from '../AboutSection/About';
 
 
 
 function Work () {
     return (
-        <>
-            <HowItWork>
-                <WorkTitle>how it works</WorkTitle>
-                <WorkCards>
-                    <WorkCard>
-                        <WorkCardTitle>Pick Meals</WorkCardTitle>
-                        <CardLine/>
-                        <WorkCardDescr>Choose your meals from our diverse weekly menu. Find gluten or dairy free, 
-                        low carb & veggie options.</WorkCardDescr>
-                    </WorkCard>
-                    <WorkCard>
-                        <WorkCardTitle>Choose How Often</WorkCardTitle>
-                        <CardLine/>
-                        <WorkCardDescr>Our team of chefs do the prep work - no more chopping, measuring, 
-                        or sink full of dishes!</WorkCardDescr>
-                    </WorkCard>
-                    <WorkCard>
-                        <WorkCardTitle>Fast Deliveries</WorkCardTitle>
-                        <CardLine/>
-                        <WorkCardDescr>Your freshly prepped 15-min dinner kits arrive on your doorstep 
-                        in a refrigerated box.</WorkCardDescr>
-                    </WorkCard>
-                    <WorkCard>
-                        <WorkCardTitle>Tasty Meals</WorkCardTitle>
-                        <CardLine/>
-                        <WorkCardDescr>Gobble makes cooking fast, so you have more time 
-                        to unwind and be with family.</WorkCardDescr>
-                    </WorkCard>
-                </WorkCards>
-            </HowItWork>
-        </>
+        <HowItWork>
+            <MainTitle>
+                <Title>
+                    How It Works
+                </Title>
+                <BackgroundTitle className='bgtitle'>WORK</BackgroundTitle>
+            </MainTitle>
+            <WorkCards>
+                <WorkCard>
+                    <WorkCardTitle>Pick Meals</WorkCardTitle>
+                    <CardLine/>
+                    <WorkCardDescr>Choose your meals from our diverse weekly menu. Find gluten or dairy free, 
+                    low carb & veggie options.</WorkCardDescr>
+                </WorkCard>
+                <WorkCard>
+                    <WorkCardTitle>Choose How Often</WorkCardTitle>
+                    <CardLine/>
+                    <WorkCardDescr>Our team of chefs do the prep work - no more chopping, measuring, 
+                    or sink full of dishes!</WorkCardDescr>
+                </WorkCard>
+                <WorkCard>
+                    <WorkCardTitle>Fast Deliveries</WorkCardTitle>
+                    <CardLine/>
+                    <WorkCardDescr>Your freshly prepped 15-min dinner kits arrive on your doorstep 
+                    in a refrigerated box.</WorkCardDescr>
+                </WorkCard>
+                <WorkCard>
+                    <WorkCardTitle>Tasty Meals</WorkCardTitle>
+                    <CardLine/>
+                    <WorkCardDescr>Gobble makes cooking fast, so you have more time 
+                    to unwind and be with family.</WorkCardDescr>
+                </WorkCard>
+            </WorkCards>
+        </HowItWork>
     )
 }
 
@@ -45,44 +51,10 @@ export default Work;
 
 
 const HowItWork = styled.div`
-    width:100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-
     min-height: 100vh;
-    align-content: center;
     justify-content: center;
-`;
-
-const WorkTitle = styled.p`
-    min-height:150px;
-    min-width:308px;
-    display: flex;
-    background: url('${placeholderwork}') no-repeat center center;
-    align-items: center;
-    justify-content: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    // line-height: 90px;
-    text-align: center;
-    letter-spacing: 0.2em;
-    text-transform: capitalize;
-    color: #D9D9D9;
-    padding-bottom: 6px;
-    margin-bottom: 0px;
-    flex-direction: column;
-
-    ::after {
-        height: 2px;
-        max-width: 100%;
-        background: #34C759;
-        color: #34C759;
-        content: ' ';
-        min-width:56px;
-        // margin-top:40px;
-    }
 `;
 
 const WorkCards = styled.div`
@@ -119,12 +91,8 @@ const WorkCard = styled.div`
 
 const WorkCardTitle = styled.p`
     height: 32px;
-    font-style: normal;
-    font-weight: 400;
     font-size: 22px;
-    line-height: 26px;
     letter-spacing: -0.275px;
-    text-transform: capitalize;
     margin-bottom: 10px;
     margin-top: 24px;
     margin-left: 24px;

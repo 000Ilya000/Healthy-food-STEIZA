@@ -4,18 +4,23 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import bgImg from '../../assets/img/placeholder.svg';
 import logo from '../../assets/img/Logo.svg';
 import HEALTHYSWITCHER from '../../assets/img/HEALTHY SWITCHER.svg';
-import Button from './components/Button/Button';
 import icon_time from '../../assets/img/icon_time.svg';
 import icon_adress from '../../assets/img/icon_adress.svg';
 import icon_call from '../../assets/img/icon_call.svg';
+import AboutScreen from './components/AboutSection/About';
+import Work from './components/WorkSection/Work';
+import DishesScreen from './components/DishesSection/Dishes';
+import Chefs from './components/ChefsSection/Chefs';
+import Recipes from './components/RecipesSection/Recipes';
+import Social from './components/SocialSection/Social';
 
 function Main () {
     return (
         <>
             <MainM>
-                <MainHeader className='header'>
+                <MainHeader className='header' >
                     <Logo>
-                        <Link to="Main">
+                        <Link to="/">
                             <img src={logo} alt="logo" />
                             <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
                         </Link>
@@ -23,15 +28,15 @@ function Main () {
                     
                     <MainNav>
                         <ul>
-                            <li><Link to="#">Menu</Link></li>
-                            <li><Link to="#">Recipes</Link></li>
-                            <li><Link to="#">Chefs</Link></li>
-                            <li><Link to="#">Contacts</Link></li>   
+                            <li><Link to="/">Menu</Link></li>
+                            <li><Link to="/">Recipes</Link></li>
+                            <li><Link to="/">Chefs</Link></li>
+                            <li><Link to="/">Contacts</Link></li>   
                         </ul>
                     </MainNav>
                 </MainHeader>
                 <FirstScreen>
-                    <Tekst>
+                    <Text>
                         <Title>
                             Your favourite food
                             delivered hot & fresh
@@ -40,8 +45,10 @@ function Main () {
                             HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & 
                             marinating, so you can cook a fresh homemade dinner in just 15 minutes.
                         </Descr>
-                    </Tekst>
-                    <Button/>
+                    </Text>
+                    <MainBut>
+                        <Link to = "/">Order Now</Link>
+                    </MainBut>
                     <CardCont>
                         <Card>
                             <img src={icon_time} alt="time" />
@@ -60,7 +67,13 @@ function Main () {
                         </Card>
                     </CardCont>
                 </FirstScreen>
-            </MainM>  
+            </MainM> 
+            <AboutScreen/>
+            <Work/>
+            <DishesScreen/>
+            <Chefs/>
+            <Recipes/>
+            <Social/> 
         </>
     )
 }
@@ -79,15 +92,13 @@ window.onscroll = function showHeader() {
 }
 
 const MainM = styled.div`
-    top: 0;
-    left: 0;
+    // top: 0;
+    // left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100wh;
+
 
     .header_fixed {
         background: rgba(26, 26, 26, 1);
@@ -180,7 +191,7 @@ const MainNav = styled.div`
     }
 `;
 
-const Tekst = styled.div`
+const Text = styled.div`
     font-family: "HelveticaNeueRegular";
     text-align: center;
     color: #FFFFFF;
@@ -212,6 +223,32 @@ const Descr = styled.p`
     mix-blend-mode: normal;
     opacity: 0.7;
 `;
+
+const MainBut = styled.div`
+
+    a {
+        margin-top: 40px;
+        display: flex;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 25px 58px;
+        user-select: none;
+        outline: none;
+        border-radius: 43px;
+        transition: 0.4s;
+        color: black;
+        font-family: "HelveticaNeueRegular";
+        font-size: 20px;
+        background: #34C759;
+        border: 1px solid #34C759;   
+    }
+
+    a:hover {
+        color: #34C759;
+        background: none;
+        border: 1px solid #34C759;   
+    }
+`
 
 const CardCont = styled.div`
     width: 65%;
