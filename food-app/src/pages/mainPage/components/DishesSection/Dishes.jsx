@@ -14,10 +14,10 @@ import { MainTitle } from '../AboutSection/About';
 import { Title } from '../AboutSection/About';
 import { BackgroundTitle } from '../AboutSection/About';
 
-function changeColor(e) {
-    const btn = document.getElementsByClassName('MainButton')
-    btn.className.add("active");     
-};
+// function changeColor(e) {
+//     const btn = document.getElementsByClassName('MainButton')
+//     btn.className.add("active");     
+// };
 
 
 function DishesScreen () {
@@ -45,7 +45,7 @@ function DishesScreen () {
                             <DishesReiting>
                                 <img src={stars} alt="stars" />
                             </DishesReiting>
-                                <button onClick={changeColor} className='MainButton'>ORDER</button>
+                                <button className='MainButton'>ORDER</button>
                         </DishesCardFoot>
                     </CardContent>
                 </DishCard>
@@ -65,7 +65,7 @@ function DishesScreen () {
                             <DishesReiting>
                                 <img src={stars} alt="stars" />
                             </DishesReiting>
-                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                            <button className='MainButton'>ORDER</button>
                         </DishesCardFoot>
                     </CardContent>
                 </DishCard>
@@ -85,7 +85,7 @@ function DishesScreen () {
                             <DishesReiting>
                                 <img src={stars} alt="stars" />
                             </DishesReiting>
-                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                            <button className='MainButton'>ORDER</button>
                         </DishesCardFoot>
                     </CardContent>
                 </DishCard>
@@ -106,7 +106,7 @@ function DishesScreen () {
                             <DishesReiting>
                                 <img src={stars} alt="stars" />
                             </DishesReiting>
-                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                            <button className='MainButton'>ORDER</button>
                         </DishesCardFoot>
                     </CardContent>
                 </DishCard>
@@ -126,7 +126,7 @@ function DishesScreen () {
                             <DishesReiting>
                                 <img src={stars} alt="stars" />
                             </DishesReiting>
-                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                            <button className='MainButton'>ORDER</button>
                         </DishesCardFoot>
                     </CardContent>
                 </DishCard>
@@ -146,7 +146,7 @@ function DishesScreen () {
                             <DishesReiting>
                                 <img src={stars} alt="stars" />
                             </DishesReiting>
-                            <button onClick={changeColor} className='MainButton'>ORDER</button>
+                            <button className='MainButton'>ORDER</button>
                         </DishesCardFoot>
                     </CardContent>
                 </DishCard>

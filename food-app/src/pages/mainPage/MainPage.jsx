@@ -224,7 +224,7 @@ const Descr = styled.p`
     opacity: 0.7;
 `;
 
-const MainBut = styled.div`
+export const MainBut = styled.div`
 
     a {
         margin-top: 40px;
