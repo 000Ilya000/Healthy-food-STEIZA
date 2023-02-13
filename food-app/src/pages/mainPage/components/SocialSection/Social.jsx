@@ -8,11 +8,12 @@ import Twitter from './Social(img)/Twitter.svg';
 import Instagram from './Social(img)/Instagram.svg';
 import Facebook from './Social(img)/Facebook.svg';
 import img1 from './Social(img)/img1.svg';
-import img2 from './Social(img)/img2.svg';
-import img3 from './Social(img)/img3.svg';
-import img4 from './Social(img)/img4.svg';
-import img5 from './Social(img)/img5.svg';
-import img6 from './Social(img)/img6.svg';
+// import img2 from './Social(img)/img2.svg';
+// import img3 from './Social(img)/img3.svg';
+// import img4 from './Social(img)/img4.svg';
+// import img5 from './Social(img)/img5.svg';
+// import img6 from './Social(img)/img6.svg';
+import GrayArrow from './Social(img)/GrayArrow.svg';
 
 import { MainBut } from '../../MainPage';
 
@@ -60,17 +61,59 @@ function Social () {
                         </MainBut>
                     </HeaderSocialCard>
                     <MainPartSocialCard>
-                        <TextAndAutor>
-                            <img src={img1} alt="img.1" />
-                            <img src={img2} alt="img.2" />
-                            <img src={img3} alt="img.3" />
-                            <img src={img4} alt="img.4" />
-                            <img src={img5} alt="img.5" />
-                            <img src={img6} alt="img.6" />
-                            <img src={img3} alt="img.3" />
-                            <img src={img2} alt="img.2" />
-                            <img src={img1} alt="img.1" />
-                        </TextAndAutor>
+                            <SocialImgBlock>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                            </SocialImgBlock>
+
+                            <SocialImgBlock>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                            </SocialImgBlock>
+
+                            <SocialImgBlock>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                                <ImgHover>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>    
+                            </SocialImgBlock>
                     </MainPartSocialCard>
                 </SocialCard>
                 <SocialCard>
@@ -105,6 +148,9 @@ export default Social;
 
 const MainSocial = styled.div`
     min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const SocialCards = styled.div`
@@ -115,8 +161,31 @@ const SocialCards = styled.div`
     .centrCard {
         margin-left: 30px;
         margin-right: 30px;
-        // width:100%;
     }
+
+    .centrCard div:last-child {
+        margin: 0px;
+
+        overflow: overlay;
+        max-height:240px;
+        max-width: none;
+        
+        ::-webkit-scrollbar {
+            width: 4px;
+            position:absolute;
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            border-radius: 100px;
+            background-color: rgba(255, 255, 255, 0.5);
+            position:absolute;
+        }
+    }
+
+    .centrCard div:last-child div:last-child {
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }   
 `;
 
 const SocialCard = styled.div`
@@ -139,7 +208,6 @@ const HeaderSocialCard = styled.div`
     a:first-child {
         display: flex;
         align-items: center;
-        // width: 150px;
         justify-content: space-between;   
     }
 
@@ -177,9 +245,6 @@ const HeaderSocialCard = styled.div`
     }
 `;
 
-const SocialIkonAndName = styled.div`
-`;
-
 const ImgSocial = styled.div`
     width: 40px;
     height: 40px;
@@ -197,9 +262,34 @@ const ImgSocial = styled.div`
     }
 `;
 
+const ImgHover = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:120px;
+    height:120px;
+    background: url('${img1}') no-repeat center center;
+
+    a {
+        width:40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 60px;
+        transition: 0.4s;
+        background: #34C759;
+        opacity:0%;
+    }
+
+    :hover {
+        a {
+            opacity:100%;
+        }
+    }
+`;
+
 const SocialName = styled.p`
-    // width: 106px;
-    // height: 30px;
     font-weight: 400;
     font-size: 14px;
     line-height: 30px;
@@ -224,6 +314,11 @@ const SocialDate = styled.p`
     margin-bottom: 10px;
 `;
 
+const SocialImgBlock = styled.div`
+    display: flex;
+`;
+
+
 const MainSocialText = styled.p`
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 10px;
@@ -242,10 +337,5 @@ const TextAndAutor = styled.div`
         border-radius: 100px;
         background-color: #303030;
         position:absolute;
-    }
-
-    img {
-        width:120px;
-        height:120px;
     }
 `;
