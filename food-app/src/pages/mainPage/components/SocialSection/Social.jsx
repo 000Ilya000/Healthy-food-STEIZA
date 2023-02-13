@@ -8,11 +8,11 @@ import Twitter from './Social(img)/Twitter.svg';
 import Instagram from './Social(img)/Instagram.svg';
 import Facebook from './Social(img)/Facebook.svg';
 import img1 from './Social(img)/img1.svg';
-// import img2 from './Social(img)/img2.svg';
-// import img3 from './Social(img)/img3.svg';
-// import img4 from './Social(img)/img4.svg';
-// import img5 from './Social(img)/img5.svg';
-// import img6 from './Social(img)/img6.svg';
+import img2 from './Social(img)/img2.svg';
+import img3 from './Social(img)/img3.svg';
+import img4 from './Social(img)/img4.svg';
+import img5 from './Social(img)/img5.svg';
+import img6 from './Social(img)/img6.svg';
 import GrayArrow from './Social(img)/GrayArrow.svg';
 
 import { MainBut } from '../../MainPage';
@@ -62,35 +62,17 @@ function Social () {
                     </HeaderSocialCard>
                     <MainPartSocialCard>
                             <SocialImgBlock>
-                                <ImgHover>
+                                <ImgHover className='img1'>
                                     <Link to="/">
                                         <img src={GrayArrow} alt="arrow1" />
                                     </Link>
                                 </ImgHover>
-                                <ImgHover>
+                                <ImgHover className='img2'>
                                     <Link to="/">
                                         <img src={GrayArrow} alt="arrow1" />
                                     </Link>
                                 </ImgHover>
-                                <ImgHover>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                            </SocialImgBlock>
-
-                            <SocialImgBlock>
-                                <ImgHover>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                                <ImgHover>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                                <ImgHover>
+                                <ImgHover className='img3'>
                                     <Link to="/">
                                         <img src={GrayArrow} alt="arrow1" />
                                     </Link>
@@ -98,17 +80,35 @@ function Social () {
                             </SocialImgBlock>
 
                             <SocialImgBlock>
-                                <ImgHover>
+                                <ImgHover className='img4'>
                                     <Link to="/">
                                         <img src={GrayArrow} alt="arrow1" />
                                     </Link>
                                 </ImgHover>
-                                <ImgHover>
+                                <ImgHover className='img5'>
                                     <Link to="/">
                                         <img src={GrayArrow} alt="arrow1" />
                                     </Link>
                                 </ImgHover>
-                                <ImgHover>
+                                <ImgHover className='img6'>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                            </SocialImgBlock>
+
+                            <SocialImgBlock>
+                                <ImgHover className='img7'>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                                <ImgHover className='img8'>
+                                    <Link to="/">
+                                        <img src={GrayArrow} alt="arrow1" />
+                                    </Link>
+                                </ImgHover>
+                                <ImgHover className='img9'>
                                     <Link to="/">
                                         <img src={GrayArrow} alt="arrow1" />
                                     </Link>
@@ -182,11 +182,6 @@ const SocialCards = styled.div`
             position:absolute;
         }
     }
-
-    .centrCard div:last-child div:last-child {
-        border-bottom-right-radius: 6px;
-        border-bottom-left-radius: 6px;
-    }   
 `;
 
 const SocialCard = styled.div`
@@ -267,9 +262,9 @@ const ImgHover = styled.div`
     display:flex;
     justify-content: center;
     align-items: center;
-    width:120px;
+    width:100%;
     height:120px;
-    background: url('${img1}') no-repeat center center;
+    // background: url('${img1}') no-repeat center center;
 
     a {
         width:40px;
@@ -317,6 +312,36 @@ const SocialDate = styled.p`
 
 const SocialImgBlock = styled.div`
     display: flex;
+
+    .img1 {
+        background: url('${img1}') no-repeat;
+    }
+    .img2 {
+        background: url('${img2}') no-repeat;
+    }
+    .img3 {
+        background: url('${img3}') no-repeat;
+    }
+    .img4 {
+        background: url('${img4}') no-repeat;
+    }
+    .img5 {
+        background: url('${img5}') no-repeat;
+    }
+    .img6 {
+        background: url('${img6}') no-repeat;
+    }
+    .img7 {
+        background: url('${img1}') no-repeat;
+        border-bottom-left-radius: 6px;
+    }
+    .img8 {
+        background: url('${img2}') no-repeat;
+    }
+    .img9 {
+        background: url('${img3}') no-repeat;
+        border-bottom-right-radius: 6px;
+    }
 `;
 
 
