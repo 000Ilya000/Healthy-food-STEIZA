@@ -151,6 +151,7 @@ const MainSocial = styled.div`
     display:flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom:60px;
 `;
 
 const SocialCards = styled.div`

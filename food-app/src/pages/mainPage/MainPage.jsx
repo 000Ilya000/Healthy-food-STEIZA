@@ -13,6 +13,7 @@ import DishesScreen from './components/DishesSection/Dishes';
 import Chefs from './components/ChefsSection/Chefs';
 import Recipes from './components/RecipesSection/Recipes';
 import Social from './components/SocialSection/Social';
+import Footer from './components/Footer/Footer';
 
 function Main () {
     return (
@@ -74,6 +75,7 @@ function Main () {
             <Chefs/>
             <Recipes/>
             <Social/> 
+            <Footer/>
         </>
     )
 }
@@ -143,7 +145,7 @@ const MainHeader = styled.div`
     position: fixed;
 `;
 
-const Logo = styled.div`
+export const Logo = styled.div`
     margin-left: 165px;
     display:flex;
     width:200px;
@@ -250,7 +252,7 @@ export const MainBut = styled.div`
     }
 `
 
-const CardCont = styled.div`
+export const CardCont = styled.div`
     width: 65%;
     display: flex;
     align-items: center;
@@ -259,7 +261,7 @@ const CardCont = styled.div`
     margin-top: 70px;
 `;
 
-const Card = styled.div`
+export const Card = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -267,7 +269,7 @@ const Card = styled.div`
     height: 95px;
 `;
 
-const CardTitle = styled.p`
+export const CardTitle = styled.p`
     margin-top: 13px;
     margin-bottom: 10px;
     color: white;
@@ -276,7 +278,7 @@ const CardTitle = styled.p`
     font-size: 16px;
 `;
 
-const CardDescr = styled.p`
+export const CardDescr = styled.p`
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
