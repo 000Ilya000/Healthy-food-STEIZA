@@ -14,9 +14,9 @@ import ChefImg6 from "./Chefs(img)/ChefImg6.svg"
 import ChefImg7 from "./Chefs(img)/ChefImg7.svg"
 import ChefImg8 from "./Chefs(img)/ChefImg8.svg"
 import ChefImg9 from "./Chefs(img)/ChefImg9.svg"
-import { MainTitle } from '../AboutSection/About';
-import { Title } from '../AboutSection/About';
-import { BackgroundTitle } from '../AboutSection/About';
+import { MainTitle } from '../About/About';
+import { Title } from '../About/About';
+import { BackgroundTitle } from '../About/About';
 
 function Chefs () {
     return (
@@ -80,6 +80,8 @@ export default Chefs;
 
 const ChefsScreen = styled.div`
     min-height:100vh;
+    margin-top:90px;
+    margin-bottom:90px;
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -90,6 +92,11 @@ const MainChefs = styled.div`
     width: 100%;
     justify-content: center;
     margin-top: 36px;
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const Chef = styled.div`
@@ -104,7 +111,6 @@ const ChefText = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 24px;
-    font-style: normal;
     font-weight: 400;
 `;
 
@@ -131,11 +137,18 @@ const AboutChef = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 24px;
+
+    @media (max-width: 1100px) {
+        justify-content: center;
+    }
 `;
 
 const ChefFoods = styled.div`
     display: flex;
     #firstChefImg {
         margin-right: 8%;
+    }
+    @media (max-width: 1100px) {
+        margin-bottom:40px;
     }
 `;

@@ -6,9 +6,9 @@ import WhiteArrowLeft from './Recipes(img)/WhiteArrowLeft.svg'
 import WhiteEye from './Recipes(img)/WhiteEye.svg'
 import WhiteComm from './Recipes(img)/WhiteComm.svg'
 import placeholder10 from './Recipes(img)/placeholder (10).svg'
-import { MainTitle } from '../AboutSection/About';
-import { Title } from '../AboutSection/About';
-import { BackgroundTitle } from '../AboutSection/About';
+import { MainTitle } from '../About/About';
+import { Title } from '../About/About';
+import { BackgroundTitle } from '../About/About';
 
 
 
@@ -118,6 +118,8 @@ export default Recipes;
 const MainRecipes = styled.div`
     display: flex;
     min-height: 100vh;
+    margin-top:90px;
+    margin-bottom:90px;
     flex-direction: column;
     justify-content: center;
 `;
@@ -127,17 +129,30 @@ const RecipesBlocks = styled.div`
     display: flex;
     justify-content: center;    
     margin-top: 60px;
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        div:last-child {
+            margin-left:0px;
+        }
+    }
 `;
 
 const FirstRecipeBlock = styled.div`
     height: 510px;
     display: flex;
     background: url('${FirstBlockRecipePlactholder}') no-repeat center center;
-    max-width: 540px;
+    width: 540px;
+    overflow:hidden;
+
     :hover {
         a {
             opacity:100%;
         }
+        background-size: 110%;
+        border-radius:6px;
     }
 
     a {
@@ -160,6 +175,10 @@ const FirstRecipeBlock = styled.div`
             background: #34C759;
         }
     }
+
+    @media (max-width: 1100px) {
+        margin-bottom: 30px;
+    }
 `;
 
 const ContentFirstRecipeBlock = styled.div`
@@ -173,7 +192,6 @@ const ContentFirstRecipeBlock = styled.div`
     margin-left:70px;
 
 
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
 `;
@@ -181,7 +199,6 @@ const ContentFirstRecipeBlock = styled.div`
 const TypeOfFoodRecipe = styled.p`
     // height: 25px;
 
-    font-style: normal;
     font-weight: 900;
     font-size: 10px;
     line-height: 25px;
@@ -204,7 +221,6 @@ const DateRcipe = styled.p`
 
 const TitleFirstBlockRecipe = styled.p`
     max-width:415px;
-    font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 40px;
@@ -309,7 +325,6 @@ const SecondRecipesBlocksTitle = styled.p`
     max-width: 505px;
     // padding-top: 30px;
     // margin-left: 30px;
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
@@ -325,7 +340,6 @@ const TypeAndDate = styled.div`
         color: white;
     }
 
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 25px;

@@ -10,7 +10,7 @@ import ArrowRight from './About(img)/ArrowRight.svg';
 
 function AboutScreen () {
     return (
-        <About>
+        <MainAbout>
             <PlaceholderAbout>
                 <MainTitle>
                     <Title>
@@ -26,21 +26,21 @@ function AboutScreen () {
                     <Link to="#">
                         <img src={ArrowLeft} alt="arrow1" />
                     </Link>
-                    <img src={Basicfood1} alt="img1" />
+                    <img src={Basicfood1} alt="img1" className='firstimgslider' />
                     <img src={Basicfood2} alt="img2" />
                     <Link to="#">
                         <img src={ArrowRight} alt="arrow2" />
                     </Link>
                 </AboutImg>
             </PlaceholderAbout>
-        </About>
+        </MainAbout>
     )
 }
 
 
 export default AboutScreen;
 
-const About = styled.div`
+const MainAbout = styled.div`
     position: relative;
     min-height: 100vh;
     display flex;
@@ -48,11 +48,12 @@ const About = styled.div`
     align-content: center;
     justify-content: center;
     align-items: flex-start;
+
 `;
 
 const PlaceholderAbout = styled.div`
     max-height: 736px;
-    width: 80%;
+    width: fit-content;
     background: #252525;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
@@ -71,7 +72,6 @@ export const MainTitle = styled.div`
 
 export const BackgroundTitle = styled.p`
     font-family: "HelveticalNeueCondensend";
-    font-style: normal;
     font-weight: 600;
     font-size: 100px;
     line-height: 150px;
@@ -84,7 +84,6 @@ export const Title = styled.p`
     min-height:150px;
     display: flex;
     align-items: center;
-    font-style: normal;
     font-weight: 400;
     font-size: 30px;
     letter-spacing: 0.2em;
@@ -94,7 +93,6 @@ export const Title = styled.p`
 const AboutDiscr = styled.p`
     max-width: 734px;
     // height: 60px;
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
@@ -108,9 +106,16 @@ const AboutImg = styled.div`
     min-width: 75%;
     justify-content: space-between;
     margin-bottom: 90px;
-    align-items: center; 
+    align-items: center;
+    margin-left: 64px;
+    margin-right:64px; 
+
+    .firstimgslider {
+        margin-right:34px;
+    }
     
     a {
+        margin-left:64px;
         min-width: 60px;
         min-height: 60px;
         border: 2px solid #303030;
@@ -123,6 +128,29 @@ const AboutImg = styled.div`
     
         :hover {
             background: #34C759;
+        }
+    }
+
+    a:first-child {
+        margin-left: 0px;
+        margin-right: 64px;
+    }
+
+    @media (max-width: 1100px) {
+        margin-left: 0px;
+        margin-right:0px; 
+
+        .firstimgslider {
+            margin-right:0px;
+        }
+
+        a {
+            margin-left:0px;
+        }
+
+        a:first-child {
+            margin-left: 0px;
+            margin-right: 0px;
         }
     }
 `;

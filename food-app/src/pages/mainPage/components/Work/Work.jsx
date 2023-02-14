@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 // import placeholderwork from './Work(img)/WORK.svg';
-import { MainTitle } from '../AboutSection/About';
-import { Title } from '../AboutSection/About';
-import { BackgroundTitle } from '../AboutSection/About';
+import { MainTitle } from '../About/About';
+import { Title } from '../About/About';
+import { BackgroundTitle } from '../About/About';
 
 
 
@@ -55,6 +55,13 @@ const HowItWork = styled.div`
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
+    margin-top:90px;
+    margin-bottom:90px;
+
+    @media (max-width: 1100px) {
+        width:100%;
+        align-items: center;
+    }
 `;
 
 const WorkCards = styled.div`
@@ -65,6 +72,24 @@ const WorkCards = styled.div`
     }
     justify-content: center;
     margin-top:60px;
+    p {
+        cursor: default;
+    }
+
+    @media (max-width: 1100px) {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width:75%;
+        height: 500px;
+        align-items: center;
+        div {
+            margin-right:0px;
+        }
+
+        div:last-child {
+            // margin-top:35px;
+        }
+    }
 `;
 
 
@@ -110,7 +135,6 @@ const CardLine = styled.div`
 
 const WorkCardDescr = styled.p`
     max-width: 207px;
-    font-style: normal;
     font-weight: 400;
     font-size: 13px;
     margin-top: 24px;

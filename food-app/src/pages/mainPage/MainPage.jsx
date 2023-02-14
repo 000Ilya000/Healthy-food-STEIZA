@@ -7,12 +7,12 @@ import HEALTHYSWITCHER from '../../assets/img/HEALTHY SWITCHER.svg';
 import icon_time from '../../assets/img/icon_time.svg';
 import icon_adress from '../../assets/img/icon_adress.svg';
 import icon_call from '../../assets/img/icon_call.svg';
-import AboutScreen from './components/AboutSection/About';
-import Work from './components/WorkSection/Work';
-import DishesScreen from './components/DishesSection/Dishes';
-import Chefs from './components/ChefsSection/Chefs';
-import Recipes from './components/RecipesSection/Recipes';
-import Social from './components/SocialSection/Social';
+import AboutScreen from './components/About/About';
+import Work from './components/Work/Work';
+import DishesScreen from './components/Dishes/Dishes';
+import Chefs from './components/Chefs/Chefs';
+import Recipes from './components/Recipes/Recipes';
+import Social from './components/Social/Social';
 import Footer from './components/Footer/Footer';
 
 function Main () {
@@ -86,7 +86,7 @@ export default Main;
 window.onscroll = function showHeader() {
     var header = document.querySelector('.header');
 
-    if(window.pageYOffset > 40) {
+    if(window.pageYOffset > 20) {
         header.classList.add('header_fixed');
     } else {
         header.classList.remove('header_fixed');
@@ -94,17 +94,16 @@ window.onscroll = function showHeader() {
 }
 
 const MainM = styled.div`
-    // top: 0;
-    // left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100wh;
+    background: url('${bgImg}') no-repeat center center;
+    background-size: cover; 
 
 
     .header_fixed {
         background: rgba(26, 26, 26, 1);
-        // position: stiky;
         z-index: 2;
         top:0;
         left:0;
@@ -113,8 +112,11 @@ const MainM = styled.div`
 
 const FirstScreen = styled.div`
     min-height:100vh;
-    background: url('${bgImg}') no-repeat center center;
-    background-size: cover; 
+    // background: url('${bgImg}') no-repeat center center;
+    // background-size: cover; 
+    margin-top:90px;
+    margin-bottom:90px;
+    // padding-bottom: 40px;
     top: 0;
     left: 0;
     width: 100%;

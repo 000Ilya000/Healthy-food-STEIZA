@@ -5,7 +5,7 @@ import GlobalStyle from './assets/styles/GlobalStyle';
 import React from 'react';
 import {BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 import Main from './pages/mainPage/MainPage';
-import Recipes from './pages/mainPage/components/RecipesSection/Recipes';
+import Recipes from './pages/mainPage/components/Recipes/Recipes';
 
 function App() {
   return (

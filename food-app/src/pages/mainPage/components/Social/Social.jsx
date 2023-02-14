@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import { MainTitle } from '../AboutSection/About';
-import { Title } from '../AboutSection/About';
-import { BackgroundTitle } from '../AboutSection/About';
+import { MainTitle } from '../About/About';
+import { Title } from '../About/About';
+import { BackgroundTitle } from '../About/About';
 import Twitter from './Social(img)/Twitter.svg';
 import Instagram from './Social(img)/Instagram.svg';
 import Facebook from './Social(img)/Facebook.svg';
@@ -50,7 +50,7 @@ function Social () {
                         </TextAndAutor>
                     </MainPartSocialCard>
                 </SocialCard>
-                <SocialCard className='centrCard'>
+                <SocialCard className='centerCard'>
                     <HeaderSocialCard>
                         <Link to="/">
                             <ImgSocial><img src={Instagram} alt="Twitter"/></ImgSocial>
@@ -148,6 +148,8 @@ export default Social;
 
 const MainSocial = styled.div`
     min-height: 100vh;
+    margin-top:90px;
+    // margin-bottom:90px;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -159,12 +161,12 @@ const SocialCards = styled.div`
     justify-content: center;
     margin-top: 60px;
 
-    .centrCard {
+    .centerCard {
         margin-left: 30px;
         margin-right: 30px;
     }
 
-    .centrCard div:last-child {
+    .centerCard div:last-child {
         margin: 0px;
 
         overflow: overlay;
@@ -180,6 +182,21 @@ const SocialCards = styled.div`
             border-radius: 100px;
             background-color: rgba(255, 255, 255, 0.5);
             position:absolute;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        align-items: center;
+        div {
+            max-width: 350px;
+        }
+
+        .centerCard {
+            margin-right:0px;
+            margin-left:0px;
+            margin-top:30px;
+            margin-bottom:30px;
         }
     }
 `;
@@ -199,7 +216,7 @@ const HeaderSocialCard = styled.div`
     display: flex;
     align-items: center;
     min-width:300px;
-    justify-content: space-around;
+    justify-content: space-around;  
 
     a:first-child {
         display: flex;
@@ -225,7 +242,7 @@ const HeaderSocialCard = styled.div`
         margin-top:0px;
         background: none;
         border-color: #303030;
-        color: #303030;
+        color: #737373;
         display: flex;
         justify-content: center;
         transition: 0.4s;
