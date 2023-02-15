@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 // import CHEFS from "./Chefs(img)/CHEFS.svg";
-import ChefAvatar1 from "./Chefs(img)/ChefAvatar1.svg";
-import ChefAvatar2 from "./Chefs(img)/ChefAvatar2.svg";
-import ChefAvatar3 from "./Chefs(img)/ChefAvatar3.svg";
-import ChefImg1 from "./Chefs(img)/ChefImg1.svg"
-import ChefImg2 from "./Chefs(img)/ChefImg2.svg"
-import ChefImg3 from "./Chefs(img)/ChefImg3.svg"
-import ChefImg4 from "./Chefs(img)/ChefImg4.svg"
-import ChefImg5 from "./Chefs(img)/ChefImg5.svg"
-import ChefImg6 from "./Chefs(img)/ChefImg6.svg"
-import ChefImg7 from "./Chefs(img)/ChefImg7.svg"
-import ChefImg8 from "./Chefs(img)/ChefImg8.svg"
-import ChefImg9 from "./Chefs(img)/ChefImg9.svg"
+import ChefAvatar1 from "./images/ChefAvatar1.svg";
+import ChefAvatar2 from "./images/ChefAvatar2.svg";
+import ChefAvatar3 from "./images/ChefAvatar3.svg";
+import ChefImg1 from "./images/ChefImg1.svg"
+import ChefImg2 from "./images/ChefImg2.svg"
+import ChefImg3 from "./images/ChefImg3.svg"
+import ChefImg4 from "./images/ChefImg4.svg"
+import ChefImg5 from "./images/ChefImg5.svg"
+import ChefImg6 from "./images/ChefImg6.svg"
+import ChefImg7 from "./images/ChefImg7.svg"
+import ChefImg8 from "./images/ChefImg8.svg"
+import ChefImg9 from "./images/ChefImg9.svg"
 import { MainTitle } from '../About/About';
 import { Title } from '../About/About';
 import { BackgroundTitle } from '../About/About';

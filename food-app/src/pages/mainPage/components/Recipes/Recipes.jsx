@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import FirstBlockRecipePlactholder from "./Recipes(img)/FirstBlockRecipePlactholder.svg";
-import WhiteArrowLeft from './Recipes(img)/WhiteArrowLeft.svg'
-import WhiteEye from './Recipes(img)/WhiteEye.svg'
-import WhiteComm from './Recipes(img)/WhiteComm.svg'
-import placeholder10 from './Recipes(img)/placeholder (10).svg'
+import FirstBlockRecipePlactholder from "./images/FirstBlockRecipePlactholder.svg";
+import WhiteArrowLeft from './images/WhiteArrowLeft.svg'
+import WhiteEye from './images/WhiteEye.svg'
+import WhiteComm from './images/WhiteComm.svg'
+import placeholder10 from './images/placeholder (10).svg'
 import { MainTitle } from '../About/About';
 import { Title } from '../About/About';
 import { BackgroundTitle } from '../About/About';
@@ -43,7 +43,7 @@ function Recipes () {
                         <img src={WhiteArrowLeft} alt="arrow1" />
                     </Link>
                 </FirstRecipeBlock>
-                <SecondRecipesBlocks>
+                <SecondRecipesBlocks className='secondblocks'>
                     <Recipe>
                         <SecondMainCont>
                             <SecondRecipesBlocksTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</SecondRecipesBlocksTitle>
@@ -138,6 +138,16 @@ const RecipesBlocks = styled.div`
             margin-left:0px;
         }
     }
+
+    @media (max-width: 600px) {
+        .secondblocks {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0px;
+        }
+    }
 `;
 
 const FirstRecipeBlock = styled.div`
@@ -178,6 +188,15 @@ const FirstRecipeBlock = styled.div`
 
     @media (max-width: 1100px) {
         margin-bottom: 30px;
+    }
+
+    @media (max-width: 1100px) {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 600px) {
+        width:90%;
+        border-radius:6px;
     }
 `;
 
@@ -311,6 +330,10 @@ const Recipe = styled.div`
     p {
         margin-top: 0px;
         margin-bottom: 0px;    
+    }
+
+    @media (max-width: 600px) {
+        width:90%;  
     }
 `;
 

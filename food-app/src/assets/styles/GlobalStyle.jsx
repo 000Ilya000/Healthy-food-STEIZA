@@ -13,7 +13,7 @@ export default createGlobalStyle`
     }
 
     html {
-        min-width:350px;
+        min-width:474px;
         // display: grid;   
     }
 

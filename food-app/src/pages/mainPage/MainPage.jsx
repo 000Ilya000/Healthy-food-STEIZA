@@ -133,6 +133,10 @@ const FirstScreen = styled.div`
         top:0;
         left:0;
     }
+
+    @media (max-width: 300px) {
+        padding-bottom:40%;
+    }
 `;
 
 const MainHeader = styled.div`
@@ -145,6 +149,10 @@ const MainHeader = styled.div`
     transition: 0.2s;
     background: none;
     position: fixed;
+
+    @media (max-width: 850px) {
+        justify-content: space-evenly;
+    }
 `;
 
 export const Logo = styled.div`
@@ -162,10 +170,19 @@ export const Logo = styled.div`
         margin-top: 10px;
         margin-left: 9px;
     }
+
+    @media (max-width: 850px) {
+        margin-left:0px;
+    }
+
+    @media (max-width: 600px) {
+        width: 39%;
+    }
 `;
 
 const MainNav = styled.div`
     display:flex;
+    padding-top:8px;
     
     a {
         color: #FFFFFF;
@@ -181,12 +198,32 @@ const MainNav = styled.div`
         display: flex;
         align-items: center;
         width:100%;
-        margin-right:130px
+        margin-right:130px;
+
+        @media (max-width: 850px) {
+            margin-right:0px;
+        }
+
+        @media (max-width: 600px) {
+            padding-left:0px;   
+        }
     }
 
     ul li a {
         margin-right:45px;
         cursor: pointer;
+        @media (max-width: 600px) {
+            margin-right: 20px;
+        }
+
+        @media (max-width: 520px) {
+            margin-right: 15px;
+            min-width:498px;
+        }
+
+        @media (max-width: 520px) {
+            margin-right: 8px;
+        }
     }
 
     ul li a:hover {
@@ -213,6 +250,16 @@ const Title = styled.h1`
     text-transform: capitalize;
     margin-bottom: 0px;
     margin-top: 0px;
+
+    @media (max-width: 600px) {
+        font-size: 58px;
+        line-height: 54px;
+        margin-top:75px;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 50px;
+    }
 `;
 
 const Descr = styled.p`
@@ -226,6 +273,10 @@ const Descr = styled.p`
     letter-spacing: -0.2px;
     mix-blend-mode: normal;
     opacity: 0.7;
+
+    @media (max-width: 500px) {
+        font-size: 14px;
+    }
 `;
 
 export const MainBut = styled.div`
@@ -252,6 +303,13 @@ export const MainBut = styled.div`
         background: none;
         border: 1px solid #34C759;   
     }
+
+    @media (max-width: 500px) {
+        a {
+            padding: 20px 50px;
+            font-size: 16px;
+        }    
+    }
 `
 
 export const CardCont = styled.div`
@@ -261,6 +319,14 @@ export const CardCont = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 70px;
+
+    @media (max-width: 1300px) {
+        width:100%;
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 `;
 
 export const Card = styled.div`

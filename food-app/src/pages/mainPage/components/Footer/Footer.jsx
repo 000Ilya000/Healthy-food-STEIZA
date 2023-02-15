@@ -59,7 +59,7 @@ const MainFooter = styled.div`
 `
 
 const FooterMainInfo = styled.div`
-    height:155px;
+    min-height:155px;
     border-bottom: 2px solid #303030;
     width:100%;
     display: flex;
@@ -69,6 +69,17 @@ const FooterMainInfo = styled.div`
         width:80%;
         justify-content: space-evenly;
         margin: 0px;
+    }
+
+    @media (max-width: 720px) {
+        .centrcards {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        margin-top:10px;
+        // padding-bottom:0px;
     }
 `;
 

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import Basicfood1 from './About(img)/BasicFOOD1.svg';
-import Basicfood2 from './About(img)/BasicFOOD2.svg';
-import ArrowLeft from './About(img)/Arrowleft.svg';
-import ArrowRight from './About(img)/ArrowRight.svg';
+import Basicfood1 from'./images/BasicFOOD1.svg';
+import Basicfood2 from'./images/BasicFOOD2.svg';
+import ArrowLeft from './images/Arrowleft.svg';
+import ArrowRight from'./images/ArrowRight.svg';
 // import placeholderabout from './About(img)/ABOUT.svg';
 
 
@@ -27,7 +27,7 @@ function AboutScreen () {
                         <img src={ArrowLeft} alt="arrow1" />
                     </Link>
                     <img src={Basicfood1} alt="img1" className='firstimgslider' />
-                    <img src={Basicfood2} alt="img2" />
+                    <img src={Basicfood2} alt="img2"  className='secondimgslider'/>
                     <Link to="#">
                         <img src={ArrowRight} alt="arrow2" />
                     </Link>
@@ -77,6 +77,10 @@ export const BackgroundTitle = styled.p`
     line-height: 150px;
     letter-spacing: 0.2em;
     color: #303030;
+
+    @media (max-width: 540px) {
+        font-size: 86px;
+    }
 `;
 
 export const Title = styled.p`
@@ -88,6 +92,15 @@ export const Title = styled.p`
     font-size: 30px;
     letter-spacing: 0.2em;
     color: #D9D9D9;
+
+    @media (max-width: 800px) {
+        justify-content: center;
+        width:100%;
+    }
+
+    @media (max-width: 540px) {
+        font-size: 24px;
+    }
 `;
 
 const AboutDiscr = styled.p`
@@ -137,20 +150,36 @@ const AboutImg = styled.div`
     }
 
     @media (max-width: 1100px) {
-        margin-left: 0px;
-        margin-right:0px; 
-
         .firstimgslider {
-            margin-right:0px;
+            width:40%;
+        }
+
+        justify-content: space-evenly;
+
+        .secondimgslider {
+            width:40%;
         }
 
         a {
-            margin-left:0px;
+            border: 0px;
+            min-width: 0px;
+            min-height: 0px;
+        }
+    }
+
+    @media (max-width: 750px) {
+        .secondimgslider {
+            display:none;
         }
 
-        a:first-child {
-            margin-left: 0px;
-            margin-right: 0px;
+        .firstimgslider {
+            margin-right:0px;
+            width:100%;
         }
+    }
+
+    @media (max-width: 510px) {
+        max-width: 60%;
+        min-width: 60%;
     }
 `;

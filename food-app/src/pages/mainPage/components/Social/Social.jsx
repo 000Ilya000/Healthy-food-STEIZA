@@ -4,16 +4,16 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import { MainTitle } from '../About/About';
 import { Title } from '../About/About';
 import { BackgroundTitle } from '../About/About';
-import Twitter from './Social(img)/Twitter.svg';
-import Instagram from './Social(img)/Instagram.svg';
-import Facebook from './Social(img)/Facebook.svg';
-import img1 from './Social(img)/img1.svg';
-import img2 from './Social(img)/img2.svg';
-import img3 from './Social(img)/img3.svg';
-import img4 from './Social(img)/img4.svg';
-import img5 from './Social(img)/img5.svg';
-import img6 from './Social(img)/img6.svg';
-import GrayArrow from './Social(img)/GrayArrow.svg';
+import Twitter from './images/Twitter.svg';
+import Instagram from './images/Instagram.svg';
+import Facebook from './images/Facebook.svg';
+import img1 from './images/img1.svg';
+import img2 from './images/img2.svg';
+import img3 from './images/img3.svg';
+import img4 from './images/img4.svg';
+import img5 from './images/img5.svg';
+import img6 from './images/img6.svg';
+import GrayArrow from './images/GrayArrow.svg';
 
 import { MainBut } from '../../MainPage';
 

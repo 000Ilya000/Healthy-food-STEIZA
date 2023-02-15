@@ -79,16 +79,17 @@ const WorkCards = styled.div`
     @media (max-width: 1100px) {
         flex-wrap: wrap;
         justify-content: space-evenly;
-        width:75%;
-        height: 500px;
+        // width: 60%;
+        // height: 500px;
         align-items: center;
+
         div {
             margin-right:0px;
         }
+    }
 
-        div:last-child {
-            // margin-top:35px;
-        }
+    @media (max-width: 850px) {
+        height:100%;
     }
 `;
 
@@ -111,6 +112,10 @@ const WorkCard = styled.div`
         div {
             background: #191919;
         }
+    }
+
+    @media (max-width: 1020px) {
+        margin-top:30px;
     }
 `;
 
