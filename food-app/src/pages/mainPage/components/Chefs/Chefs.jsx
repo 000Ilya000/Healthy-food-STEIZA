@@ -20,12 +20,9 @@ import { BackgroundTitle } from '../About/About';
 
 function Chefs () {
     return (
-        <ChefsScreen>
-            <MainTitle>
-                <Title>
-                    This Month's Chefs
-                </Title>
-                <BackgroundTitle className='bgtitle'>CHEFS</BackgroundTitle>
+        <BestChefs>
+            <MainTitle className='bgtitle' id='chefstitle'>
+                <BackgroundTitle>CHEFS</BackgroundTitle>
             </MainTitle>
             <MainChefs>
                 <Chef>
@@ -72,13 +69,13 @@ function Chefs () {
                     </ChefFoods>
                 </Chef>
             </MainChefs>
-        </ChefsScreen>
+        </BestChefs>
     )
 }
 
 export default Chefs;
 
-const ChefsScreen = styled.div`
+const BestChefs = styled.div`
     min-height:100vh;
     margin-top:90px;
     margin-bottom:90px;

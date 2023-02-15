@@ -69,4 +69,12 @@ export default createGlobalStyle`
     .firstthreecards {
         padding-top:30px;
     }
+
+    #chefstitle {
+        p {
+            : after {
+                content: 'Our Chefs';
+            }
+        }
+    }
 `;

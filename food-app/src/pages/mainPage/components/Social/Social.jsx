@@ -20,11 +20,8 @@ import { MainBut } from '../../MainPage';
 function Social () {
     return (
         <MainSocial>
-            <MainTitle>
-                <Title>
-                    We in Social
-                </Title>
-                <BackgroundTitle className='bgtitle'>SOCIAL</BackgroundTitle>
+            <MainTitle className='bgtitle'>
+                <BackgroundTitle>SOCIAL</BackgroundTitle>
             </MainTitle>
             <SocialCards>
                 <SocialCard>
@@ -154,6 +151,12 @@ const MainSocial = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-bottom:60px;
+
+    .bgtitle {
+        p:after {
+            content: 'We in Social';
+        }
+    }
 `;
 
 const SocialCards = styled.div`

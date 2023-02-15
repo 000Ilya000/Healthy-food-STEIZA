@@ -15,11 +15,8 @@ import { BackgroundTitle } from '../About/About';
 function Recipes () {
     return (
         <MainRecipes>
-            <MainTitle>
-                <Title>
-                    Recipes From Our Chefs
-                </Title>
-                <BackgroundTitle className='bgtitle'>RECIPES</BackgroundTitle>
+            <MainTitle className='bgtitle'>
+                <BackgroundTitle>RECIPES</BackgroundTitle>
             </MainTitle>
             <RecipesBlocks>
                 <FirstRecipeBlock>
@@ -122,6 +119,12 @@ const MainRecipes = styled.div`
     margin-bottom:90px;
     flex-direction: column;
     justify-content: center;
+
+    .bgtitle {
+        p:after {
+            content: 'Recipes From Our Chefs';
+        }
+    }
 `;
 
 

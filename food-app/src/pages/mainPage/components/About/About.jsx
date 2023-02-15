@@ -13,9 +13,6 @@ function AboutScreen () {
         <MainAbout>
             <PlaceholderAbout>
                 <MainTitle>
-                    <Title>
-                        The Basics Of Healthy Food
-                    </Title>
                     <BackgroundTitle>ABOUT</BackgroundTitle>
                 </MainTitle>
                 <AboutDiscr>
@@ -63,11 +60,38 @@ const PlaceholderAbout = styled.div`
 `;
 
 export const MainTitle = styled.div`
-    display: flex;
-    align-items: center;
-    width:100%;
+    width: 100%;
+    display:flex;
     justify-content: center;
-    margin-top:60px;
+    p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }   
+    p:after {
+        position:absolute;
+        font-family: "HelveticaNeueRegular";
+        display: flex;
+        align-items: center;
+        width:100%;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 60px;
+        letter-spacing: 0.2em;
+        color: #D9D9D9;
+        content: 'The Basics Of Healthy Food';
+
+        @media (max-width: 800px) {
+            justify-content: center;
+            width:100%;
+        }
+    
+        @media (max-width: 540px) {
+            font-size: 24px;
+        }
+    }
 `;
 
 export const BackgroundTitle = styled.p`
@@ -84,23 +108,23 @@ export const BackgroundTitle = styled.p`
 `;
 
 export const Title = styled.p`
-    position: absolute;
-    min-height:150px;
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-    font-size: 30px;
-    letter-spacing: 0.2em;
-    color: #D9D9D9;
+    // position: absolute;
+    // min-height:150px;
+    // display: flex;
+    // align-items: center;
+    // font-weight: 400;
+    // font-size: 30px;
+    // letter-spacing: 0.2em;
+    // color: #D9D9D9;
 
-    @media (max-width: 800px) {
-        justify-content: center;
-        width:100%;
-    }
+    // @media (max-width: 800px) {
+    //     justify-content: center;
+    //     width:100%;
+    // }
 
-    @media (max-width: 540px) {
-        font-size: 24px;
-    }
+    // @media (max-width: 540px) {
+    //     font-size: 24px;
+    // }
 `;
 
 const AboutDiscr = styled.p`

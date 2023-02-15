@@ -23,11 +23,8 @@ import { BackgroundTitle } from '../About/About';
 function DishesScreen () {
     return (
         <Dishes id='dishes'>
-            <MainTitle>
-                <Title>
-                    Dish Of The Day
-                </Title>
-                <BackgroundTitle className='bgtitle'>DISHES</BackgroundTitle>
+            <MainTitle className='bgtitle'>
+                <BackgroundTitle>DISHES</BackgroundTitle>
             </MainTitle>
             <MainDishCards>
                     <DishCard className='firstthree'>
@@ -165,6 +162,12 @@ const Dishes = styled.div`
     justify-content: center;
     margin-top:90px;
     margin-bottom:90px;
+
+    .bgtitle {
+        p:after {
+            content: 'Dish Of The Day';
+        }
+    }
 `;
 
 const MainDishCards = styled.div`

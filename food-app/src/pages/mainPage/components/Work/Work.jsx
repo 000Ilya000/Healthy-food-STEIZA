@@ -11,11 +11,8 @@ import { BackgroundTitle } from '../About/About';
 function Work () {
     return (
         <HowItWork>
-            <MainTitle>
-                <Title>
-                    How It Works
-                </Title>
-                <BackgroundTitle className='bgtitle'>WORK</BackgroundTitle>
+            <MainTitle className='bgtitle'>
+                <BackgroundTitle>WORK</BackgroundTitle>
             </MainTitle>
             <WorkCards>
                 <WorkCard>
@@ -61,6 +58,12 @@ const HowItWork = styled.div`
     @media (max-width: 1100px) {
         width:100%;
         align-items: center;
+    } 
+    
+    .bgtitle {
+        p:after {
+            content: 'How It Works';
+        }
     }
 `;
 
