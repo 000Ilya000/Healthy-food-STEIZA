@@ -90,6 +90,7 @@ export const MainTitle = styled.div`
     
         @media (max-width: 540px) {
             font-size: 24px;
+            min-width: max-content;
         }
     }
 `;

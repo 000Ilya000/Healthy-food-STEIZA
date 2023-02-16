@@ -74,6 +74,7 @@ export default createGlobalStyle`
         p {
             : after {
                 content: 'Our Chefs';
+                min-width: max-content;
             }
         }
     }

@@ -123,6 +123,7 @@ const MainRecipes = styled.div`
     .bgtitle {
         p:after {
             content: 'Recipes From Our Chefs';
+            min-width: max-content;
         }
     }
 `;

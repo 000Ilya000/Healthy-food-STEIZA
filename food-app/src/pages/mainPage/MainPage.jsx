@@ -14,10 +14,14 @@ import Chefs from './components/Chefs/Chefs';
 import Recipes from './components/Recipes/Recipes';
 import Social from './components/Social/Social';
 import Footer from './components/Footer/Footer';
+import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import { useState } from 'react';
 
 function Main () {
+    const [nav, setNav] = useState(false);
+
     return (
-        <>
+        <MainContainer>
             <MainM>
                 <MainHeader className='header' >
                     <Logo>
@@ -28,13 +32,19 @@ function Main () {
                     </Logo>
                     
                     <MainNav>
-                        <ul>
-                            <li><Link to="/">Menu</Link></li>
-                            <li><Link to="/">Recipes</Link></li>
-                            <li><Link to="/">Chefs</Link></li>
-                            <li><Link to="/">Contacts</Link></li>   
-                        </ul>
+                            <ul className={ nav ? 'active' : 'menu'}>
+                                <li><Link to="/">Menu</Link></li>
+                                <li><Link to="/">Recipes</Link></li>
+                                <li><Link to="/">Chefs</Link></li>
+                                <li><Link to="/">Contacts</Link></li>   
+                            </ul>
                     </MainNav>
+
+                    {/* <AiOutlineMenu size={24} className='burger'/> */}
+                    <MenuBurger onClick = {() => setNav(!nav)}>
+                        {/* <HeaderBurger><span></span></HeaderBurger> */}
+                        {nav ? <CloseHeaderBurger><span/></CloseHeaderBurger> : <HeaderBurger><span></span></HeaderBurger>}
+                    </MenuBurger>
                 </MainHeader>
                 <FirstScreen>
                     <Text>
@@ -76,7 +86,7 @@ function Main () {
             <Recipes/>
             <Social/> 
             <Footer/>
-        </>
+        </MainContainer>
     )
 }
   
@@ -92,6 +102,12 @@ window.onscroll = function showHeader() {
         header.classList.remove('header_fixed');
     }
 }
+
+const MainContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`;
 
 const MainM = styled.div`
     display: flex;
@@ -153,6 +169,118 @@ const MainHeader = styled.div`
     @media (max-width: 850px) {
         justify-content: space-evenly;
     }
+
+    .burger {
+        color:white;
+        margin-top: 8px;
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+
+        .burger {
+            display: block;
+            position:absolute;
+            right:0;
+            margin-right:4%;
+            cursor: pointer;
+            z-index: 11;
+        }
+
+        z-index: 11;    
+
+
+        .Nav {
+            display: none;
+        }
+    }
+`;
+
+const MenuBurger = styled.div`
+
+`;
+
+const HeaderBurger = styled.div`
+    display: none;
+    margin-right: 18px;
+    transition: 2s;
+
+    @media(max-width: 767px){
+        position: relative;
+        width: 40px;
+        height: 35px;
+        display: flex;
+        z-index:10;
+
+
+        span, ::after, ::before {
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            background: white;
+            margin: 0 auto;
+
+        }
+
+        span {
+            top: 20px;
+            opacity: 100%;
+        }
+    
+        ::after, ::before {
+            content: '';
+        }
+
+        ::after {
+            bottom: 5px;
+        }
+
+        ::before {
+            top: 12px;
+        }
+    }
+`;
+
+const CloseHeaderBurger = styled.div`
+    display: none;
+
+    @media(max-width: 767px){
+        position: relative;
+        width: 40px;
+        height: 35px;
+        display: flex;
+        z-index:10;
+        margin-right: 18px;
+        transition: 2s;
+
+        span, ::after, ::before {
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            background: white;
+            margin: 0 auto;
+
+        }
+
+        span {
+            top: 20px;
+            opacity:0; 
+        }
+    
+        ::after, ::before {
+            content: '';
+        }
+
+        ::after {
+            transform: rotate(-40deg);
+            bottom: 16px;
+        }
+
+        ::before {
+            transform: rotate(40deg);
+            top: 17px;
+        }
+    }
 `;
 
 export const Logo = styled.div`
@@ -175,14 +303,21 @@ export const Logo = styled.div`
         margin-left:0px;
     }
 
-    @media (max-width: 600px) {
-        width: 39%;
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-left: 4%;
+        z-index: 11;
     }
+
+    // @media (max-width: 600px) {
+    //     width: 39%;
+    // }
 `;
 
 const MainNav = styled.div`
     display:flex;
     padding-top:8px;
+
     
     a {
         color: #FFFFFF;
@@ -200,13 +335,28 @@ const MainNav = styled.div`
         width:100%;
         margin-right:130px;
 
+
         @media (max-width: 850px) {
             margin-right:0px;
+        }
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(26, 26, 26, 1);
+            margin-top:0px;
+            margin-bottom:0px;
+            font-size:20px;
+
         }
 
         @media (max-width: 600px) {
             padding-left:0px;   
         }
+    }
+
+    ul li {
     }
 
     ul li a {
@@ -228,7 +378,27 @@ const MainNav = styled.div`
 
     ul li a:hover {
         color: #34C759;
-        transition: 0.4s;
+    }
+
+    @media (max-width: 767px) {
+        display: flex;
+        position: fixed;
+        z-index: 10;
+        top:0;
+        bottm:0;
+        left: -100%;
+        right:0;
+        width:100%;
+        height:100%;
+        transition: left 1s;
+        padding-top: 0px;
+
+        .active {
+            left: 0;
+            position: fixed;
+            height: 100%;
+            transition: left 2s;
+        }
     }
 `;
 

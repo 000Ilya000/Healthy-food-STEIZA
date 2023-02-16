@@ -63,6 +63,7 @@ const HowItWork = styled.div`
     .bgtitle {
         p:after {
             content: 'How It Works';
+            min-width: max-content;
         }
     }
 `;

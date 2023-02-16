@@ -166,6 +166,7 @@ const Dishes = styled.div`
     .bgtitle {
         p:after {
             content: 'Dish Of The Day';
+            min-width: max-content;
         }
     }
 `;

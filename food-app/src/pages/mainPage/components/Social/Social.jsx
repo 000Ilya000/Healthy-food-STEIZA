@@ -155,6 +155,7 @@ const MainSocial = styled.div`
     .bgtitle {
         p:after {
             content: 'We in Social';
+            min-width: max-content;
         }
     }
 `;
