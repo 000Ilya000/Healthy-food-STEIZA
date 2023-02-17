@@ -322,7 +322,6 @@ const MainNav = styled.div`
     display:flex;
     padding-top:8px;
 
-    
     a {
         color: #FFFFFF;
     }
@@ -354,10 +353,6 @@ const MainNav = styled.div`
             font-size:20px;
             padding-left: 0px;
         }
-
-        // @media (max-width: 600px) {
-        //     padding-left:0px;   
-        // }
     }
 
     ul li {
@@ -387,6 +382,8 @@ const MainNav = styled.div`
     @media (max-width: 767px) {
         width:100%;
         height:100%;
+        padding-top: 0px;
+
 
         .menu {
             display: flex;
@@ -398,7 +395,7 @@ const MainNav = styled.div`
             right:0;
             width:100%;
             height:100%;
-            transition: left 1s;
+            transition: left 0.8s;
             padding-top: 0px;
         }
 
@@ -406,7 +403,7 @@ const MainNav = styled.div`
             left: 0;
             position: fixed;
             height: 100%;
-            transition: left 1s;
+            transition: left 0.8s;
         }
     }
 `;

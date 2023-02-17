@@ -92,8 +92,17 @@ const WorkCards = styled.div`
         }
     }
 
+    @media (max-width: 1020px) {
+        max-width: 75%;
+    }
+
     @media (max-width: 850px) {
         height:100%;
+    }
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        max-width: 100%;
     }
 `;
 
@@ -121,6 +130,11 @@ const WorkCard = styled.div`
     @media (max-width: 1020px) {
         margin-top:30px;
     }
+
+    @media (max-width: 767px) {
+        height: 180px;
+        width: 85%;
+    }
 `;
 
 const WorkCardTitle = styled.p`
@@ -140,6 +154,10 @@ const CardLine = styled.div`
     background: #34C759;
     margin-left: 24px;
     transition: 0.4s;
+
+    @media (max-width: 767px) {
+        max-width: 30%;
+    }
 `;
 
 const WorkCardDescr = styled.p`
@@ -153,4 +171,8 @@ const WorkCardDescr = styled.p`
     letter-spacing: -0.1625px;
 
     color: rgba(255, 255, 255, 0.5);
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+    }
 `;
