@@ -197,7 +197,11 @@ const MainHeader = styled.div`
 `;
 
 const MenuBurger = styled.div`
+    position: absolute;
 
+    @media(max-width: 767px){
+        position: relative;
+    }
 `;
 
 const HeaderBurger = styled.div`
