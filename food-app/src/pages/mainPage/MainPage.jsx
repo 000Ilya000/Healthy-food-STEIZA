@@ -207,7 +207,7 @@ const MenuBurger = styled.div`
 const HeaderBurger = styled.div`
     display: none;
     margin-right: 18px;
-    transition: 2s;
+    // transition: 2s;
 
     @media(max-width: 767px){
         position: relative;
@@ -255,7 +255,7 @@ const CloseHeaderBurger = styled.div`
         display: flex;
         z-index:10;
         margin-right: 18px;
-        transition: 2s;
+        // transition: 2s;
 
         span, ::after, ::before {
             height: 2px;
@@ -352,12 +352,12 @@ const MainNav = styled.div`
             margin-top:0px;
             margin-bottom:0px;
             font-size:20px;
-
+            padding-left: 0px;
         }
 
-        @media (max-width: 600px) {
-            padding-left:0px;   
-        }
+        // @media (max-width: 600px) {
+        //     padding-left:0px;   
+        // }
     }
 
     ul li {
@@ -385,23 +385,28 @@ const MainNav = styled.div`
     }
 
     @media (max-width: 767px) {
-        display: flex;
-        position: fixed;
-        z-index: 10;
-        top:0;
-        bottm:0;
-        left: -100%;
-        right:0;
         width:100%;
         height:100%;
-        transition: left 1s;
-        padding-top: 0px;
+
+        .menu {
+            display: flex;
+            position: fixed;
+            z-index: 10;
+            top:0;
+            bottm:0;
+            left: -100%;
+            right:0;
+            width:100%;
+            height:100%;
+            transition: left 1s;
+            padding-top: 0px;
+        }
 
         .active {
             left: 0;
             position: fixed;
             height: 100%;
-            transition: left 2s;
+            transition: left 1s;
         }
     }
 `;
