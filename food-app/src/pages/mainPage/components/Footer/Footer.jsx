@@ -8,9 +8,9 @@ import { CardDescr } from '../../MainPage';
 import icon_time from './../../../../assets/img/icon_time.svg';
 import icon_adress from './../../../../assets/img/icon_adress.svg';
 import icon_call from './../../../../assets/img/icon_call.svg';
-import { Logo } from '../../MainPage';
-import logo from './../../../../assets/img/Logo.svg';
-import HEALTHYSWITCHER from './../../../../assets/img/HEALTHY SWITCHER.svg';
+import { Logo } from '../Header/Header';
+import logo from '../Header/images/Logo.svg';
+import HEALTHYSWITCHER from '../Header/images/HEALTHY SWITCHER.svg';
 
 function Footer () {
     return (
