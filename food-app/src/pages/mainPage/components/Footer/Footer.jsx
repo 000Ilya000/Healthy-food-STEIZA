@@ -15,34 +15,34 @@ import HEALTHYSWITCHER from '../Header/images/HEALTHY SWITCHER.svg';
 function Footer () {
     return (
         <MainFooter>
-            <FooterMainInfo>
-                <CardCont className='centrcards'>
-                    <Card>
-                        <img src={icon_time} alt="time" />
-                        <CardTitle>Today 10:00 am - 7:00 pm</CardTitle>
-                        <CardDescr>Working hours</CardDescr>
-                    </Card>
-                    <Card>
-                        <img src={icon_adress} alt="time" />
-                        <CardTitle>Velyka Vasylkivska 100</CardTitle>
-                        <CardDescr>Get Directions</CardDescr>
-                    </Card>
-                    <Card>
-                        <img src={icon_call} alt="time" />
-                        <CardTitle>+38 (063)833 24 15</CardTitle>
-                        <CardDescr>Call Online</CardDescr>
-                    </Card>
-                </CardCont>
-            </FooterMainInfo>
-            <FooterLogo>
-                <Logo>
-                    <Link to="/">
-                        <img src={logo} alt="logo" />
-                        <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
-                    </Link>
-                </Logo> 
-                <Designed>© Designed by Yellow Snow. All Rights Reserved.</Designed>
-            </FooterLogo>
+                <FooterMainInfo>
+                    <CardCont className='centrcards'>
+                        <Card>
+                            <img src={icon_time} alt="time" />
+                            <CardTitle>Today 10:00 am - 7:00 pm</CardTitle>
+                            <CardDescr>Working hours</CardDescr>
+                        </Card>
+                        <Card>
+                            <img src={icon_adress} alt="time" />
+                            <CardTitle>Velyka Vasylkivska 100</CardTitle>
+                            <CardDescr>Get Directions</CardDescr>
+                        </Card>
+                        <Card>
+                            <img src={icon_call} alt="time" />
+                            <CardTitle>+38 (063)833 24 15</CardTitle>
+                            <CardDescr>Call Online</CardDescr>
+                        </Card>
+                    </CardCont>
+                </FooterMainInfo>
+                <FooterLogo>
+                    <Logo>
+                        <Link to="/">
+                            <img src={logo} alt="logo" />
+                            <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
+                        </Link>
+                    </Logo> 
+                    <Designed>© Designed by Yellow Snow. All Rights Reserved.</Designed>
+                </FooterLogo>
         </MainFooter>
     )
 }
@@ -57,7 +57,9 @@ const MainFooter = styled.div`
     flex-direction: column;
     justify-content: space-around;
     width:100%; 
-`
+    align-items: center;
+
+`;
 
 const FooterMainInfo = styled.div`
     min-height:155px;
@@ -67,14 +69,26 @@ const FooterMainInfo = styled.div`
     justify-content: center;
 
     .centrcards {
-        width:80%;
         margin: 0px;
         justify-content: space-between;
-    }
 
-    @media (max-width: 720px) {
-        .centrcards {
-            width: 100%;
+        width: 1140px;
+        display: flex;
+    
+        @media (max-width: 1162px) {
+            width: 960px;
+        }  
+
+        @media (max-width: 984px) {
+            width: 720px;
+        }
+
+        @media (max-width: 767px) {
+            width: 540px;
+        }
+
+        @media (max-width: 550px) {
+            width: 440px;
         }
     }
 

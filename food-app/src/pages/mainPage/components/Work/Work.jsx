@@ -11,35 +11,37 @@ import { BackgroundTitle } from '../About/About';
 function Work () {
     return (
         <HowItWork>
-            <MainTitle className='bgtitle'>
-                <BackgroundTitle>WORK</BackgroundTitle>
-            </MainTitle>
-            <WorkCards>
-                <WorkCard>
-                    <WorkCardTitle>Pick Meals</WorkCardTitle>
-                    <CardLine/>
-                    <WorkCardDescr>Choose your meals from our diverse weekly menu. Find gluten or dairy free, 
-                    low carb & veggie options.</WorkCardDescr>
-                </WorkCard>
-                <WorkCard>
-                    <WorkCardTitle>Choose How Often</WorkCardTitle>
-                    <CardLine/>
-                    <WorkCardDescr>Our team of chefs do the prep work - no more chopping, measuring, 
-                    or sink full of dishes!</WorkCardDescr>
-                </WorkCard>
-                <WorkCard>
-                    <WorkCardTitle>Fast Deliveries</WorkCardTitle>
-                    <CardLine/>
-                    <WorkCardDescr>Your freshly prepped 15-min dinner kits arrive on your doorstep 
-                    in a refrigerated box.</WorkCardDescr>
-                </WorkCard>
-                <WorkCard>
-                    <WorkCardTitle>Tasty Meals</WorkCardTitle>
-                    <CardLine/>
-                    <WorkCardDescr>Gobble makes cooking fast, so you have more time 
-                    to unwind and be with family.</WorkCardDescr>
-                </WorkCard>
-            </WorkCards>
+            <WorkContent>
+                <MainTitle className='bgtitle'>
+                    <BackgroundTitle>WORK</BackgroundTitle>
+                </MainTitle>
+                <WorkCards>
+                    <WorkCard>
+                        <WorkCardTitle>Pick Meals</WorkCardTitle>
+                        <CardLine/>
+                        <WorkCardDescr>Choose your meals from our diverse weekly menu. Find gluten or dairy free, 
+                        low carb & veggie options.</WorkCardDescr>
+                    </WorkCard>
+                    <WorkCard>
+                        <WorkCardTitle>Choose How Often</WorkCardTitle>
+                        <CardLine/>
+                        <WorkCardDescr>Our team of chefs do the prep work - no more chopping, measuring, 
+                        or sink full of dishes!</WorkCardDescr>
+                    </WorkCard>
+                    <WorkCard>
+                        <WorkCardTitle>Fast Deliveries</WorkCardTitle>
+                        <CardLine/>
+                        <WorkCardDescr>Your freshly prepped 15-min dinner kits arrive on your doorstep 
+                        in a refrigerated box.</WorkCardDescr>
+                    </WorkCard>
+                    <WorkCard>
+                        <WorkCardTitle>Tasty Meals</WorkCardTitle>
+                        <CardLine/>
+                        <WorkCardDescr>Gobble makes cooking fast, so you have more time 
+                        to unwind and be with family.</WorkCardDescr>
+                    </WorkCard>
+                </WorkCards>
+            </WorkContent>
         </HowItWork>
     )
 }
@@ -54,7 +56,9 @@ const HowItWork = styled.div`
     justify-content: center;
     margin-top:90px;
     margin-bottom:90px;
-    min-width:80%;
+    width:100%;
+    align-items: center;
+    align-content: center;
 
     @media (max-width: 1100px) {
         width:100%;
@@ -66,6 +70,29 @@ const HowItWork = styled.div`
             content: 'How It Works';
             min-width: max-content;
         }
+    }
+`;
+
+const WorkContent = styled.div`
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1162px) {
+        width: 960px;
+        align-items: center;
+    }
+    
+    @media (max-width: 984px) {
+        width: 720px;
+    }
+
+    @media (max-width: 767px) {
+        width: 540px;
+    }
+
+    @media (max-width: 550px) {
+        width: 440px;
     }
 `;
 
@@ -81,7 +108,7 @@ const WorkCards = styled.div`
         cursor: default;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1162px) {
         flex-wrap: wrap;
         justify-content: space-evenly;
         // width: 60%;
@@ -91,7 +118,11 @@ const WorkCards = styled.div`
         div {
             margin-right:0px;
         }
-    }
+
+        div:last-child {
+            margin-top: 30px;
+        }
+    } 
 
     @media (max-width: 1020px) {
         max-width: 75%;

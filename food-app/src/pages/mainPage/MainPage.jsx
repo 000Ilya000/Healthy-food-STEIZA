@@ -89,6 +89,7 @@ const MainM = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
+    align-content: center;
     background: url('${bgImg}') no-repeat center center;
     background-size: cover; 
 
@@ -110,7 +111,7 @@ const FirstScreen = styled.div`
     // padding-bottom: 40px;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 1140px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,6 +124,22 @@ const FirstScreen = styled.div`
         z-index: 2;
         top:0;
         left:0;
+    }
+
+    @media (max-width: 1162px) {
+        width: 960px;
+    }
+
+    @media (max-width: 984px) {
+        width: 720px;
+    }
+
+    @media (max-width: 767px) {
+        width: 540px;
+    }
+
+    @media (max-width: 550px) {
+        width: 440px;
     }
 
     @media (max-width: 300px) {
@@ -149,13 +166,13 @@ const Title = styled.h1`
     margin-bottom: 0px;
     margin-top: 0px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         font-size: 58px;
         line-height: 54px;
         margin-top:75px;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 550px) {
         font-size: 50px;
     }
 `;
@@ -202,7 +219,7 @@ export const MainBut = styled.div`
         border: 1px solid #34C759;   
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 550px) {
         a {
             padding: 20px 50px;
             font-size: 16px;
@@ -222,7 +239,7 @@ export const CardCont = styled.div`
         width:100%;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
         flex-direction: column;
     }
 `;

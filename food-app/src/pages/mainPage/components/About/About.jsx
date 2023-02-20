@@ -41,7 +41,7 @@ const MainAbout = styled.div`
     position: relative;
     min-height: 100vh;
     display flex;
-    width: 80%;
+    width: 100%;
     align-content: center;
     justify-content: center;
     align-items: flex-start;
@@ -50,17 +50,33 @@ const MainAbout = styled.div`
 
 const PlaceholderAbout = styled.div`
     max-height: 736px;
-    width: 100%;
+    width: 1140px;
     background: #252525;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 1162px) {
+        width: 960px;
+    }
+
+    @media (max-width: 984px) {
+        width: 720px;
+    }
+
+    @media (max-width: 767px) {
+        width: 540px;
+    }
+
+    @media (max-width: 550px) {
+        width: 440px;
+    }
 `;
 
 export const MainTitle = styled.div`
-    width: 100%;
+    // width: 100%;
     display:flex;
     justify-content: center;
     p {
@@ -107,7 +123,7 @@ export const BackgroundTitle = styled.p`
     letter-spacing: 0.2em;
     color: #303030;
 
-    @media (max-width: 540px) {
+    @media (max-width: 550px) {
         font-size: 86px;
     }
 `;
@@ -207,7 +223,7 @@ const AboutImg = styled.div`
         }
     }
 
-    @media (max-width: 510px) {
+    @media (max-width: 550px) {
         max-width: 60%;
         min-width: 60%;
     }

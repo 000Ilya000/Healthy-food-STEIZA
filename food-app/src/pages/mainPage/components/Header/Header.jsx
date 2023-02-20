@@ -39,7 +39,7 @@ function Header () {
 export default Header;
 
 const MainHeader = styled.div`
-    height:90px;
+    // height:90px;
     display: flex;
     align-items: center;
     width:100%;
@@ -61,6 +61,27 @@ const MainHeader = styled.div`
     }
 
     @media (max-width: 767px) {
+        z-index: 11;    
+    }
+`;
+
+const HeaderContent = styled.div`
+    display: flex;
+    align-items: center;
+    width: 1140px;
+    justify-content: space-between;
+    height:90px;
+
+    @media (max-width: 1162px) {
+        width: 960px;
+    }
+
+    @media (max-width: 984px) {
+        width: 720px;
+    }
+
+    @media (max-width: 767px) {
+        width: 540px;
 
         .burger {
             display: block;
@@ -69,22 +90,17 @@ const MainHeader = styled.div`
             margin-right:4%;
             cursor: pointer;
             z-index: 11;
-        }
-
-        z-index: 11;    
+        }    
 
 
         .Nav {
             display: none;
         }
     }
-`;
 
-const HeaderContent = styled.div`
-    display: flex;
-    align-items: center;
-    width: 80%;
-    justify-content: space-between;
+    @media (max-width: 550px) {
+        width: 440px;
+    }
 `;
 
 export const Logo = styled.div`
@@ -156,18 +172,18 @@ const MainNav = styled.div`
     ul li a {
         margin-right:45px;
         cursor: pointer;
-        @media (max-width: 600px) {
-            margin-right: 20px;
+        @media (max-width: 767px) {
+            margin-right: 0px;
         }
 
-        @media (max-width: 520px) {
-            margin-right: 15px;
-            min-width:498px;
-        }
+        // @media (max-width: 520px) {
+        //     margin-right: 15px;
+        //     min-width:498px;
+        // }
 
-        @media (max-width: 520px) {
-            margin-right: 8px;
-        }
+        // @media (max-width: 520px) {
+        //     margin-right: 8px;
+        // }
     }
 
     ul li:last-child a {
@@ -199,7 +215,7 @@ const MainNav = styled.div`
         }
 
         ul li:last-child a {
-            margin-right:8px;
+            margin-right: 0px;
         }
 
         .active {

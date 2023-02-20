@@ -20,123 +20,125 @@ import { MainBut } from '../../MainPage';
 function Social () {
     return (
         <MainSocial>
-            <MainTitle className='bgtitle'>
-                <BackgroundTitle>SOCIAL</BackgroundTitle>
-            </MainTitle>
-            <SocialCards>
-                <SocialCard>
-                    <HeaderSocialCard>
-                        <Link to="/">
-                            <ImgSocial><img src={Twitter} alt="Twitter"/></ImgSocial>
-                            <SocialName>Twitter</SocialName>
-                        </Link>
-                        <MainBut>
-                            <Link to = "/">FOLLOW US</Link>
-                        </MainBut>
-                    </HeaderSocialCard>
-                    <MainPartSocialCard>
-                        <SocialDate>24 Jun at 16:20 pm</SocialDate>
-                        <TextAndAutor>
-                            <MainSocialText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur, 
-                                consectetur adipiscing elit, consectetur adipiscing, 
-                                sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, 
-                                consectetur adipiscing,
-                            </MainSocialText>
-                            <Link to="/">@DennisFerguson</Link>
-                        </TextAndAutor>
-                    </MainPartSocialCard>
-                </SocialCard>
-                <SocialCard className='centerCard'>
-                    <HeaderSocialCard>
-                        <Link to="/">
-                            <ImgSocial><img src={Instagram} alt="Twitter"/></ImgSocial>
-                            <SocialName>Instagram</SocialName>
-                        </Link>
-                        <MainBut>
-                            <Link to = "/">FOLLOW US</Link>
-                        </MainBut>
-                    </HeaderSocialCard>
-                    <MainPartSocialCard>
-                            <SocialImgBlock>
-                                <ImgHover className='img1'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                                <ImgHover className='img2'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                                <ImgHover className='img3'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                            </SocialImgBlock>
+            <SocialContent>
+                <MainTitle className='bgtitle'>
+                    <BackgroundTitle>SOCIAL</BackgroundTitle>
+                </MainTitle>
+                <SocialCards>
+                    <SocialCard>
+                        <HeaderSocialCard>
+                            <Link to="/">
+                                <ImgSocial><img src={Twitter} alt="Twitter"/></ImgSocial>
+                                <SocialName>Twitter</SocialName>
+                            </Link>
+                            <MainBut>
+                                <Link to = "/">FOLLOW US</Link>
+                            </MainBut>
+                        </HeaderSocialCard>
+                        <MainPartSocialCard>
+                            <SocialDate>24 Jun at 16:20 pm</SocialDate>
+                            <TextAndAutor>
+                                <MainSocialText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur, 
+                                    consectetur adipiscing elit, consectetur adipiscing, 
+                                    sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing,
+                                </MainSocialText>
+                                <Link to="/">@DennisFerguson</Link>
+                            </TextAndAutor>
+                        </MainPartSocialCard>
+                    </SocialCard>
+                    <SocialCard className='centerCard'>
+                        <HeaderSocialCard>
+                            <Link to="/">
+                                <ImgSocial><img src={Instagram} alt="Twitter"/></ImgSocial>
+                                <SocialName>Instagram</SocialName>
+                            </Link>
+                            <MainBut>
+                                <Link to = "/">FOLLOW US</Link>
+                            </MainBut>
+                        </HeaderSocialCard>
+                        <MainPartSocialCard>
+                                <SocialImgBlock>
+                                    <ImgHover className='img1'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>
+                                    <ImgHover className='img2'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>
+                                    <ImgHover className='img3'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>
+                                </SocialImgBlock>
 
-                            <SocialImgBlock>
-                                <ImgHover className='img4'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                                <ImgHover className='img5'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                                <ImgHover className='img6'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                            </SocialImgBlock>
+                                <SocialImgBlock>
+                                    <ImgHover className='img4'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>
+                                    <ImgHover className='img5'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>
+                                    <ImgHover className='img6'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>
+                                </SocialImgBlock>
 
-                            <SocialImgBlock>
-                                <ImgHover className='img7'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                                <ImgHover className='img8'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>
-                                <ImgHover className='img9'>
-                                    <Link to="/">
-                                        <img src={GrayArrow} alt="arrow1" />
-                                    </Link>
-                                </ImgHover>    
-                            </SocialImgBlock>
-                    </MainPartSocialCard>
-                </SocialCard>
-                <SocialCard>
-                    <HeaderSocialCard>
-                        <Link to="/">
-                            <ImgSocial><img src={Facebook} alt="Twitter"/></ImgSocial>
-                            <SocialName>Facebook</SocialName>
-                        </Link>
-                        <MainBut>
-                            <Link to = "/">FOLLOW US</Link>
-                        </MainBut>
-                    </HeaderSocialCard>
-                    <MainPartSocialCard>
-                    <SocialDate>17 Oct at 13:28 pm</SocialDate>
-                        <TextAndAutor>
-                            <MainSocialText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur, consectetur adipisci
-                                consectetur adipiscing elit, consectetur adipiscing, adipiscing elit, consectetur adipiscin
-                                sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit amet, 
-                                consectetur adipiscing,
-                            </MainSocialText>
-                            <Link to="/">@MarkRergson</Link>
-                        </TextAndAutor>
-                    </MainPartSocialCard>
-                </SocialCard>
-            </SocialCards>
+                                <SocialImgBlock>
+                                    <ImgHover className='img7'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>
+                                    <ImgHover className='img8'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>
+                                    <ImgHover className='img9'>
+                                        <Link to="/">
+                                            <img src={GrayArrow} alt="arrow1" />
+                                        </Link>
+                                    </ImgHover>    
+                                </SocialImgBlock>
+                        </MainPartSocialCard>
+                    </SocialCard>
+                    <SocialCard>
+                        <HeaderSocialCard>
+                            <Link to="/">
+                                <ImgSocial><img src={Facebook} alt="Twitter"/></ImgSocial>
+                                <SocialName>Facebook</SocialName>
+                            </Link>
+                            <MainBut>
+                                <Link to = "/">FOLLOW US</Link>
+                            </MainBut>
+                        </HeaderSocialCard>
+                        <MainPartSocialCard>
+                        <SocialDate>17 Oct at 13:28 pm</SocialDate>
+                            <TextAndAutor>
+                                <MainSocialText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur, consectetur adipisci
+                                    consectetur adipiscing elit, consectetur adipiscing, adipiscing elit, consectetur adipiscin
+                                    sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing,
+                                </MainSocialText>
+                                <Link to="/">@MarkRergson</Link>
+                            </TextAndAutor>
+                        </MainPartSocialCard>
+                    </SocialCard>
+                </SocialCards>
+            </SocialContent>
         </MainSocial>
     )
 }
@@ -151,12 +153,36 @@ const MainSocial = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-bottom:60px;
+    width:100%;
+    align-items: center;
 
     .bgtitle {
         p:after {
             content: 'We in Social';
             min-width: max-content;
         }
+    }
+`;
+
+const SocialContent = styled.div`
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1162px) {
+        width: 960px;
+    }  
+
+    @media (max-width: 984px) {
+        width: 720px;
+    }
+
+    @media (max-width: 767px) {
+        width: 540px;
+    }
+
+    @media (max-width: 550px) {
+        width: 440px;
     }
 `;
 
@@ -189,13 +215,24 @@ const SocialCards = styled.div`
         }
     }
 
-    @media (max-width: 1100px) {
-        flex-direction: column;
+    @media (max-width: 1162px) {
+        // flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
         div {
             max-width: 350px;
         }
 
+        .centerCard {
+            margin-right:0px;
+            // margin-left:0px;
+            margin-top:30px;
+            margin-bottom:30px;
+        }
+    }
+
+    @media (max-width: 984px) {
+        flex-direction: column;
         .centerCard {
             margin-right:0px;
             margin-left:0px;
