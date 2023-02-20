@@ -8,6 +8,11 @@ import { useState } from 'react';
 
 function Header () {
     const [nav, setNav] = useState(false);
+
+    function ChangeBurger() {
+        setNav(!nav);
+    }
+
     return (
         <MainHeader className='header' >
             <HeaderContent>
@@ -27,7 +32,7 @@ function Header () {
                         </ul>
                 </MainNav>
 
-                <MenuBurger onClick = {() => setNav(!nav)}>
+                <MenuBurger onClick = {ChangeBurger}>
                     {nav ? <CloseHeaderBurger><span/></CloseHeaderBurger> : <CloseHeaderBurger className='HeadBurger'><span/></CloseHeaderBurger>}
                 </MenuBurger>
             </HeaderContent>
