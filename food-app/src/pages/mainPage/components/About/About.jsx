@@ -41,7 +41,7 @@ const MainAbout = styled.div`
     position: relative;
     min-height: 100vh;
     display flex;
-    width: 100%;
+    width: 80%;
     align-content: center;
     justify-content: center;
     align-items: flex-start;
@@ -50,7 +50,7 @@ const MainAbout = styled.div`
 
 const PlaceholderAbout = styled.div`
     max-height: 736px;
-    width: fit-content;
+    width: 100%;
     background: #252525;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
@@ -87,10 +87,14 @@ export const MainTitle = styled.div`
             justify-content: center;
             width:100%;
         }
-    
-        @media (max-width: 540px) {
+
+        @media (max-width: 700px) {
             font-size: 24px;
             min-width: max-content;
+        }
+
+        @media (max-width: 555px) {
+            font-size: 20px;
         }
     }
 `;
@@ -174,7 +178,7 @@ const AboutImg = styled.div`
         margin-right: 64px;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1245px) {
         .firstimgslider {
             width:40%;
         }

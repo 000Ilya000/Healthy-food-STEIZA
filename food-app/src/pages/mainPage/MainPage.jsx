@@ -17,7 +17,7 @@ import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
 function Main () {
     return (
-        <MainContainer>
+        <Container>
             <MainM>
                 <Header/>
                 <FirstScreen>
@@ -60,7 +60,7 @@ function Main () {
             <Recipes/>
             <Social/> 
             <Footer/>
-        </MainContainer>
+        </Container>
     )
 }
   
@@ -77,17 +77,18 @@ window.onscroll = function showHeader() {
     }
 }
 
-const MainContainer = styled.div`
+const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
 `;
 
 const MainM = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100wh;
+    width: 100%;
     background: url('${bgImg}') no-repeat center center;
     background-size: cover; 
 
@@ -109,7 +110,7 @@ const FirstScreen = styled.div`
     // padding-bottom: 40px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -10,25 +10,27 @@ function Header () {
     const [nav, setNav] = useState(false);
     return (
         <MainHeader className='header' >
-            <Logo>
-                <Link to="/">
-                    <img src={logo} alt="logo" />
-                    <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
-                </Link>
-            </Logo>
-            
-            <MainNav>
-                    <ul className={ nav ? 'active' : 'menu'}>
-                        <li><Link to="/">Menu</Link></li>
-                        <li><Link to="/">Recipes</Link></li>
-                        <li><Link to="/">Chefs</Link></li>
-                        <li><Link to="/">Contacts</Link></li>   
-                    </ul>
-            </MainNav>
+            <HeaderContent>
+                <Logo>
+                    <Link to="/">
+                        <img src={logo} alt="logo" />
+                        <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
+                    </Link>
+                </Logo>
+                
+                <MainNav>
+                        <ul className={ nav ? 'active' : 'menu'}>
+                            <li><Link to="/">Menu</Link></li>
+                            <li><Link to="/">Recipes</Link></li>
+                            <li><Link to="/">Chefs</Link></li>
+                            <li><Link to="/">Contacts</Link></li>   
+                        </ul>
+                </MainNav>
 
-            <MenuBurger onClick = {() => setNav(!nav)}>
-                {nav ? <CloseHeaderBurger><span/></CloseHeaderBurger> : <HeaderBurger><span></span></HeaderBurger>}
-            </MenuBurger>
+                <MenuBurger onClick = {() => setNav(!nav)}>
+                    {nav ? <CloseHeaderBurger><span/></CloseHeaderBurger> : <HeaderBurger><span/></HeaderBurger>}
+                </MenuBurger>
+            </HeaderContent>
         </MainHeader>
     )
 }
@@ -41,11 +43,12 @@ const MainHeader = styled.div`
     display: flex;
     align-items: center;
     width:100%;
-    justify-content: space-between;
+    // justify-content: space-between;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     transition: 0.2s;
     background: none;
     position: fixed;
+    justify-content: center;
 
     @media (max-width: 850px) {
         justify-content: space-evenly;
@@ -77,8 +80,15 @@ const MainHeader = styled.div`
     }
 `;
 
+const HeaderContent = styled.div`
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+`;
+
 export const Logo = styled.div`
-    margin-left: 165px;
+    // margin-left: 165px;
     display:flex;
     width:200px;
     height: 25px;
@@ -114,6 +124,7 @@ const MainNav = styled.div`
     }
 
     ul {
+        padding-left:0px;
         list-style: none;
         font-family: "HelveticaNeueRegular";
         font-style: normal;
@@ -123,7 +134,7 @@ const MainNav = styled.div`
         display: flex;
         align-items: center;
         width:100%;
-        margin-right:130px;
+        // margin-right:130px;
 
 
         @media (max-width: 850px) {
@@ -142,9 +153,6 @@ const MainNav = styled.div`
         }
     }
 
-    ul li {
-    }
-
     ul li a {
         margin-right:45px;
         cursor: pointer;
@@ -160,6 +168,10 @@ const MainNav = styled.div`
         @media (max-width: 520px) {
             margin-right: 8px;
         }
+    }
+
+    ul li:last-child a {
+        margin-right:0px;
     }
 
     ul li a:hover {
@@ -184,6 +196,10 @@ const MainNav = styled.div`
             height:100%;
             transition: left 0.8s;
             padding-top: 0px;
+        }
+
+        ul li:last-child a {
+            margin-right:8px;
         }
 
         .active {

@@ -164,7 +164,7 @@ const SocialCards = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 60px;
-
+    width:100%;
     .centerCard {
         margin-left: 30px;
         margin-right: 30px;

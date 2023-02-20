@@ -55,7 +55,8 @@ const MainFooter = styled.div`
     display: flex;
     min-height:275px;
     flex-direction: column;
-    justify-content: space-around
+    justify-content: space-around;
+    width:100%; 
 `
 
 const FooterMainInfo = styled.div`
@@ -67,8 +68,8 @@ const FooterMainInfo = styled.div`
 
     .centrcards {
         width:80%;
-        justify-content: space-evenly;
         margin: 0px;
+        justify-content: space-between;
     }
 
     @media (max-width: 720px) {

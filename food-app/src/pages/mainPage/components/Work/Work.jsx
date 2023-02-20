@@ -54,6 +54,7 @@ const HowItWork = styled.div`
     justify-content: center;
     margin-top:90px;
     margin-bottom:90px;
+    min-width:80%;
 
     @media (max-width: 1100px) {
         width:100%;
