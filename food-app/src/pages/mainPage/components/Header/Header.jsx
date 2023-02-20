@@ -28,7 +28,7 @@ function Header () {
                 </MainNav>
 
                 <MenuBurger onClick = {() => setNav(!nav)}>
-                    {nav ? <CloseHeaderBurger><span/></CloseHeaderBurger> : <HeaderBurger><span/></HeaderBurger>}
+                    {nav ? <CloseHeaderBurger><span/></CloseHeaderBurger> : <CloseHeaderBurger className='HeadBurger'><span/></CloseHeaderBurger>}
                 </MenuBurger>
             </HeaderContent>
         </MainHeader>
@@ -222,7 +222,7 @@ const MainNav = styled.div`
             left: 0;
             position: fixed;
             height: 100%;
-            transition: left 0.8s;
+            transition: left 0.5s;
         }
     }
 `;
@@ -233,87 +233,98 @@ const MenuBurger = styled.div`
     @media(max-width: 767px){
         position: relative;
     }
+
+    opacity: 100;
+
+    .HeadBurger {
+        // // display: none;
+        // margin-right: 18px;
+    
+        @media(max-width: 767px){
+            span {
+                top: 20px;
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                background: white;
+                margin: 0 auto;
+                transition: 0.5s;
+                opacity: 100;
+    
+                
+                ::after, ::before {
+                    content: '';
+                    height: 2px;
+                    width: 100%;
+                    position: absolute;
+                    background: white;
+                    margin: 0 auto;
+                    transition: 0.5s;
+                    opacity: 100;
+                }
+    
+                ::after {
+                    transform: rotate(0deg);
+                    bottom: 8px;
+                    transition: 0.5s;
+                }
+        
+                ::before {
+                    transform: rotate(0deg);
+                    top: 8px;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
 `;
 
 const CloseHeaderBurger = styled.div`
-    display: none;
+
+    opacity: 100;
 
     @media(max-width: 767px){
-        position: relative;
         width: 40px;
         height: 35px;
         display: flex;
         z-index:10;
         margin-right: 18px;
-        // transition: 2s;
-
-        span, ::after, ::before {
-            height: 2px;
-            width: 100%;
-            position: absolute;
-            background: white;
-            margin: 0 auto;
-
-        }
-
-        span {
-            top: 20px;
-            opacity:0; 
-        }
-    
-        ::after, ::before {
-            content: '';
-        }
-
-        ::after {
-            transform: rotate(-40deg);
-            bottom: 16px;
-        }
-
-        ::before {
-            transform: rotate(40deg);
-            top: 17px;
-        }
-    }
-`;
-
-const HeaderBurger = styled.div`
-    display: none;
-    margin-right: 18px;
-    // transition: 2s;
-
-    @media(max-width: 767px){
+        transition: 0.5s;
         position: relative;
-        width: 40px;
-        height: 35px;
-        display: flex;
-        z-index:10;
-
-
-        span, ::after, ::before {
-            height: 2px;
-            width: 100%;
-            position: absolute;
-            background: white;
-            margin: 0 auto;
-
-        }
 
         span {
             top: 20px;
-            opacity: 100%;
-        }
+            opacity: 100;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            margin: 0 auto;
+            transition: 0.1s;
+            position: relative;
+            background: rgba(255, 255, 255, 0);
+            
+            ::after, ::before {
+                content: '';
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                background: white;
+                margin: 0 auto;
+                transition: 0.5s;
+                opacity: 100;
+            }
+
+            ::after {
+                transform: rotate(-40deg);
+                bottom: 0px;
+                transition: 0.5s;
+            }
     
-        ::after, ::before {
-            content: '';
-        }
-
-        ::after {
-            bottom: 5px;
-        }
-
-        ::before {
-            top: 12px;
+            ::before {
+                transform: rotate(40deg);
+                top: 0px;
+                transition: 0.5s;
+            }
         }
     }
 `;
