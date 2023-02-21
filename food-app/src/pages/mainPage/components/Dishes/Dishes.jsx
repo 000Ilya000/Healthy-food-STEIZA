@@ -13,6 +13,8 @@ import WhiteARR from './images/WhiteARR.svg';
 import { MainTitle } from '../About/About';
 import { Title } from '../About/About';
 import { BackgroundTitle } from '../About/About';
+import { useState} from 'react';
+
 
 // function changeColor(e) {
 //     const btn = document.getElementsByClassName('MainButton')
@@ -21,6 +23,33 @@ import { BackgroundTitle } from '../About/About';
 
 
 function DishesScreen () {
+    const [nav, setNav] = useState(false);
+    const [nav1, setNav1] = useState(false);
+    const [nav2, setNav2] = useState(false);
+    const [nav3, setNav3] = useState(false);
+    const [nav4, setNav4] = useState(false);
+    const [nav5, setNav5] = useState(false);
+
+
+    function ChangeDishesButton1() {
+        setNav(!nav);
+    }
+    function ChangeDishesButton2() {
+        setNav1(!nav1);
+    }
+    function ChangeDishesButton3() {
+        setNav2(!nav2);
+    }
+    function ChangeDishesButton4() {
+        setNav3(!nav3);
+    }
+    function ChangeDishesButton5() {
+        setNav4(!nav4);
+    }
+    function ChangeDishesButton6() {
+        setNav5(!nav5);
+    }
+
     return (
         <Dishes id='dishes'>
             <DishesContent>
@@ -43,7 +72,9 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                        <button className='MainButton'>ORDER</button>
+                                        <button onClick={ChangeDishesButton1}>
+                                            {nav ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
+                                        </button>
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
@@ -63,7 +94,9 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button className='MainButton'>ORDER</button>
+                                    <button onClick={ChangeDishesButton2}>
+                                            {nav1 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
+                                    </button>
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
@@ -83,7 +116,9 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button className='MainButton'>ORDER</button>
+                                    <button onClick={ChangeDishesButton3}>
+                                            {nav2 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
+                                    </button>
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
@@ -103,7 +138,9 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button className='MainButton'>ORDER</button>
+                                    <button onClick={ChangeDishesButton4}>
+                                            {nav3 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
+                                    </button>
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
@@ -123,7 +160,9 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button className='MainButton'>ORDER</button>
+                                    <button onClick={ChangeDishesButton5}>
+                                            {nav4 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
+                                    </button>
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
@@ -143,7 +182,9 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button className='MainButton'>ORDER</button>
+                                    <button onClick={ChangeDishesButton6}>
+                                            {nav5 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
+                                    </button>
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
@@ -199,7 +240,6 @@ const DishesContent = styled.div`
 `;
 
 const MainDishCards = styled.div`
-    width:80%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -214,16 +254,17 @@ const MainDishCards = styled.div`
     }
 
     @media (max-width: 1300px) {
+        // width:100%;
+        .secondthree {
+            margin-bottom:40px;
+        }
+    }
+    @media (max-width: 1050px) {
         width:100%;
         .secondthree {
             margin-bottom:40px;
         }
     }
-    // @media (max-width: 1050px) {
-    //     .secondthree {
-    //         margin-bottom:40px;
-    //     }
-    // }
 `;
 
 const DishCard = styled.div`
@@ -283,6 +324,10 @@ const CardContent = styled.div`
     margin-left: 8%;
 `;
 
+const MainBut = styled.div`
+
+`;
+
 const MainDishesCardTitle = styled.p`
     // width: 290px;
     font-weight: 400;
@@ -316,16 +361,41 @@ const DishesDescr = styled.p`
 `;
 
 const DishesCardFoot = styled.div`
+    margin-top: 20px;
+
     button {
-        margin-left:11%;
+        margin-left:8%;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .MainButton {
+        display: flex;
+        font-weight: 600;
+        padding: 16px 36px;
+        border-radius: 43px;
+        transition: 0.4s;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "HelveticaNeueBold";
+        font-size: 10px;
+        background: none;
+        border: 2px solid #303030; 
+        letter-spacing: 0.1em;
     }
 
     .active {
-        background-color: red;
-    }
-
-    div:last-child {
-        margin-left:11%;
+        display: flex;
+        font-weight: 600;
+        padding: 16px 36px;
+        border-radius: 43px;
+        transition: 0.4s;
+        color: #252525;
+        font-family: "HelveticaNeueBold";
+        font-size: 10px;
+        background: #34C759;
+        border: 2px solid #34C759; 
+        letter-spacing: 0.1em;
     }
 
     display: flex;

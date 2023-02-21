@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import logo from './images/Logo.svg';
 import HEALTHYSWITCHER from './images/HEALTHY SWITCHER.svg';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import Recipes from '../Recipes/Recipes';
+import { animateScroll as scroll } from "react-scroll";
 
-
-function Header () {
+function Header() {
     const [nav, setNav] = useState(false);
 
     function ChangeBurger() {
@@ -25,8 +26,8 @@ function Header () {
                 
                 <MainNav>
                         <ul className={ nav ? 'active' : 'menu'}>
-                            <li><Link to="/">Menu</Link></li>
-                            <li><Link to="/">Recipes</Link></li>
+                            <li><Link to="/#menu">Menu</Link></li>
+                            <li><Link to="/#recipes">Recipes</Link></li>
                             <li><Link to="/">Chefs</Link></li>
                             <li><Link to="/">Contacts</Link></li>   
                         </ul>
@@ -36,12 +37,14 @@ function Header () {
                     {nav ? <CloseHeaderBurger><span/></CloseHeaderBurger> : <CloseHeaderBurger className='HeadBurger'><span/></CloseHeaderBurger>}
                 </MenuBurger>
             </HeaderContent>
+
         </MainHeader>
     )
 }
 
 
 export default Header;
+
 
 const MainHeader = styled.div`
     // height:90px;

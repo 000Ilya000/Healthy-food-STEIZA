@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { animateScroll as scroll } from "react-scroll";
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import bgImg from '../../assets/img/placeholder.svg';
-import icon_time from '../../assets/img/icon_time.svg';
+import icon_time from '../../assets/img/icon_time.svg'; 
 import icon_adress from '../../assets/img/icon_adress.svg';
 import icon_call from '../../assets/img/icon_call.svg';
 import Header from './components/Header/Header';
@@ -14,9 +15,13 @@ import Recipes from './components/Recipes/Recipes';
 import Social from './components/Social/Social';
 import Footer from './components/Footer/Footer';
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import { useState, useRef } from 'react';
 
-function Main () {
+
+function Main() {
+    
     return (
+
         <Container>
             <MainM>
                 <Header/>

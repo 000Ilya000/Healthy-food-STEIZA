@@ -11,7 +11,6 @@ import { Title } from '../About/About';
 import { BackgroundTitle } from '../About/About';
 
 
-
 function Recipes () {
     return (
         <MainRecipes>

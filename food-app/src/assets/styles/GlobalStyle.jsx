@@ -24,28 +24,28 @@ export default createGlobalStyle`
         margin-bottom:0px;
     };
 
-    .MainButton {
-        display: flex;
-        // font-weight: 900;
-        text-decoration: none;
-        padding: 15px 32px;
-        user-select: none;
-        outline: none;
-        border-radius: 43px;
-        transition: 0.4s;
-        color: black;
-        font-family: "HelveticaNeueBold";
-        font-size: 10px;
-        background: #34C759;
-        border: 1px solid #34C759;  
-        // letter-spacing: 0.2em;
-    } 
+    // .MainButton {
+    //     display: flex;
+    //     // font-weight: 900;
+    //     text-decoration: none;
+    //     padding: 15px 32px;
+    //     user-select: none;
+    //     outline: none;
+    //     border-radius: 43px;
+    //     transition: 0.4s;
+    //     color: black;
+    //     font-family: "HelveticaNeueBold";
+    //     font-size: 10px;
+    //     background: #34C759;
+    //     border: 1px solid #34C759;  
+    //     // letter-spacing: 0.2em;
+    // } 
 
-    .MainButton:hover {
-        color: #34C759;
-        background: none;
-        border: 1px solid #34C759;
-    }
+    // .MainButton:hover {
+    //     color: #34C759;
+    //     background: none;
+    //     border: 1px solid #34C759;
+    // }
 
     .bgtitle {
         display:flex;
