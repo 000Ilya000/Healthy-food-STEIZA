@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 // import DISHES from './Dishes(img)/DISHES.svg';
+import dishesinfo from './menu';
 import imgDishes1 from './images/imgDishes1.svg';
 import imgDishes2 from './images/imgDishes2.svg';
 import imgDishes3 from './images/imgDishes3.svg';
@@ -20,6 +21,8 @@ import { useState} from 'react';
 //     const btn = document.getElementsByClassName('MainButton')
 //     btn.className.add("active");     
 // };
+
+console.log(dishesinfo);
 
 
 function DishesScreen () {
