@@ -15,6 +15,7 @@ import { MainTitle } from '../About/About';
 import { Title } from '../About/About';
 import { BackgroundTitle } from '../About/About';
 import { useState} from 'react';
+// import { isInputElement } from 'react-router-dom/dist/dom';
 
 
 // function changeColor(e) {
@@ -22,36 +23,41 @@ import { useState} from 'react';
 //     btn.className.add("active");     
 // };
 
-console.log(dishesinfo);
+// console.log(resultdihesinfo);
+// const firstcardinfo = dishesinfo[0];
+
+// console.log(firstcardinfo);
 
 
 function DishesScreen () {
-    const [nav, setNav] = useState(false);
-    const [nav1, setNav1] = useState(false);
-    const [nav2, setNav2] = useState(false);
-    const [nav3, setNav3] = useState(false);
-    const [nav4, setNav4] = useState(false);
-    const [nav5, setNav5] = useState(false);
+    // const [nav, setNav] = useState(false);
+    // const [nav1, setNav1] = useState(false);
+    // const [nav2, setNav2] = useState(false);
+    // const [nav3, setNav3] = useState(false);
+    // const [nav4, setNav4] = useState(false);
+    // const [nav5, setNav5] = useState(false);
 
 
-    function ChangeDishesButton1() {
-        setNav(!nav);
-    }
-    function ChangeDishesButton2() {
-        setNav1(!nav1);
-    }
-    function ChangeDishesButton3() {
-        setNav2(!nav2);
-    }
-    function ChangeDishesButton4() {
-        setNav3(!nav3);
-    }
-    function ChangeDishesButton5() {
-        setNav4(!nav4);
-    }
-    function ChangeDishesButton6() {
-        setNav5(!nav5);
-    }
+    // function ChangeDishesButton1() {
+    //     setNav(!nav);
+    // }
+    // function ChangeDishesButton2() {
+    //     setNav1(!nav1);
+    // }
+    // function ChangeDishesButton3() {
+    //     setNav2(!nav2);
+    // }
+    // function ChangeDishesButton4() {
+    //     setNav3(!nav3);
+    // }
+    // function ChangeDishesButton5() {
+    //     setNav4(!nav4);
+    // }
+    // function ChangeDishesButton6() {
+    //     setNav5(!nav5);
+    // }
+
+    // const firstcardinfo = dishesinfo[0];
 
     return (
         <Dishes id='dishes'>
@@ -60,11 +66,12 @@ function DishesScreen () {
                     <BackgroundTitle>DISHES</BackgroundTitle>
                 </MainTitle>
                 <MainDishCards>
-                        <DishCard className='firstthree'>
+                        <DishCard>
                             <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
-                            <img src={imgDishes1} alt="imgDishes1" />
+                            {dishesinfo.map((item, index) => <img key={index} src={item.image.img1}/>)}
                             <CardContent>
                                 <DishesCardTitle>
+                                    {/* {dishesinfo.map((item, id) => <MainDishesCardTitle key={id}>{item.title}</MainDishesCardTitle>)} */}
                                     <MainDishesCardTitle>Featured Meal</MainDishesCardTitle>
                                     <DishesCardTitleDescr>Served with french fries + drink</DishesCardTitleDescr>
                                 </DishesCardTitle>
@@ -75,14 +82,13 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                        <button onClick={ChangeDishesButton1}>
-                                            {nav ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
-                                        </button>
+                                        <button>ORDER</button>
+                                        {/* {nav ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>} */}
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
                         
-                        <DishCard className='firstthree'>
+                        <DishCard>
                             <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                             <img src={imgDishes2} alt="imgDishes2" />
                             <CardContent>
@@ -97,14 +103,13 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button onClick={ChangeDishesButton2}>
-                                            {nav1 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
-                                    </button>
+                                    <button>ORDER</button>
+                                    {/* {nav1 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>} */}
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
                         
-                        <DishCard className='firstthree'>
+                        <DishCard>
                             <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                             <img src={imgDishes3} alt="imgDishes3" />
                             <CardContent>
@@ -119,14 +124,13 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button onClick={ChangeDishesButton3}>
-                                            {nav2 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
-                                    </button>
+                                    <button>ORDER</button>
+                                    {/* {nav2 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>} */}
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
                         
-                        <DishCard className='secondthree'>
+                        <DishCard>
                             <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                             <img src={imgDishes4} alt="imgDishes4" />
                             <CardContent>
@@ -141,14 +145,13 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button onClick={ChangeDishesButton4}>
-                                            {nav3 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
-                                    </button>
+                                    <button>ORDER</button>
+                                    {/* {nav3 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>} */}
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
                         
-                        <DishCard className='secondthree'>
+                        <DishCard>
                             <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                             <img src={imgDishes5} alt="imgDishes5" />
                             <CardContent>
@@ -163,14 +166,13 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button onClick={ChangeDishesButton5}>
-                                            {nav4 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
-                                    </button>
+                                    <button>ORDER</button>
+                                    {/* {nav4 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>} */}
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
                         
-                        <DishCard className='secondthree'>
+                        <DishCard>
                             <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
                             <img src={imgDishes6} alt="imgDishes6" />
                             <CardContent>
@@ -185,9 +187,8 @@ function DishesScreen () {
                                     <DishesReiting>
                                         <img src={stars} alt="stars" />
                                     </DishesReiting>
-                                    <button onClick={ChangeDishesButton6}>
-                                            {nav5 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>}
-                                    </button>
+                                    <button>ORDER</button>
+                                    {/* {nav5 ? <MainBut className='active'>ORDER</MainBut> : <MainBut className='MainButton'>ORDER</MainBut>} */}
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
@@ -252,22 +253,22 @@ const MainDishCards = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
 
-    .firstthree {
-        margin-bottom:40px;
-    }
+    // div {
+    //     margin-bottom:40px;
+    // }
 
-    @media (max-width: 1300px) {
-        // width:100%;
-        .secondthree {
-            margin-bottom:40px;
-        }
-    }
-    @media (max-width: 1050px) {
-        width:100%;
-        .secondthree {
-            margin-bottom:40px;
-        }
-    }
+    // @media (max-width: 1300px) {
+    //     // width:100%;
+    //     .secondthree {
+    //         margin-bottom:40px;
+    //     }
+    // }
+    // @media (max-width: 1050px) {
+    //     width:100%;
+    //     .secondthree {
+    //         margin-bottom:40px;
+    //     }
+    // }
 `;
 
 const DishCard = styled.div`
@@ -279,6 +280,7 @@ const DishCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-bottom:40px;
 
 
     :hover {
@@ -368,12 +370,9 @@ const DishesCardFoot = styled.div`
 
     button {
         margin-left:8%;
-        border: none;
-        background: none;
+        // border: none;
+        // background: none;
         cursor: pointer;
-    }
-
-    .MainButton {
         display: flex;
         font-weight: 600;
         padding: 16px 36px;
@@ -387,19 +386,33 @@ const DishesCardFoot = styled.div`
         letter-spacing: 0.1em;
     }
 
-    .active {
-        display: flex;
-        font-weight: 600;
-        padding: 16px 36px;
-        border-radius: 43px;
-        transition: 0.4s;
-        color: #252525;
-        font-family: "HelveticaNeueBold";
-        font-size: 10px;
-        background: #34C759;
-        border: 2px solid #34C759; 
-        letter-spacing: 0.1em;
-    }
+    // .MainButton {
+    //     display: flex;
+    //     font-weight: 600;
+    //     padding: 16px 36px;
+    //     border-radius: 43px;
+    //     transition: 0.4s;
+    //     color: rgba(255, 255, 255, 0.5);
+    //     font-family: "HelveticaNeueBold";
+    //     font-size: 10px;
+    //     background: none;
+    //     border: 2px solid #303030; 
+    //     letter-spacing: 0.1em;
+    // }
+
+    // .active {
+    //     display: flex;
+    //     font-weight: 600;
+    //     padding: 16px 36px;
+    //     border-radius: 43px;
+    //     transition: 0.4s;
+    //     color: #252525;
+    //     font-family: "HelveticaNeueBold";
+    //     font-size: 10px;
+    //     background: #34C759;
+    //     border: 2px solid #34C759; 
+    //     letter-spacing: 0.1em;
+    // }
 
     display: flex;
     align-items: center;
