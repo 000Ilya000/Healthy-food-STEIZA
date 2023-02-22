@@ -7,7 +7,7 @@ import img6 from './images/imgDishes6.svg';
 
 const  dishesinfo = [
     {
-        image: {img1},
+        image: img1,
         title: "Featured Meal",
         subtitle: "Served with french fries + drink",
         description: "Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...",
@@ -30,10 +30,10 @@ const  dishesinfo = [
         ]
     },
     {
-        image: {img2},
+        image: img2,
         title: "Morbi nec",
         subtitle: "Morbi nec tortor a mauris consectetur pulvinar",
-        description: "In vehicula odio quis metus consequat, vel porta purus lacinia...",
+        description: "In vehicula odio quis metus consequat, Add Tender crisp patty and more vel porta purus lacinia...",
         reviews: [
             {
                 name: "Mikle",
@@ -58,10 +58,10 @@ const  dishesinfo = [
         ]
     },
     {
-        image: {img3},
+        image: img3,
         title: "Aenean in urna",
         subtitle: "Phasellus ut massa eget arcu faucibus rutrum",
-        description: "Fusce placerat viverra arcu, nec molestie diam pharetra sit amet...",
+        description: "Fusce placerat viverra tender main crisp patty and more arcu, nec molestie diam pharetra sit amet...",
         reviews: [
             {
                 name: "Gregory",
@@ -71,10 +71,10 @@ const  dishesinfo = [
         ]
     },
     {
-        image: {img4},
-        title: "Nulla non sollicitudin purus",
+        image: img4,
+        title: "Nulla purus",
         subtitle: "Quisque ut molestie velit, in aliquet mauris",
-        description: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae...",
+        description: "Vestibulum ante tenderpatty and more tender crisp and ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae...",
         reviews: [
             {
                 name: "James",
@@ -89,10 +89,10 @@ const  dishesinfo = [
         ]
     },
     {
-        image: {img5},
-        title: "Suspendisse ac nisi justo",
+        image: img5,
+        title: "Suspendisse justo",
         subtitle: "Praesent venenatis dui a tempor tempus",
-        description: "In sed hendrerit sapien, eu efficitur orci...",
+        description: "In sed hendrerit crisp patty and more patty and more sapien, eu efficitur crisp patty and more orci...",
         reviews: [
             {
                 name: "Natalie",
@@ -107,10 +107,10 @@ const  dishesinfo = [
         ]
     },
     {
-        image: {img6},
-        title: "Pellentesque vel laoreet lectus",
+        image: img6,
+        title: "Pellentesque vel",
         subtitle: "Vestibulum eu turpis quis lacus gravida feugiat",
-        description: "Phasellus turpis mi, commodo a ultricies nec, convallis a tortor...",
+        description: "More phasellus crisp patty and more turpis mi, commodo a ultricies add tender crisp nec, convallis a tortor...",
         reviews: [
             {
                 name: "Richard",
