@@ -15,15 +15,46 @@ import Recipes from './components/Recipes/Recipes';
 import Social from './components/Social/Social';
 import Footer from './components/Footer/Footer';
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 
 function Main() {
-    
+    // const [nav, setNav] = useState(false);
+    // const [isActive, setIsActive] = useState(false);
+
+    // function ChangeBurger() {
+    //     setNav(!nav);
+    // }
+
+    // function headerChange() {
+    //     setIsActive(!isActive);
+    // }
+
+    // window.onscroll = function showHeader() {
+    //     headerChange();
+    //     // var header = document.querySelector('.header');
+
+    //     // if(window.pageYOffset > 20) {
+    //     //     // header.classList.add('header_fixed');
+    //     //     isActive ? <Header/> : <Header className='header_fixed'/>
+    //     // // } else {
+    //     // //     header.classList.remove('header_fixed');
+    //     // }
+    // }
+
     return (
 
         <Container>
             <MainM>
+
+                {/* {window.onscroll = function showHeader() {
+                    if(window.pageYOffset > 20) {
+                        headerChange()
+                        console.log('ghbdtn')
+                    }
+                }} 
+                isActive ? <Header className='header_fixed'/> : <Header/> */}
+
                 <Header/>
                 <FirstScreen>
                     <Text>
@@ -72,15 +103,16 @@ function Main() {
 
 export default Main;
 
-window.onscroll = function showHeader() {
-    var header = document.querySelector('.header');
+// { window.onscroll = function showHeader() {
+//     var header = document.querySelector('.header');
 
-    if(window.pageYOffset > 20) {
-        header.classList.add('header_fixed');
-    } else {
-        header.classList.remove('header_fixed');
-    }
-}
+//     if(window.pageYOffset > 20) {
+//         header.classList.add('header_fixed');
+//         nav ? <Header/> : <Header className='header_fixed'/>
+//         } else {
+//             header.classList.remove('header_fixed');
+//     }
+// }}
 
 const Container = styled.div`
     display: flex;
@@ -99,7 +131,7 @@ const MainM = styled.div`
     background-size: cover; 
 
 
-    .header_fixed {
+    .header {
         background: rgba(26, 26, 26, 1);
         z-index: 2;
         top:0;

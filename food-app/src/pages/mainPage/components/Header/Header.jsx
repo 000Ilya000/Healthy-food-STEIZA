@@ -3,19 +3,25 @@ import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import logo from './images/Logo.svg';
 import HEALTHYSWITCHER from './images/HEALTHY SWITCHER.svg';
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Recipes from '../Recipes/Recipes';
 import { animateScroll as scroll } from "react-scroll";
 
 function Header() {
     const [nav, setNav] = useState(false);
+    const [isActive, setIsActive] = useState(true);
 
     function ChangeBurger() {
         setNav(!nav);
     }
 
+    {window.onscroll = function showHeader() {
+        window.pageYOffset > 20 ? setIsActive(false) : setIsActive(true)
+    }} 
+
     return (
-        <MainHeader className='header' >
+        <MainHeader className={isActive ? 'header_fixed' : 'header'}> 
+            {/* {isActive ? <MainHeaderd className='header_fixed'/> : <MainHeaderd className='header'/>} */}
             <HeaderContent>
                 <Logo>
                     <Link to="/">
@@ -38,6 +44,8 @@ function Header() {
                 </MenuBurger>
             </HeaderContent>
 
+        {/* <MainHeader className='header'>
+        </MainHeader> */}
         </MainHeader>
     )
 }
@@ -45,6 +53,8 @@ function Header() {
 
 export default Header;
 
+// const MainHeaderd = styled.div`
+// `;
 
 const MainHeader = styled.div`
     // height:90px;
@@ -60,6 +70,14 @@ const MainHeader = styled.div`
 
     @media (max-width: 850px) {
         justify-content: space-evenly;
+    }
+
+    .header {
+        background: rgba(26, 26, 26, 1);
+        position: fixed;
+        z-index: 2;
+        top:0;
+        left:0;
     }
 
     .burger {
