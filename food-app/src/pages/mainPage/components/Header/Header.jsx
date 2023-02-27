@@ -9,18 +9,23 @@ import { animateScroll as scroll } from "react-scroll";
 
 function Header() {
     const [nav, setNav] = useState(false);
-    const [isActive, setIsActive] = useState(true);
+    const [scrolling, setScrolling] = useState(true);
 
     function ChangeBurger() {
         setNav(!nav);
     }
+    
+    useEffect(() => {
+        const onScroll = () => setScrolling(window.pageYOffset < 20);
+        window.addEventListener('scroll', onScroll);
+    })
 
-    {window.onscroll = function showHeader() {
-        window.pageYOffset > 20 ? setIsActive(false) : setIsActive(true)
-    }} 
+    // {window.onscroll = function showHeader() {
+    //     window.pageYOffset > 20 ? setIsActive(false) : setIsActive(true)
+    // }} 
 
     return (
-        <MainHeader className={isActive ? 'header_fixed' : 'header'}> 
+        <MainHeader className={scrolling ? 'header_fixed' : 'header'}> 
             {/* {isActive ? <MainHeaderd className='header_fixed'/> : <MainHeaderd className='header'/>} */}
             <HeaderContent>
                 <Logo>
