@@ -13,7 +13,7 @@ import { BackgroundTitle } from '../About/About';
 
 function Recipes () {
     return (
-        <MainRecipes>
+        <MainRecipes id='recipes'>
             <RecipesContent>
                 <MainTitle className='bgtitle'>
                     <BackgroundTitle>RECIPES</BackgroundTitle>

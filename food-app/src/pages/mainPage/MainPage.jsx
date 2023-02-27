@@ -65,7 +65,7 @@ function Main() {
                 }} 
                 isActive ? <Header className='header_fixed'/> : <Header/> */}
 
-                <Header menu='menu' recipes='' chefs='' contacts=''/>
+                <Header/>
                 <FirstScreen>
                     <Text>
                         <Title>

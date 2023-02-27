@@ -15,7 +15,7 @@ function App() {
         {/* <Main/> */}
         <Routes>
             <Route path="/" element={<Main/>}/>
-            <Route path="/menu" element={<DishesScreen/>}/>
+            {/* <Route path="/menu" element={<DishesScreen/>}/> */}
         </Routes>
       </Router>
     </>

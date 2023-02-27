@@ -19,7 +19,7 @@ import { MainBut } from '../../MainPage';
 
 function Social () {
     return (
-        <MainSocial>
+        <MainSocial id='social'>
             <SocialContent>
                 <MainTitle className='bgtitle'>
                     <BackgroundTitle>SOCIAL</BackgroundTitle>

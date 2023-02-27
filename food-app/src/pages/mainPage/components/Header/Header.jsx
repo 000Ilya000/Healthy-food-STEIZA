@@ -1,13 +1,13 @@
 import React, { Component} from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+// import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import logo from './images/Logo.svg';
 import HEALTHYSWITCHER from './images/HEALTHY SWITCHER.svg';
 import { useState, useEffect, useRef } from 'react';
 import Recipes from '../Recipes/Recipes';
-import { animateScroll } from "react-scroll";
+import { animateScroll, Link } from "react-scroll";
 
-function Header(props) {
+function Header() {
     const [nav, setNav] = useState(false);
     const [scrolling, setScrolling] = useState(true);
 
@@ -37,10 +37,10 @@ function Header(props) {
                 
                 <MainNav>
                         <ul className={ nav ? 'active' : 'menu'}>
-                            <li><Link to={props.menu}>Menu</Link></li>
-                            <li><Link to={props.recipes}>Recipes</Link></li>
-                            <li><Link to={props.chefs}>Chefs</Link></li>
-                            <li><Link to={props.contacts}>Contacts</Link></li>   
+                            <li><Link to="dishes" smooth={true} offset={-80} duration={500}>Menu</Link></li>
+                            <li><Link to="recipes" smooth={true} offset={-40} duration={500}>Recipes</Link></li>
+                            <li><Link to="chefs" smooth={true} duration={500}>Chefs</Link></li>
+                            <li><Link to="social" smooth={true} duration={500}>Contacts</Link></li>   
                         </ul>
                 </MainNav>
 

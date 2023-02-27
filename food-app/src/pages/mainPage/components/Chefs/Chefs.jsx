@@ -20,7 +20,7 @@ import { BackgroundTitle } from '../About/About';
 
 function Chefs () {
     return (
-        <BestChefs>
+        <BestChefs id='chefs'>
             <ChefsContent>
                 <MainTitle className='bgtitle' id='chefstitle'>
                     <BackgroundTitle>CHEFS</BackgroundTitle>
