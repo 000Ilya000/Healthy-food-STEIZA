@@ -5,20 +5,20 @@ import logo from './images/Logo.svg';
 import HEALTHYSWITCHER from './images/HEALTHY SWITCHER.svg';
 import { useState, useEffect, useRef } from 'react';
 import Recipes from '../Recipes/Recipes';
-import { animateScroll as scroll } from "react-scroll";
+import { animateScroll } from "react-scroll";
 
-function Header() {
+function Header(props) {
     const [nav, setNav] = useState(false);
     const [scrolling, setScrolling] = useState(true);
 
     function ChangeBurger() {
         setNav(!nav);
     }
-    
+
     useEffect(() => {
         const onScroll = () => setScrolling(window.pageYOffset < 20);
         window.addEventListener('scroll', onScroll);
-    })
+    },)
 
     // {window.onscroll = function showHeader() {
     //     window.pageYOffset > 20 ? setIsActive(false) : setIsActive(true)
@@ -37,10 +37,10 @@ function Header() {
                 
                 <MainNav>
                         <ul className={ nav ? 'active' : 'menu'}>
-                            <li><Link to="/#menu">Menu</Link></li>
-                            <li><Link to="/#recipes">Recipes</Link></li>
-                            <li><Link to="/">Chefs</Link></li>
-                            <li><Link to="/">Contacts</Link></li>   
+                            <li><Link to={props.menu}>Menu</Link></li>
+                            <li><Link to={props.recipes}>Recipes</Link></li>
+                            <li><Link to={props.chefs}>Chefs</Link></li>
+                            <li><Link to={props.contacts}>Contacts</Link></li>   
                         </ul>
                 </MainNav>
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { animateScroll as scroll } from "react-scroll";
+// import { animateScroll, Link } from "react-scroll";
 import styled from 'styled-components';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import bgImg from '../../assets/img/placeholder.svg';
@@ -42,6 +42,16 @@ function Main() {
     //     // }
     // }
 
+    // handleScroll = e => {
+    //     e.preventDefault();
+    //     const main = this.main.current;
+    //     window.scrollTo({
+    //         top: main.offsetTop,
+    //         left: 0,
+    //         behavior: "instant"
+    //     });
+    // };
+
     return (
 
         <Container>
@@ -55,7 +65,7 @@ function Main() {
                 }} 
                 isActive ? <Header className='header_fixed'/> : <Header/> */}
 
-                <Header/>
+                <Header menu='menu' recipes='' chefs='' contacts=''/>
                 <FirstScreen>
                     <Text>
                         <Title>
@@ -91,7 +101,7 @@ function Main() {
             </MainM> 
             <AboutScreen/>
             <Work/>
-            <DishesScreen/>
+            <DishesScreen id='menu'/>
             <Chefs/>
             <Recipes/>
             <Social/> 
