@@ -74,7 +74,7 @@ function DishesScreen () {
                     {dishesinfo.map((item, index) =>
                         <div key={index}>
                             <DishCard>
-                                <Link to="/"><img src={WhiteARR} alt="WhiteARR" /></Link>
+                                <Link to={`/${item.title}`}><img src={WhiteARR} alt="WhiteARR" /></Link>
                                 <img src={item.image} alt="imgDishes2"/>
                                 <CardContent>
                                     <DishesCardTitle>
@@ -148,7 +148,7 @@ const DishesContent = styled.div`
     }
 `;
 
-const MainDishCards = styled.div`
+export const MainDishCards = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -176,7 +176,7 @@ const MainDishCards = styled.div`
     // }
 `;
 
-const DishCard = styled.div`
+export const DishCard = styled.div`
     height: 494px;
     background: #252525;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -224,10 +224,10 @@ const DishCard = styled.div`
 
 
 
-const DishesCardTitle = styled.div`
+export const DishesCardTitle = styled.div`
 `;
 
-const CardContent = styled.div`
+export const CardContent = styled.div`
     // width: 100%;
     display: flex;
     flex-direction: column;
@@ -238,7 +238,7 @@ const MainBut = styled.div`
 
 `;
 
-const MainDishesCardTitle = styled.p`
+export const MainDishesCardTitle = styled.p`
     // width: 290px;
     font-weight: 400;
     font-size: 32px;
@@ -248,7 +248,7 @@ const MainDishesCardTitle = styled.p`
     margin-bottom: 0px;
 `;
 
-const DishesCardTitleDescr = styled.p`
+export const DishesCardTitleDescr = styled.p`
     // width: 290px;
     font-weight: 400;
     font-size: 12px;
@@ -258,7 +258,7 @@ const DishesCardTitleDescr = styled.p`
     margin-top: 0px;
 `;
 
-const DishesDescr = styled.p`
+export const DishesDescr = styled.p`
     // width: 290px;
 
     max-width: 85%;
@@ -270,7 +270,7 @@ const DishesDescr = styled.p`
     color: #85878C;
 `;
 
-const DishesCardFoot = styled.div`
+export const DishesCardFoot = styled.div`
     margin-top: 20px;
 
     button {
@@ -323,7 +323,7 @@ const DishesCardFoot = styled.div`
     align-items: center;
 `;
 
-const DishesReiting = styled.div`
+export const DishesReiting = styled.div`
     max-width: 155px;
     display: flex;
     align-items: center;

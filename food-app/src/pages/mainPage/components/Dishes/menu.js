@@ -27,7 +27,8 @@ const  dishesinfo = [
                 text: "Cras in lectus eget nisl ultricies iaculis nec ac nisi.",
                 rating: 4    
             }
-        ]
+        ],
+        // srcCard: '/DishesCard1'
     },
     {
         image: img2,
@@ -55,7 +56,8 @@ const  dishesinfo = [
                 text: "In orci ipsum, finibus id eros et, semper molestie nisi.",
                 rating: 3    
             }
-        ]
+        ],
+        // srcCard: '/DishesCard2'
     },
     {
         image: img3,
@@ -68,7 +70,8 @@ const  dishesinfo = [
                 text: "Nam pellentesque enim ac libero maximus finibus.",
                 rating: 5    
             }
-        ]
+        ],
+        // srcCard: '/DishesCard3'
     },
     {
         image: img4,
@@ -86,7 +89,8 @@ const  dishesinfo = [
                 text: "Curabitur in neque vitae tellus fermentum facilisis et sit amet mi.",
                 rating: 5    
             }
-        ]
+        ],
+        // srcCard: '/DishesCard4'
     },
     {
         image: img5,
@@ -104,7 +108,8 @@ const  dishesinfo = [
                 text: "Aliquam iaculis tempor metus, in vestibulum massa consequat at.",
                 rating: 5    
             }
-        ]
+        ],
+        // srcCard: '/DishesCard5'
     },
     {
         image: img6,
@@ -127,7 +132,8 @@ const  dishesinfo = [
                 text: "Proin malesuada purus vel gravida tincidunt.",
                 rating: 5    
             }
-        ]
+        ],
+        // srcCard: '/DishesCard6'
     }
 ];
 

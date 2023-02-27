@@ -6,6 +6,8 @@ import {BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 import Main from './pages/mainPage/MainPage';
 import Recipes from './pages/mainPage/components/Recipes/Recipes';
 import DishesScreen from './pages/mainPage/components/Dishes/Dishes';
+import DishesCard from './pages/DishesCards/components/DishesCard/DishesCard';
+import dishesinfo from './pages/mainPage/components/Dishes/menu';
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
         {/* <Main/> */}
         <Routes>
             <Route path="/" element={<Main/>}/>
-            {/* <Route path="/menu" element={<DishesScreen/>}/> */}
+            {/* <Route path={dishesinfo.map((item) => item.srcCard)} element={<DishesCard/>}/> */}
+            {dishesinfo.map((item, index) => <Route key={index} path={`/${item.title}`} element={<DishesCard/>}/>)}
         </Routes>
       </Router>
     </>
