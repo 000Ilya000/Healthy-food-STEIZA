@@ -28,7 +28,7 @@ const  dishesinfo = [
                 rating: 4    
             }
         ],
-        // srcCard: '/DishesCard1'
+        // fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur, consectetur adipiscing elit, consectetur adipiscing, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing,"
     },
     {
         image: img2,
@@ -57,6 +57,7 @@ const  dishesinfo = [
                 rating: 3    
             }
         ],
+        // fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur, consectetur adipiscing elit, consectetur adipiscing, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing,"
         // srcCard: '/DishesCard2'
     },
     {

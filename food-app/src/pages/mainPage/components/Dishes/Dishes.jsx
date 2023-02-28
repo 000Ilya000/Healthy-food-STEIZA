@@ -74,7 +74,7 @@ function DishesScreen () {
                     {dishesinfo.map((item, index) =>
                         <div key={index}>
                             <DishCard>
-                                <Link to={`/${item.title}`}><img src={WhiteARR} alt="WhiteARR" /></Link>
+                                <Link to={`/${index}`}><img src={WhiteARR} alt="WhiteARR" /></Link>
                                 <img src={item.image} alt="imgDishes2"/>
                                 <CardContent>
                                     <DishesCardTitle>

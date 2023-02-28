@@ -9,6 +9,11 @@ import DishesScreen from './pages/mainPage/components/Dishes/Dishes';
 import DishesCard from './pages/DishesCards/components/DishesCard/DishesCard';
 import dishesinfo from './pages/mainPage/components/Dishes/menu';
 
+let i = 0;
+while (i < 3) {
+  i++;
+}
+
 function App() {
   return (
     <>
@@ -18,7 +23,8 @@ function App() {
         <Routes>
             <Route path="/" element={<Main/>}/>
             {/* <Route path={dishesinfo.map((item) => item.srcCard)} element={<DishesCard/>}/> */}
-            {dishesinfo.map((item, index) => <Route key={index} path={`/${item.title}`} element={<DishesCard/>}/>)}
+            {dishesinfo.map((item, index) => <Route key={index} path={`/${index}`} element={<DishesCard lenght={`${item.length}`} numindex={`${index}`} nextindex={`${index+1}`} previndex={`${index-1}`}/>}/>)}
+            {/* {dishesinfo.map((item, index) => <Route key={index} path={`/${item.index}`} element={<DishesCard numindex={`${index}`}/>}/>)} */}
         </Routes>
       </Router>
     </>
