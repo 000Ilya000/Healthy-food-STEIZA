@@ -19,7 +19,7 @@ function DishesScreen () {
                         <div key={index}>
                             <DishCard>
                                 <Link to={`/${index}`}><img src={WhiteARR} alt="WhiteARR" /></Link>
-                                <img src={item.image} alt="imgDishes2"/>
+                                <img src={item.image} className='dishimg' alt="imgDishes2"/>
                                 <CardContent>
                                     <div>
                                         <MainDishesCardTitle>{item.title}</MainDishesCardTitle>
@@ -116,7 +116,7 @@ export const DishCard = styled.div`
         }
     }
 
-    img {
+    .dishimg {
         width:100%;
     }
 
