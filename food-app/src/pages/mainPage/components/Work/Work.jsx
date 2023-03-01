@@ -1,11 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-// import placeholderwork from './Work(img)/WORK.svg';
-import { MainTitle } from '../About/About';
-import { Title } from '../About/About';
-import { BackgroundTitle } from '../About/About';
-
+import { MainTitle, BackgroundTitle } from '../About/About';
 
 
 function Work () {
@@ -111,8 +106,6 @@ const WorkCards = styled.div`
     @media (max-width: 1162px) {
         flex-wrap: wrap;
         justify-content: space-evenly;
-        // width: 60%;
-        // height: 500px;
         align-items: center;
 
         div {

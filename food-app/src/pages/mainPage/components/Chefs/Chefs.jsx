@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-// import CHEFS from "./Chefs(img)/CHEFS.svg";
 import ChefAvatar1 from "./images/ChefAvatar1.svg";
 import ChefAvatar2 from "./images/ChefAvatar2.svg";
 import ChefAvatar3 from "./images/ChefAvatar3.svg";
@@ -14,9 +12,7 @@ import ChefImg6 from "./images/ChefImg6.svg"
 import ChefImg7 from "./images/ChefImg7.svg"
 import ChefImg8 from "./images/ChefImg8.svg"
 import ChefImg9 from "./images/ChefImg9.svg"
-import { MainTitle } from '../About/About';
-import { Title } from '../About/About';
-import { BackgroundTitle } from '../About/About';
+import { MainTitle, BackgroundTitle } from '../About/About';
 
 function Chefs () {
     return (
@@ -28,7 +24,7 @@ function Chefs () {
                 <MainChefs>
                     <Chef>
                         <AboutChef>
-                            <img src={ChefAvatar1} alt="ChefAvatar1" />
+                            <img src={ChefAvatar1} alt="ChefAvatar1"/>
                             <ChefText>
                                 <ChefName>Gregory Flores</ChefName>
                                 <ChefDiscr>Chef of the cold</ChefDiscr>
@@ -43,7 +39,7 @@ function Chefs () {
                     </Chef>
                     <Chef>
                         <AboutChef>
-                            <img src={ChefAvatar2} alt="ChefAvatar2" />
+                            <img src={ChefAvatar2} alt="ChefAvatar2"/>
                             <ChefText>
                                 <ChefName>Annette Cooper</ChefName>
                                 <ChefDiscr>Chef of the hot</ChefDiscr>
@@ -57,7 +53,7 @@ function Chefs () {
                     </Chef>
                     <Chef>
                         <AboutChef>
-                            <img src={ChefAvatar3} alt="ChefAvatar3 " />
+                            <img src={ChefAvatar3} alt="ChefAvatar3 "/>
                             <ChefText>
                                 <ChefName>Greg Fox</ChefName>
                                 <ChefDiscr>Сhef macro kitchen</ChefDiscr>
@@ -66,7 +62,7 @@ function Chefs () {
                         <ChefFoods> 
                             <img src={ChefImg7} alt="ChefImg7" id='firstChefImg'/>
                             <img src={ChefImg8} alt="ChefImg8" id='firstChefImg'/>
-                            <img src={ChefImg9} alt="ChefImg9" />
+                            <img src={ChefImg9} alt="ChefImg9"/>
                         </ChefFoods>
                     </Chef>
                 </MainChefs>

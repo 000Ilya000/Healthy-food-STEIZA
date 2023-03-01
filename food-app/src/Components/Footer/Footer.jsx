@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import { CardCont } from '../../MainPage';
-import { Card } from '../../MainPage';
-import { CardTitle } from '../../MainPage';
-import { CardDescr } from '../../MainPage';
-import icon_time from './../../../../assets/img/icon_time.svg';
-import icon_adress from './../../../../assets/img/icon_adress.svg';
-import icon_call from './../../../../assets/img/icon_call.svg';
+import { CardCont, Card, CardTitle, CardDescr } from '../../pages/mainPage/MainPage';
+import icon_time from '../../assets/img/icon_time.svg';
+import icon_adress from '../../assets/img/icon_adress.svg';
+import icon_call from '../../assets/img/icon_call.svg';
 import { Logo } from '../Header/Header';
 import logo from '../Header/images/Logo.svg';
 import HEALTHYSWITCHER from '../Header/images/HEALTHY SWITCHER.svg';
@@ -36,10 +32,10 @@ function Footer () {
                 </FooterMainInfo>
                 <FooterLogo>
                     <Logo>
-                        <Link to="/">
+                        <a href="/">
                             <img src={logo} alt="logo" />
                             <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
-                        </Link>
+                        </a>
                     </Logo> 
                     <Designed>© Designed by Yellow Snow. All Rights Reserved.</Designed>
                 </FooterLogo>
@@ -58,7 +54,6 @@ const MainFooter = styled.div`
     justify-content: space-around;
     width:100%; 
     align-items: center;
-
 `;
 
 const FooterMainInfo = styled.div`
@@ -94,7 +89,6 @@ const FooterMainInfo = styled.div`
 
     @media (max-width: 600px) {
         margin-top:10px;
-        // padding-bottom:0px;
     }
 `;
 

@@ -1,11 +1,9 @@
-import React, { Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-// import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import logo from './images/Logo.svg';
 import HEALTHYSWITCHER from './images/HEALTHY SWITCHER.svg';
-import { useState, useEffect, useRef } from 'react';
-import Recipes from '../Recipes/Recipes';
-import { animateScroll, Link } from "react-scroll";
+import { useState, useEffect } from 'react';
+import { Link } from "react-scroll";
 
 function Header() {
     const [nav, setNav] = useState(false);
@@ -20,19 +18,14 @@ function Header() {
         window.addEventListener('scroll', onScroll);
     },)
 
-    // {window.onscroll = function showHeader() {
-    //     window.pageYOffset > 20 ? setIsActive(false) : setIsActive(true)
-    // }} 
-
     return (
         <MainHeader className={scrolling ? 'header_fixed' : 'header'}> 
-            {/* {isActive ? <MainHeaderd className='header_fixed'/> : <MainHeaderd className='header'/>} */}
             <HeaderContent>
                 <Logo>
-                    <Link to="/">
+                    <a href='/'>
                         <img src={logo} alt="logo" />
                         <img src={HEALTHYSWITCHER} alt="HEALTHYSWITCHER" />
-                    </Link>
+                    </a>
                 </Logo>
                 
                 <MainNav>
@@ -48,9 +41,6 @@ function Header() {
                     {nav ? <CloseHeaderBurger><span/></CloseHeaderBurger> : <CloseHeaderBurger className='HeadBurger'><span/></CloseHeaderBurger>}
                 </MenuBurger>
             </HeaderContent>
-
-        {/* <MainHeader className='header'>
-        </MainHeader> */}
         </MainHeader>
     )
 }
@@ -58,15 +48,10 @@ function Header() {
 
 export default Header;
 
-// const MainHeaderd = styled.div`
-// `;
-
 const MainHeader = styled.div`
-    // height:90px;
     display: flex;
     align-items: center;
     width:100%;
-    // justify-content: space-between;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     transition: 0.2s;
     background: none;
@@ -135,7 +120,6 @@ const HeaderContent = styled.div`
 `;
 
 export const Logo = styled.div`
-    // margin-left: 165px;
     display:flex;
     width:200px;
     height: 25px;
@@ -181,7 +165,6 @@ const MainNav = styled.div`
         display: flex;
         align-items: center;
         width:100%;
-        // margin-right:130px;
 
 
         @media (max-width: 850px) {
@@ -206,15 +189,6 @@ const MainNav = styled.div`
         @media (max-width: 767px) {
             margin-right: 0px;
         }
-
-        // @media (max-width: 520px) {
-        //     margin-right: 15px;
-        //     min-width:498px;
-        // }
-
-        // @media (max-width: 520px) {
-        //     margin-right: 8px;
-        // }
     }
 
     ul li:last-child a {
@@ -268,9 +242,6 @@ const MenuBurger = styled.div`
     opacity: 100;
 
     .HeadBurger {
-        // // display: none;
-        // margin-right: 18px;
-    
         @media(max-width: 767px){
             span {
                 top: 20px;

@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import { MainTitle } from '../About/About';
-import { Title } from '../About/About';
-import { BackgroundTitle } from '../About/About';
+import { Link } from "react-router-dom";
+import { MainTitle, BackgroundTitle } from '../About/About';
+import { MainBut } from '../../MainPage';
 import Twitter from './images/Twitter.svg';
 import Instagram from './images/Instagram.svg';
 import Facebook from './images/Facebook.svg';
@@ -14,8 +13,6 @@ import img4 from './images/img4.svg';
 import img5 from './images/img5.svg';
 import img6 from './images/img6.svg';
 import GrayArrow from './images/GrayArrow.svg';
-
-import { MainBut } from '../../MainPage';
 
 function Social () {
     return (
@@ -148,7 +145,6 @@ export default Social;
 const MainSocial = styled.div`
     min-height: 100vh;
     margin-top:90px;
-    // margin-bottom:90px;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -216,7 +212,6 @@ const SocialCards = styled.div`
     }
 
     @media (max-width: 1162px) {
-        // flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         div {
@@ -225,7 +220,6 @@ const SocialCards = styled.div`
 
         .centerCard {
             margin-right:0px;
-            // margin-left:0px;
             margin-top:30px;
             margin-bottom:30px;
         }
@@ -322,7 +316,6 @@ const ImgHover = styled.div`
     align-items: center;
     width:100%;
     height:120px;
-    // background: url('${img1}') no-repeat center center;
 
     a {
         width:40px;

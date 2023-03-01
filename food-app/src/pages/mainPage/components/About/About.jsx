@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Basicfood1 from'./images/BasicFOOD1.svg';
 import Basicfood2 from'./images/BasicFOOD2.svg';
 import ArrowLeft from './images/Arrowleft.svg';
 import ArrowRight from'./images/ArrowRight.svg';
-// import placeholderabout from './About(img)/ABOUT.svg';
 
 
 function AboutScreen () {
@@ -76,7 +75,6 @@ const PlaceholderAbout = styled.div`
 `;
 
 export const MainTitle = styled.div`
-    // width: 100%;
     display:flex;
     justify-content: center;
     p {
@@ -128,29 +126,8 @@ export const BackgroundTitle = styled.p`
     }
 `;
 
-export const Title = styled.p`
-    // position: absolute;
-    // min-height:150px;
-    // display: flex;
-    // align-items: center;
-    // font-weight: 400;
-    // font-size: 30px;
-    // letter-spacing: 0.2em;
-    // color: #D9D9D9;
-
-    // @media (max-width: 800px) {
-    //     justify-content: center;
-    //     width:100%;
-    // }
-
-    // @media (max-width: 540px) {
-    //     font-size: 24px;
-    // }
-`;
-
 const AboutDiscr = styled.p`
     max-width: 734px;
-    // height: 60px;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;

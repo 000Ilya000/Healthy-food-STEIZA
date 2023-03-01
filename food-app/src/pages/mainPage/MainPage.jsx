@@ -1,59 +1,27 @@
-import React, { Component } from 'react';
-// import { animateScroll, Link } from "react-scroll";
+import React from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import bgImg from '../../assets/img/placeholder.svg';
 import icon_time from '../../assets/img/icon_time.svg'; 
 import icon_adress from '../../assets/img/icon_adress.svg';
 import icon_call from '../../assets/img/icon_call.svg';
-import Header from './components/Header/Header';
+import Header from '../../Components/Header/Header';
 import AboutScreen from './components/About/About';
 import Work from './components/Work/Work';
 import DishesScreen from './components/Dishes/Dishes';
 import Chefs from './components/Chefs/Chefs';
 import Recipes from './components/Recipes/Recipes';
 import Social from './components/Social/Social';
-import Footer from './components/Footer/Footer';
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
-import { useState, useEffect, useRef } from 'react';
+import Footer from '../../Components/Footer/Footer';
+import { useEffect } from 'react';
 
 
 function Main() {
-    // const [nav, setNav] = useState(false);
-    // const [isActive, setIsActive] = useState(false);
-
-    // function ChangeBurger() {
-    //     setNav(!nav);
-    // }
-
-    // function headerChange() {
-    //     setIsActive(!isActive);
-    // }
-
-    // window.onscroll = function showHeader() {
-    //     headerChange();
-    //     // var header = document.querySelector('.header');
-
-    //     // if(window.pageYOffset > 20) {
-    //     //     // header.classList.add('header_fixed');
-    //     //     isActive ? <Header/> : <Header className='header_fixed'/>
-    //     // // } else {
-    //     // //     header.classList.remove('header_fixed');
-    //     // }
-    // }
-
-    // handleScroll = e => {
-    //     e.preventDefault();
-    //     const main = this.main.current;
-    //     window.scrollTo({
-    //         top: main.offsetTop,
-    //         left: 0,
-    //         behavior: "instant"
-    //     });
-    // };
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
-
         <Container>
             <MainM>
 
@@ -110,19 +78,8 @@ function Main() {
     )
 }
   
-
 export default Main;
 
-// { window.onscroll = function showHeader() {
-//     var header = document.querySelector('.header');
-
-//     if(window.pageYOffset > 20) {
-//         header.classList.add('header_fixed');
-//         nav ? <Header/> : <Header className='header_fixed'/>
-//         } else {
-//             header.classList.remove('header_fixed');
-//     }
-// }}
 
 const Container = styled.div`
     display: flex;
@@ -151,11 +108,8 @@ const MainM = styled.div`
 
 const FirstScreen = styled.div`
     min-height:100vh;
-    // background: url('${bgImg}') no-repeat center center;
-    // background-size: cover; 
     margin-top:90px;
     margin-bottom:90px;
-    // padding-bottom: 40px;
     top: 0;
     left: 0;
     width: 1140px;

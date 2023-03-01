@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import FirstBlockRecipePlactholder from "./images/FirstBlockRecipePlactholder.svg";
-import WhiteArrowLeft from './images/WhiteArrowLeft.svg'
-import WhiteEye from './images/WhiteEye.svg'
-import WhiteComm from './images/WhiteComm.svg'
-import placeholder10 from './images/placeholder (10).svg'
-import { MainTitle } from '../About/About';
-import { Title } from '../About/About';
-import { BackgroundTitle } from '../About/About';
+import WhiteArrowLeft from './images/WhiteArrowLeft.svg';
+import WhiteEye from './images/WhiteEye.svg';
+import WhiteComm from './images/WhiteComm.svg';
+import placeholder10 from './images/placeholder (10).svg';
+import { MainTitle, BackgroundTitle } from '../About/About';
 
 
 function Recipes () {
@@ -198,10 +196,8 @@ const FirstRecipeBlock = styled.div`
     a {
         margin-top: 30px;
         margin-right: 30px;
-        // position: absolute;
         min-width:40px;
         max-height: 40px;
-        // border: 2px solid #303030;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -246,8 +242,6 @@ const ContentFirstRecipeBlock = styled.div`
 `;
 
 const TypeOfFoodRecipe = styled.p`
-    // height: 25px;
-
     font-weight: 900;
     font-size: 10px;
     line-height: 25px;
@@ -273,7 +267,6 @@ const TitleFirstBlockRecipe = styled.p`
     font-weight: 400;
     font-size: 24px;
     line-height: 40px;
-    // margin: 0px;
     margin-top: 0px;
     text-align: center;
     margin-bottom: 45px;
@@ -376,8 +369,6 @@ const SecondRecipesBloksFooter = styled.div`
 
 const SecondRecipesBlocksTitle = styled.p`
     max-width: 505px;
-    // padding-top: 30px;
-    // margin-left: 30px;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
@@ -418,7 +409,6 @@ const SecondMainCont = styled.div`
 
 const SecondCommAndVievs = styled.div`
     display: flex;
-    // width:100%;
     min-width: 140px;
     justify-content: space-between;
     color: white;

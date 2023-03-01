@@ -1,69 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-// import DISHES from './Dishes(img)/DISHES.svg';
+import { Link } from "react-router-dom";
 import dishesinfo from './menu';
-// import imgDishes1 from './images/imgDishes1.svg';
-// import imgDishes2 from './images/imgDishes2.svg';
-// import imgDishes3 from './images/imgDishes3.svg';
-// import imgDishes4 from './images/imgDishes4.svg';
-// import imgDishes5 from './images/imgDishes5.svg';
-// import imgDishes6 from './images/imgDishes6.svg';
 import star from './images/star.svg';
 import WhiteARR from './images/WhiteARR.svg';
-import { MainTitle } from '../About/About';
-import { Title } from '../About/About';
-import { BackgroundTitle } from '../About/About';
-import { useState} from 'react';
-// import { isInputElement } from 'react-router-dom/dist/dom';
-
-
-// function changeColor(e) {
-//     const btn = document.getElementsByClassName('MainButton')
-//     btn.className.add("active");     
-// };
-
-// console.log(resultdihesinfo);
-// const firstcardinfo = dishesinfo[0];
-
-// console.log(firstcardinfo);
-
-// {dishesinfo.map((item, image) => <img key={image} src={item.image.img1}/>)}
-// <MainDishesCardTitle>{dishesinfo.map(item => item.title)[0]}</MainDishesCardTitle>
-
-
+import { MainTitle, BackgroundTitle } from '../About/About';
 
 
 function DishesScreen () {
-    // const [nav, setNav] = useState(false);
-    // const [nav1, setNav1] = useState(false);
-    // const [nav2, setNav2] = useState(false);
-    // const [nav3, setNav3] = useState(false);
-    // const [nav4, setNav4] = useState(false);
-    // const [nav5, setNav5] = useState(false);
-
-
-    // function ChangeDishesButton1() {
-    //     setNav(!nav);
-    // }
-    // function ChangeDishesButton2() {
-    //     setNav1(!nav1);
-    // }
-    // function ChangeDishesButton3() {
-    //     setNav2(!nav2);
-    // }
-    // function ChangeDishesButton4() {
-    //     setNav3(!nav3);
-    // }
-    // function ChangeDishesButton5() {
-    //     setNav4(!nav4);
-    // }
-    // function ChangeDishesButton6() {
-    //     setNav5(!nav5);
-    // }
-
-    // const firstcardinfo = dishesinfo[0];
-
     return (
         <Dishes id='dishes'>
             <DishesContent>
@@ -77,18 +21,14 @@ function DishesScreen () {
                                 <Link to={`/${index}`}><img src={WhiteARR} alt="WhiteARR" /></Link>
                                 <img src={item.image} alt="imgDishes2"/>
                                 <CardContent>
-                                    <DishesCardTitle>
+                                    <div>
                                         <MainDishesCardTitle>{item.title}</MainDishesCardTitle>
                                         <DishesCardTitleDescr>{item.subtitle}</DishesCardTitleDescr>
-                                    </DishesCardTitle>
+                                    </div>
                                     <DishesDescr>{item.description}</DishesDescr>
                                     <DishesCardFoot>
                                         <DishesReiting>
-                                            <img src={star}/>
-                                            <img src={star}/>
-                                            <img src={star}/>
-                                            <img src={star}/>
-                                            <img src={star}/>
+                                            {Array(5).fill(0).map((item,index) => <img key={index} src={star}/>)}
                                             <p>{item.reviews.length}</p>
                                         </DishesReiting>
                                             <button>ORDER</button>
@@ -127,7 +67,6 @@ const Dishes = styled.div`
 const DishesContent = styled.div`
     width: 1140px;
     display: flex;
-    // flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 
@@ -157,23 +96,6 @@ export const MainDishCards = styled.div`
     margin-top: 30px;
     flex-direction: row;
     flex-wrap: wrap;
-
-    // div {
-    //     margin-bottom:40px;
-    // }
-
-    // @media (max-width: 1300px) {
-    //     // width:100%;
-    //     .secondthree {
-    //         margin-bottom:40px;
-    //     }
-    // }
-    // @media (max-width: 1050px) {
-    //     width:100%;
-    //     .secondthree {
-    //         margin-bottom:40px;
-    //     }
-    // }
 `;
 
 export const DishCard = styled.div`
@@ -222,24 +144,13 @@ export const DishCard = styled.div`
     }
 `;
 
-
-
-export const DishesCardTitle = styled.div`
-`;
-
 export const CardContent = styled.div`
-    // width: 100%;
     display: flex;
     flex-direction: column;
     margin-left: 8%;
 `;
 
-const MainBut = styled.div`
-
-`;
-
 export const MainDishesCardTitle = styled.p`
-    // width: 290px;
     font-weight: 400;
     font-size: 32px;
     line-height: 30px;
@@ -249,7 +160,6 @@ export const MainDishesCardTitle = styled.p`
 `;
 
 export const DishesCardTitleDescr = styled.p`
-    // width: 290px;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
@@ -259,8 +169,6 @@ export const DishesCardTitleDescr = styled.p`
 `;
 
 export const DishesDescr = styled.p`
-    // width: 290px;
-
     max-width: 85%;
     font-weight: 400;
     font-size: 13px;
@@ -272,11 +180,11 @@ export const DishesDescr = styled.p`
 
 export const DishesCardFoot = styled.div`
     margin-top: 20px;
+    display: flex;
+    align-items: center;
 
     button {
         margin-left:10%;
-        // border: none;
-        // background: none;
         cursor: pointer;
         display: flex;
         font-weight: 600;
@@ -290,37 +198,6 @@ export const DishesCardFoot = styled.div`
         border: 2px solid #303030; 
         letter-spacing: 0.1em;
     }
-
-    // .MainButton {
-    //     display: flex;
-    //     font-weight: 600;
-    //     padding: 16px 36px;
-    //     border-radius: 43px;
-    //     transition: 0.4s;
-    //     color: rgba(255, 255, 255, 0.5);
-    //     font-family: "HelveticaNeueBold";
-    //     font-size: 10px;
-    //     background: none;
-    //     border: 2px solid #303030; 
-    //     letter-spacing: 0.1em;
-    // }
-
-    // .active {
-    //     display: flex;
-    //     font-weight: 600;
-    //     padding: 16px 36px;
-    //     border-radius: 43px;
-    //     transition: 0.4s;
-    //     color: #252525;
-    //     font-family: "HelveticaNeueBold";
-    //     font-size: 10px;
-    //     background: #34C759;
-    //     border: 2px solid #34C759; 
-    //     letter-spacing: 0.1em;
-    // }
-
-    display: flex;
-    align-items: center;
 `;
 
 export const DishesReiting = styled.div`
