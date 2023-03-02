@@ -90,6 +90,10 @@ const FooterMainInfo = styled.div`
     @media (max-width: 600px) {
         margin-top:10px;
     }
+
+    @media (max-width: 200px) {
+        padding-bottom: 100px;
+    }
 `;
 
 const FooterLogo = styled.div`

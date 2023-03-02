@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import React, { useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import dishesinfo from '../mainPage/components/Dishes/menu';
-import WhiteArrowLeft from '../mainPage/components/Recipes/images/WhiteArrowLeft.svg';
 import star from '../mainPage/components/Dishes/images/star.svg';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';  
@@ -16,9 +15,7 @@ function DishesCard ({numindex}) {
     }, []);     
     
     let filtereddishesinfo = dishesinfo.filter((value, index) => index !== numindex);
-    let reviews = [dishesinfo[numindex]].map((item, index) => item.reviews);
-
-    console.log(reviews[numindex]);
+    let reviews = [dishesinfo[numindex]].map((item) => item.reviews);
 
     return (
         <Cardpage>
@@ -32,7 +29,10 @@ function DishesCard ({numindex}) {
                                 <Images>
                                     <img src={item.image} alt="imgDishes2" className='maindishimg'/>
                                     <Otherdish>
-                                        {filtereddishesinfo.map((item, index) => <img key={index} src={item.image}/>)}
+                                        {filtereddishesinfo.map((item, filterindex) => 
+                                        <a key={filterindex} href={`/${ numindex <= filterindex ? filterindex+1 : filterindex}`}>
+                                            <img src={item.image}/>
+                                        </a>)}
                                     </Otherdish>
                                 </Images>
                                 <CardContent className='cardContent'>
@@ -42,39 +42,35 @@ function DishesCard ({numindex}) {
                                     <DishesCardFoot>
                                         <DishesReiting>
                                             {Array(5).fill(0).map((item,index) => <img key={index} src={star}/>)}
-                                            <p>{item.reviews.length}</p>
+                                            <Link to="linkreview" smooth={true} offset={-80} duration={500}><p>{item.reviews.length}</p></Link>
                                         </DishesReiting>
                                     </DishesCardFoot>
-                                    {/* <Arrows>
-                                        <Link to={`/${numindex > 0 ? numindex-1 : dishesinfo.length-1}`}><img src={WhiteArrowLeft} alt="WhiteARR" /></Link>
-                                        <Link to={`/${numindex < dishesinfo.length-1 ? numindex+1 : 0}`} className='nextcard'><img className='nextcardimg' src={WhiteArrowLeft} alt="WhiteARR" /></Link>
-                                    </Arrows> */}
                                 </CardContent>
                             </MainCardContent>
                         </div>
                     )} 
                 </DishCard>
                 <MainBut>
-                    <Link className='but' to = "/">BACK</Link>
+                    <a className='but' href = "/">BACK</a>
                 </MainBut>
             </CardAndButton>
-            <Reviews>
+            <div id='linkreview'>
                 <MainTitle className='bgtitle'>
                     <BackgroundTitle>Reviews</BackgroundTitle>
                 </MainTitle>
                 <DishReviews>
-                    {[reviews[numindex]].map((item, index) => 
-                        <Review key={index}>
-                                {item.map((item, index)=> 
-                                    <MainRewiew key={index}>
-                                        <NameAndReview><p>{item.name}</p> <p>{item.rating}</p></NameAndReview>
-                                        <ReviewDescr><p>{item.text}</p></ReviewDescr>
-                                    </MainRewiew>
-                                )}
-                        </Review>
+                    {reviews.map((item, index) => 
+                        <div key={index}>
+                            {item.map((item, index)=> 
+                                <MainRewiew key={index}>
+                                    <NameAndReview><p>{item.name}</p> <p className='review'>Review: {item.rating}</p></NameAndReview>
+                                    <ReviewDescr><p>{item.text}</p></ReviewDescr>
+                                </MainRewiew>
+                            )}
+                        </div>
                     )}
                 </DishReviews>
-            </Reviews>
+            </div>
             <Footer/>
         </Cardpage>
     )
@@ -104,7 +100,7 @@ const Cardpage = styled.div`
         }
     }
 
-    @media (max-width: 265px) {
+    @media (max-width: 200px) {
         min-height: 3000px;
     }
 `;
@@ -113,39 +109,64 @@ const MainCardContent = styled.div`
     display: flex;
     align-items: center;
     margin-top:24px;
-`;
-
-const Review = styled.div`
-    // height: 100px;
+    a:hover {
+        cursor: pointer;
+        p {
+            color: #34C759;
+        }
+    }
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
 `;
 
 const NameAndReview = styled.div`
     display: flex;  
     flex-direction: row;
-    width: 60px;
+    width: 100%;
     justify-content: space-between;
+    font-size: 32px;
+    color: #D9D9D9;
+    align-items: center;
+
+    .review {
+        font-size: 20px;
+        color: #F9AD3D;
+    }
 `;
 
 const MainRewiew = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    // width: 60px;
-    // justify-content: space-between;
+    margin-bottom: 24px;
+    padding: 10px;
+    background: #252525;
+    border-radius: 6px;
+    transition: 0.4s;
+    p {
+        cursor: default;
+    }
+    :hover {
+        background: #34C759;
+        p {
+            color: white;
+        }
+    }
 `;
 
 const ReviewDescr = styled.div`
-
-`;
-
-const Reviews = styled.div`
-
+    font-size: 16px;
+    color: #85878C;
+    width: 400px;
+    margin-top: 10px;
 `;
 
 const DishReviews = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
+    margin-bottom:60px;
 `;
 
 const Images = styled.div`
@@ -155,84 +176,37 @@ const Images = styled.div`
 
 const Otherdish = styled.div`
     display: flex;
-    margin-top: 24px;
     width:100%;
     justify-content: space-between;
-    // height: 100px;
+    height: 80px;
+    align-items: center;
+    a {
+        height: 60px;
+    }
+    a:hover {
+        border: 2px solid #34C759;
+        border-radius: 6px;
+    }
     img {
         height: 60px;
         border-radius: 6px;
-        // width:0%;
     }
 `;
 
 const CardAndButton = styled.div`
     margin-top:170px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width:100%;
     justify-content: center;
     .maindishcard {
+        max-width: 100%;
         height: fit-content;
         .dishcard {
             display: flex;
             flex-direction: column;
-
-        }
-    }
-    .but {
-        padding: 16px 40px;
-        font-size: 14px;
-        letter-spacing: 0.1em;
-        font-family: "HelveticalNeueCondensend";
-    }
-
-    @media (min-width: 984px) {
-        .cardContent {
-            margin-left: 50px;
-            max-width: 350px;
-            .dishdescr {
-                margin-top:0px;
-                font-size: 16px;
-                // width:100%;
-                max-width:90%;
-            }
-
-            .dishtitledescr {
-                font-size: 16px;
-                margin-top: 10px;
-            }
-
-            button {
-                // margin-left:10%;
-                max-width: 200px;
-                margin-top:24px;
-                margin-bottom:4px;
-                justify-content: center;
-                cursor: pointer;
-                display: flex;
-                // font-weight: 600;
-                padding: 16px 34px;
-                border-radius: 43px;
-                transition: 0.4s;
-                color: rgba(255, 255, 255, 0.5);
-                font-family: "HelveticaNeueBold";
-                font-size: 10px;
-                background: none;
-                border: 2px solid #303030; 
-                letter-spacing: 0.1em;
-            }
-        }
-
-        .maindishcard {
-            max-width: 100%;
-            height: fit-content;
-        }
-    
-        .dishcard {
-            // max-width: 100%;
             align-items: center;
             display: flex;
             .maindishimg {
@@ -242,30 +216,70 @@ const CardAndButton = styled.div`
         }
     }
 
-    @media (max-width: 265px) {
+    .cardContent {
+        margin-left: 50px;
+        max-width: 350px;
+        .dishdescr {
+            margin-top:0px;
+            font-size: 16px;
+            max-width:90%;
+        }
+
+        .dishtitledescr {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    }
+
+    .but {
+        padding: 16px 40px;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        font-family: "HelveticalNeueCondensend";
+        cursor: pointer;
+    }
+
+    button {
+        max-width: 200px;
+        margin-top:24px;
+        margin-bottom:4px;
+        justify-content: center;
+        cursor: pointer;
+        display: flex;
+        padding: 16px 34px;
+        border-radius: 43px;
+        transition: 0.4s;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "HelveticaNeueBold";
+        font-size: 10px;
+        background: none;
+        border: 2px solid #303030; 
+        letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 984px) {
+        .maindishcard {
+            width: 700px;
+        }
+        button {
+            max-width: 150px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .maindishcard {
+            width: auto;
+        }
+
+        .cardContent {
+            width:100%;
+            margin: 24px 0px 24px 0px;
+        }
+    }
+
+    @media (max-width: 200px) {
         height:100%;
         margin-top:0px;
         margin-bottom: 0px;
-    }
-`;
-
-const Arrows = styled.div`
-    display: flex;
-    .nextcardimg {
-        transform: rotate(180deg);
-    }
-    a {
-        opacity: 80%;
-        position: relative;
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-
-    @media (min-width: 984px) {
-        justify-content: flex-start;
-        a {
-            opacity: 80%;
-            position: relative;
-        }
     }
 `;

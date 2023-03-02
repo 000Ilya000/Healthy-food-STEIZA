@@ -18,7 +18,7 @@ function DishesScreen () {
                     {dishesinfo.map((item, index) =>
                         <div key={index}>
                             <DishCard>
-                                <Link to={`/${index}`}><img src={WhiteARR} alt="WhiteARR" /></Link>
+                                <Link className='dishlink' to={`/${index}`}><img src={WhiteARR} alt="WhiteARR" /></Link>
                                 <img src={item.image} className='dishimg' alt="imgDishes2"/>
                                 <CardContent>
                                     <div>
@@ -111,7 +111,7 @@ export const DishCard = styled.div`
 
 
     :hover {
-        a {
+        .dishlink {
             opacity: 100%
         }
     }
@@ -120,11 +120,11 @@ export const DishCard = styled.div`
         width:100%;
     }
 
-    a img {
+    .dishlink img {
         max-width:24px;
     }
 
-    a {
+    .dishlink {
         margin-top: 24px;
         margin-right: 24px;
         position: absolute;
