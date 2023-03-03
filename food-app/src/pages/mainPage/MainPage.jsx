@@ -5,14 +5,14 @@ import bgImg from '../../assets/img/placeholder.svg';
 import icon_time from '../../assets/img/icon_time.svg'; 
 import icon_adress from '../../assets/img/icon_adress.svg';
 import icon_call from '../../assets/img/icon_call.svg';
-import Header from '../../Components/Header/Header';
+import Header from '../../сomponents/Header/Header';
 import AboutScreen from './components/About/About';
 import Work from './components/Work/Work';
 import DishesScreen from './components/Dishes/Dishes';
 import Chefs from './components/Chefs/Chefs';
 import Recipes from './components/Recipes/Recipes';
 import Social from './components/Social/Social';
-import Footer from '../../Components/Footer/Footer';
+import Footer from '../../сomponents/Footer/Footer';
 import { useEffect } from 'react';
 
 

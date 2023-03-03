@@ -5,9 +5,10 @@ import dishesinfo from './menu';
 import star from './images/star.svg';
 import WhiteARR from './images/WhiteARR.svg';
 import { MainTitle, BackgroundTitle } from '../About/About';
-
+import { MainBut } from '../../MainPage';
 
 function DishesScreen () {
+    let firstdishcards = dishesinfo.filter((value, index) => index < 6);
     return (
         <Dishes id='dishes'>
             <DishesContent>
@@ -15,7 +16,7 @@ function DishesScreen () {
                     <BackgroundTitle>DISHES</BackgroundTitle>
                 </MainTitle>
                 <MainDishCards>
-                    {dishesinfo.map((item, index) =>
+                    {firstdishcards.map((item, index) =>
                         <div key={index}>
                             <DishCard>
                                 <Link className='dishlink' to={`/${index}`}><img src={WhiteARR} alt="WhiteARR" /></Link>
@@ -38,6 +39,9 @@ function DishesScreen () {
                         </div> 
                     )}
                 </MainDishCards>
+                <MainBut>
+                    <a className='but' href = "/AllDishes">MORE</a>
+                </MainBut>
             </DishesContent>
         </Dishes>
     )
@@ -46,7 +50,7 @@ function DishesScreen () {
 
 export default DishesScreen;
 
-const Dishes = styled.div`
+export const Dishes = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -64,11 +68,18 @@ const Dishes = styled.div`
     }
 `;
 
-const DishesContent = styled.div`
+export const DishesContent = styled.div`
     width: 1140px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    .but {
+        padding: 16px 40px;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        font-family: "HelveticalNeueCondensend";
+        cursor: pointer;
+    }
 
     @media (max-width: 1162px) {
         width: 960px;
@@ -118,6 +129,9 @@ export const DishCard = styled.div`
 
     .dishimg {
         width:100%;
+        height: 260px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
     }
 
     .dishlink img {
@@ -210,6 +224,7 @@ export const DishesReiting = styled.div`
     }
 
     p {
+        padding-top: 2px;
         padding-left: 8px;
         font-weight: 900;
         font-size: 12px;

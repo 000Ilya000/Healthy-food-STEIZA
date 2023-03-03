@@ -3,8 +3,8 @@ import React, { useEffect } from 'react';
 import { Link } from "react-scroll";
 import dishesinfo from '../mainPage/components/Dishes/menu';
 import star from '../mainPage/components/Dishes/images/star.svg';
-import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';  
+import Header from '../../сomponents/Header/Header';
+import Footer from '../../сomponents/Footer/Footer';  
 import { MainBut } from '../mainPage/MainPage';
 import { MainTitle, BackgroundTitle } from '../mainPage/components/About/About';
 import { CardContent, DishCard, DishesDescr, DishesCardFoot, MainDishesCardTitle, DishesCardTitleDescr, DishesReiting } from '../mainPage/components/Dishes/Dishes';
@@ -14,8 +14,15 @@ function DishesCard ({numindex}) {
         window.scrollTo(0, 0);
     }, []);     
     
-    let filtereddishesinfo = dishesinfo.filter((value, index) => index !== numindex);
+    // let filtereddishesinfo = dishesinfo.filter((value, index) => index !== numindex);
+    let filtereddishesinfo = dishesinfo.filter((value, index) => index < 4);
+    // filtereddishesinfo.map((item, index) => index !== numindex);
     let reviews = [dishesinfo[numindex]].map((item) => item.reviews);
+    console.log(filtereddishesinfo);
+
+    // function listdishindex() {
+    //     numindex+2;
+    // }
 
     return (
         <Cardpage>
@@ -30,9 +37,11 @@ function DishesCard ({numindex}) {
                                     <img src={item.image} alt="imgDishes2" className='maindishimg'/>
                                     <Otherdish>
                                         {filtereddishesinfo.map((item, filterindex) => 
-                                        <a key={filterindex} href={`/${ numindex <= filterindex ? filterindex+1 : filterindex}`}>
-                                            <img src={item.image}/>
-                                        </a>)}
+                                                // {/* <a key={filterindex} href={`/${ numindex <= filterindex ? filterindex+1 : filterindex}`}></a> */}
+                                                <a key={filterindex} href={`/${filterindex}`}>
+                                                    <img src={item.image}/>
+                                                </a>
+                                        )}
                                     </Otherdish>
                                 </Images>
                                 <CardContent className='cardContent'>
@@ -181,14 +190,16 @@ const Otherdish = styled.div`
     height: 80px;
     align-items: center;
     a {
-        height: 60px;
+        height: 75px;
+        border: 2px solid #252525;
+        border-radius: 6px;
     }
     a:hover {
         border: 2px solid #34C759;
         border-radius: 6px;
     }
     img {
-        height: 60px;
+        height: 75px;
         border-radius: 6px;
     }
 `;

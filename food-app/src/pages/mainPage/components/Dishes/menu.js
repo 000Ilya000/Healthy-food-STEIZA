@@ -4,7 +4,16 @@ import img3 from './images/imgDishes3.svg';
 import img4 from './images/imgDishes4.svg';
 import img5 from './images/imgDishes5.svg';
 import img6 from './images/imgDishes6.svg';
-
+import img7 from './images/img7.jpg';
+import img8 from './images/img8.jpg';
+import img9 from './images/img9.jpg';
+import img10 from './images/img10.jpg';
+import img11 from './images/img11.jpg';
+import img12 from './images/img12.jpg';
+import img13 from './images/img13.jpg';
+import img14 from './images/img14.jpg';
+import img15 from './images/img15.jpg';
+ 
 const  dishesinfo = [
     {
         image: img1,
@@ -128,7 +137,207 @@ const  dishesinfo = [
                 rating: 5    
             }
         ],
-    }
+    },
+
+    {
+        image: img7,
+        title: "Proin venenatis",
+        subtitle: "Viverra velit, vitae semper eros imperdiet ac.",
+        description: "Aliquam ultricies nibh arcu, sit amet maximus sapien tempor sit amet semper eros efficitur crisp patty....",
+        reviews: [
+            {
+                name: "Bob",
+                text: "Posuere vulputate mauris at dapibus. nisi, sit amet tristique velit gravida et.",
+                rating: 5    
+            },
+            {
+                name: "Jhon",
+                text: "Faucibus in libero fringilla orci faucibus hendrerit.",
+                rating: 4    
+            },  
+        ],
+    },
+
+    {
+        image: img8,
+        title: "Libero nec",
+        subtitle: "Etiam posuere vulputate mauris at dapibus.",
+        description: "Tender in vehicula porta purus odio quis metus consequat, Add crisp patty and more vel lacinia...",
+        reviews: [
+            {
+                name: "Bob",
+                text: "Donec in libero fringilla orci faucibus hendrerit.",
+                rating: 5    
+            },
+            {
+                name: "Lina",
+                text: "Praesent eleifend viverra ipsum, vel molestie ex.",
+                rating: 5    
+            },
+            {
+                name: "Elen",
+                text: "In orci ipsum, finibus id eros et, semper molestie nisi.",
+                rating: 3    
+            }
+        ],
+    },
+
+    {
+        image: img9,
+        title: "Quisque  scelerisque ",
+        subtitle: "Tincidunt tincidunt molestie a mauris consectetur pulvinar",
+        description: "Curabitur commodo quam eu metus consequat, Add Tender crisp patty and more vel porta purus lacinia...",
+        reviews: [
+            {
+                name: "Mikle",
+                text: "Maecenas dictum sagittis nisi, sit amet tristique velit gravida et.",
+                rating: 5    
+            }
+        ],
+    },
+
+    {
+        image: img10,
+        title: "Morbi nec",
+        subtitle: "Morbi nec tortor a mauris consectetur pulvinar",
+        description: "In vehicula odio quis metus consequat, Add Tender crisp patty and more vel porta purus lacinia...",
+        reviews: [
+            {
+                name: "Mikle",
+                text: "Maecenas dictum sagittis nisi, sit amet tristique velit gravida et.",
+                rating: 4    
+            },
+            {
+                name: "Bob",
+                text: "Donec in libero fringilla orci faucibus hendrerit.",
+                rating: 5    
+            },
+            {
+                name: "Lina",
+                text: "Praesent eleifend viverra ipsum, vel molestie ex.",
+                rating: 5    
+            },
+            {
+                name: "Elen",
+                text: "In orci ipsum, finibus id eros et, semper molestie nisi.",
+                rating: 3    
+            }
+        ],
+    },
+
+    {
+        image: img11,
+        title: "Pulvinar Cen",
+        subtitle: "Neque porro quisquam est qui dolorem ipsum quia",
+        description: "Vestibulum placerat nisl et volutpat sodales. Donec eget quam porta vel quam egestas hendrerit...",
+        reviews: [
+            {
+                name: "Bob",
+                text: "Donec in libero fringilla orci faucibus hendrerit.",
+                rating: 5    
+            },
+            {
+                name: "Lina",
+                text: "Praesent eleifend viverra ipsum, vel molestie ex.",
+                rating: 5    
+            },
+        ],
+    },
+
+    {
+        image: img12,
+        title: "Phasellus gravida",
+        subtitle: "Proin morbi facilisis maximus lacus a tincidunt",
+        description: "Cras eu sodales urna, at posuere enim. Donec eget tincidunt porta nisl. Sed ut lectus quis quam...",
+        reviews: [
+            {
+                name: "Lina",
+                text: "Donec eget tincidunt nisl.",
+                rating: 5    
+            }
+        ],
+    },
+
+    {
+        image: img13,
+        title: "Phasellus congue",
+        subtitle: "Donec et urna ut dolor egestas posuere",
+        description: "ras eu eros arcu. Etiam vitae scelerisque est. Vestibulum pellentesque mauris at urna blandit sollicitudin uit...",
+        reviews: [
+            {
+                name: "Mark",
+                text: "Etiam dictum pellentesque nisi, sit amet sollicitudin velit gravida et.",
+                rating: 4    
+            },
+            {
+                name: "Elen",
+                text: "In orci ipsum, finibus id eros et, semper molestie nisi.",
+                rating: 3    
+            }
+        ],
+    },
+
+    {
+        image: img14,
+        title: "Fusce lacinia",
+        subtitle: "Praesent pretium libero et enim vehicula elementum",
+        description: "Curabitur ut nunc ultrices, vestibulum neque vitae, viverra ex. Class aptent taciti sociosqu ad litora torque...",
+        reviews: [
+            {
+                name: "Broke",
+                text: "Vestibulum dictum sagittis nisi, sit amet tristique velit gravida et.",
+                rating: 3    
+            },
+            {
+                name: "Lena",
+                text: "Curabitur in libero fringilla orci faucibus hendrerit.",
+                rating: 5    
+            }
+        ],
+    },
+
+    {
+        image: img15,
+        title: "Duis in",
+        subtitle: "Proin dapibus varius lorem a blandit",
+        description: "Integer eget purus at orci porta egestas. Nunc odio faucibus erat, facilisis non gravida sed, laoreet id...",
+        reviews: [
+            {
+                name: "Elen",
+                text: "Facilisis orci ipsum, finibus id eros et, semper molestie nisi.",
+                rating: 5    
+            }
+        ],
+    },
+
+    // {
+    //     image: img16,
+    //     title: "Morbi nec",
+    //     subtitle: "Morbi nec tortor a mauris consectetur pulvinar",
+    //     description: "In vehicula odio quis metus consequat, Add Tender crisp patty and more vel porta purus lacinia...",
+    //     reviews: [
+    //         {
+    //             name: "Mikle",
+    //             text: "Maecenas dictum sagittis nisi, sit amet tristique velit gravida et.",
+    //             rating: 4    
+    //         },
+    //         {
+    //             name: "Bob",
+    //             text: "Donec in libero fringilla orci faucibus hendrerit.",
+    //             rating: 5    
+    //         },
+    //         {
+    //             name: "Lina",
+    //             text: "Praesent eleifend viverra ipsum, vel molestie ex.",
+    //             rating: 5    
+    //         },
+    //         {
+    //             name: "Elen",
+    //             text: "In orci ipsum, finibus id eros et, semper molestie nisi.",
+    //             rating: 3    
+    //         }
+    //     ],
+    // },
 ];
 
 
