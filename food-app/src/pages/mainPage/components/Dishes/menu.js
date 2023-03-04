@@ -37,6 +37,7 @@ const  dishesinfo = [
                 rating: 4    
             }
         ],
+        button: 'but0'
     },
     {
         image: img2,
@@ -65,6 +66,7 @@ const  dishesinfo = [
                 rating: 3    
             }
         ],
+        button: false
     },
     {
         image: img3,
@@ -78,6 +80,7 @@ const  dishesinfo = [
                 rating: 5    
             }
         ],
+        button: false
     },
     {
         image: img4,

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-scroll";
 import dishesinfo from '../mainPage/components/Dishes/menu';
 import star from '../mainPage/components/Dishes/images/star.svg';
@@ -10,6 +10,26 @@ import { MainTitle, BackgroundTitle } from '../mainPage/components/About/About';
 import { CardContent, DishCard, DishesDescr, DishesCardFoot, MainDishesCardTitle, DishesCardTitleDescr, DishesReiting } from '../mainPage/components/Dishes/Dishes';
 
 function DishesCard ({numindex}) {
+    const [but0, setBut0] = useState(false);
+    const [but1, setBut1] = useState(false);
+    const [but2, setBut2] = useState(false);
+    const [but3, setBut3] = useState(false);
+    const [but4, setBut4] = useState(false);
+    const [but5, setBut5] = useState(false);
+
+
+    const but = [but0,but1,but2,but3, but4, but5]
+
+    function ChangeButton(e, index) {
+        index == 0 ? setBut0(!but0) : setBut0(but0)
+        index == 1 ? setBut1(!but1) : setBut1(but1)
+        index == 2 ? setBut2(!but2) : setBut2(but2)
+        index == 3 ? setBut3(!but3) : setBut3(but3)
+        index == 4 ? setBut4(!but4) : setBut4(but4)
+        index == 5 ? setBut5(!but5) : setBut5(but5)
+
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);     
@@ -47,7 +67,7 @@ function DishesCard ({numindex}) {
                                 <CardContent className='cardContent'>
                                     <DishesDescr className='dishdescr'>{item.description}</DishesDescr>
                                     <DishesCardTitleDescr className='dishtitledescr'>{item.subtitle}</DishesCardTitleDescr>
-                                    <button>ORDER</button>
+                                    <button key={index} onClick={(e) => ChangeButton(e, index)} className={but[index] ? 'push_but' : ''}>ORDER</button>
                                     <DishesCardFoot>
                                         <DishesReiting>
                                             {Array(5).fill(0).map((item,index) => <img key={index} src={star}/>)}
@@ -266,6 +286,11 @@ const CardAndButton = styled.div`
         background: none;
         border: 2px solid #303030; 
         letter-spacing: 0.1em;
+    }
+
+    .push_but {
+        color: #252525;
+        background: #34C759;
     }
 
     @media (max-width: 984px) {
