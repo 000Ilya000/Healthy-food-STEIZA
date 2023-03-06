@@ -2,10 +2,11 @@ import React, {useState} from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { MainDishCards, DishCard, CardContent, MainDishesCardTitle, DishesCardTitleDescr, DishesDescr, DishesCardFoot, DishesReiting } from '../../../mainPage/components/Dishes/Dishes';
-import star from '../../../mainPage/components/Dishes/images/star.svg';
+// import star from '../../../mainPage/components/Dishes/images/star.svg';
 import WhiteARR from '../../../mainPage/components/Dishes/images/WhiteARR.svg';
 import { MainTitle, BackgroundTitle } from '../../../mainPage/components/About/About';
-import dishesinfo from "../../../mainPage/components/Dishes/menu";
+// import dishesinfo from "../../../mainPage/components/Dishes/menu";
+import Rate from "../../../../сomponents/Rate/Rate";
 
 
 function MainDishes( {dishes, loading}) {
@@ -17,6 +18,16 @@ function MainDishes( {dishes, loading}) {
     const [but5, setBut5] = useState(false);
 
     const but = [but0,but1,but2,but3, but4, but5]
+
+    const [rating, setRating] = useState(0);
+    const [rating1, setRating1] = useState(0);
+    const [rating2, setRating2] = useState(0);
+    const [rating3, setRating3] = useState(0);
+    const [rating4, setRating4] = useState(0);
+    const [rating5, setRating5] = useState(0);
+
+    const setRait = [setRating, setRating1, setRating2, setRating3, setRating4, setRating5]
+    const rait = [rating, rating1, rating2, rating3, rating4, rating5]
 
     function ChangeButton(e, index) {
         index == 0 ? setBut0(!but0) : setBut0(but0)
@@ -51,7 +62,8 @@ function MainDishes( {dishes, loading}) {
                                 <DishesDescr>{dishes.description}</DishesDescr>
                                 <DishesCardFoot>
                                     <DishesReiting>
-                                        {Array(5).fill(0).map((item,index) => <img key={index} src={star}/>)}
+                                        {/* {Array(5).fill(0).map((item,index) => <img key={index} src={star}/>)} */}
+                                        <Rate rating={rait[index]} indexreit={index} onRating={(rate) => setRait[index](rate)}/>
                                         <p>{dishes.reviews.length}</p>
                                     </DishesReiting>
                                         <button key={index} onClick={(e) => ChangeButton(e, index)} className={but[index] ? 'push_but' : ''}>ORDER</button>

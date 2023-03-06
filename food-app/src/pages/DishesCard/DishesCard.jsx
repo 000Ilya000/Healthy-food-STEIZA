@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-scroll";
 import dishesinfo from '../mainPage/components/Dishes/menu';
-import star from '../mainPage/components/Dishes/images/star.svg';
+// import star from '../mainPage/components/Dishes/images/star.svg';
 import Header from '../../сomponents/Header/Header';
 import Footer from '../../сomponents/Footer/Footer';  
 import { MainBut } from '../mainPage/MainPage';
 import { MainTitle, BackgroundTitle } from '../mainPage/components/About/About';
+import Rate from '../../сomponents/Rate/Rate';
 import { CardContent, DishCard, DishesDescr, DishesCardFoot, MainDishesCardTitle, DishesCardTitleDescr, DishesReiting } from '../mainPage/components/Dishes/Dishes';
 
 function DishesCard ({numindex}) {
@@ -17,8 +18,17 @@ function DishesCard ({numindex}) {
     const [but4, setBut4] = useState(false);
     const [but5, setBut5] = useState(false);
 
-
     const but = [but0,but1,but2,but3, but4, but5]
+
+    const [rating, setRating] = useState(0);
+    const [rating1, setRating1] = useState(0);
+    const [rating2, setRating2] = useState(0);
+    const [rating3, setRating3] = useState(0);
+    const [rating4, setRating4] = useState(0);
+    const [rating5, setRating5] = useState(0);
+
+    const setRait = [setRating, setRating1, setRating2, setRating3, setRating4, setRating5]
+    const rait = [rating, rating1, rating2, rating3, rating4, rating5]
 
     function ChangeButton(e, index) {
         index == 0 ? setBut0(!but0) : setBut0(but0)
@@ -27,7 +37,6 @@ function DishesCard ({numindex}) {
         index == 3 ? setBut3(!but3) : setBut3(but3)
         index == 4 ? setBut4(!but4) : setBut4(but4)
         index == 5 ? setBut5(!but5) : setBut5(but5)
-
     }
 
     useEffect(() => {
@@ -70,7 +79,8 @@ function DishesCard ({numindex}) {
                                     <button key={index} onClick={(e) => ChangeButton(e, index)} className={but[index] ? 'push_but' : ''}>ORDER</button>
                                     <DishesCardFoot>
                                         <DishesReiting>
-                                            {Array(5).fill(0).map((item,index) => <img key={index} src={star}/>)}
+                                            {/* {Array(5).fill(0).map((item,index) => <img key={index} src={star}/>)} */}
+                                            <Rate rating={rait[index]} indexreit={index} onRating={(rate) => setRait[index](rate)}/>
                                             <Link to="linkreview" smooth={true} offset={-80} duration={500}><p>{item.reviews.length}</p></Link>
                                         </DishesReiting>
                                     </DishesCardFoot>
