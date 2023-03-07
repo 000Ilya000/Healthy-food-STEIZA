@@ -15,7 +15,7 @@ function AllDishes() {
     useEffect(() => {
         const getDishes = async () => {
             setloading(true)
-            console.log(dishesinfo)
+            // console.log(dishesinfo)
             setDishes(dishesinfo)
             setloading(false)
         }
@@ -36,6 +36,9 @@ function AllDishes() {
       <MainAllDishes>
         <Header/>
         <MainDishes dishes={currentDishes} loading={loading}/>
+        {console.log(currentDishes)}
+        {/* <MainDishes dishes={dishes} loading={loading}/> */}
+
         <DishesPagination
             dishesPerPage={dishesPerPage}
             totalDishes={dishes.length}
@@ -62,6 +65,5 @@ const MainAllDishes = styled.div`
         z-index: 2;
         top:0;
         left:0;
-
     }
 `;

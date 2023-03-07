@@ -2,23 +2,14 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import dishesinfo from './menu';
-// import star from './images/star.svg';
-// import gold_star from './images/gold_star.svg';
 import WhiteARR from './images/WhiteARR.svg';
 import { MainTitle, BackgroundTitle } from '../About/About';
 import { MainBut } from '../../MainPage';
 import Rate from '../../../../сomponents/Rate/Rate';
+import DishButton from './DishButton/DishButton';
 
 
 function DishesScreen () {
-
-    const [but0, setBut0] = useState(false);
-    const [but1, setBut1] = useState(false);
-    const [but2, setBut2] = useState(false);
-    const [but3, setBut3] = useState(false);
-    const [but4, setBut4] = useState(false);
-    const [but5, setBut5] = useState(false);
-
 
     const [rating, setRating] = useState(0);
     const [rating1, setRating1] = useState(0);
@@ -30,28 +21,7 @@ function DishesScreen () {
     const setRait = [setRating, setRating1, setRating2, setRating3, setRating4, setRating5]
     const rait = [rating, rating1, rating2, rating3, rating4, rating5]
 
-    const but = [but0,but1,but2,but3, but4, but5]
-
-    function ChangeButton(e, index) {
-        index == 0 ? setBut0(true) : setBut0(but0)
-        index == 1 ? setBut1(true) : setBut1(but1)
-        index == 2 ? setBut2(true) : setBut2(but2)
-        index == 3 ? setBut3(true) : setBut3(but3)
-        index == 4 ? setBut4(true) : setBut4(but4)
-        index == 5 ? setBut5(true) : setBut5(but5)
-    }
-
-    function change(delta, index) {
-        var input = document.getElementById('input');
-        input.value = parseInt(input.value) + delta;
-        if (input.value < 1) {
-            input.value = 0;
-        }
-        console.log(index)
-    }
-
     let firstdishcards = dishesinfo.filter((value, index) => index < 6);
-
 
     return (
         <Dishes id='dishes'>
@@ -74,15 +44,13 @@ function DishesScreen () {
                                     <DishesCardFoot>
                                         <DishesReiting>
                                             {/* {Array(5).fill(0).map((item,index) => <img onClick={(event) => rate(event, item)} className="star" id={"1" + item.idsurveyquestion} key={index} src={star}/>)} */}
-                                            <Rate rating={rait[index]} indexreit={index} onRating={(rate) => setRait[index](rate)}/>
+                                            <Rate rating={rait[index]} onRating={(rate) => setRait[index](rate)}/>
                                          <p>{item.reviews.length}</p>
                                         </DishesReiting>
 
                                         {/* <button key={index} onClick={(e) => ChangeButton(e, index)} className={but[index] ? 'push_but' : ''}>ORDER</button> */}
                                         {/* <button className={but[index] ? 'push_but' : ''}/> */}
-                                        <DishButton key={index} onClick={(e) => ChangeButton(e, index)}>
-                                            {but[index] ? <button className='push_but'><div className='changeorder' onClick={(e) => change(-1)}>-</div><input id="input" type="text" value ="1"/><dis className='changeorder' onClick={(e) => change(1)}>+</dis></button> : <button/>}
-                                        </DishButton>
+                                        <DishButton index={index}/>
                                     </DishesCardFoot>
                                 </CardContent>
                             </DishCard>
@@ -223,22 +191,6 @@ export const MainDishesCardTitle = styled.p`
     margin-bottom: 0px;
 `;
 
-const DishButton = styled.div`
-    display: flex;
-    margin-left: 20%;
-    font-size: 16px;
-
-    .changeorder {
-        width: 11px;
-    }
-
-    input {
-        all: unset;
-        width: 20px;
-        // height: 15px;
-    }
-`;
-
 export const DishesCardTitleDescr = styled.p`
     font-weight: 400;
     font-size: 12px;
@@ -264,7 +216,7 @@ export const DishesCardFoot = styled.div`
     align-items: center;
 
     button {
-        margin-left: 20%;
+        // margin-left: 20%;
         cursor: pointer;
         display: flex;
         font-weight: 600;

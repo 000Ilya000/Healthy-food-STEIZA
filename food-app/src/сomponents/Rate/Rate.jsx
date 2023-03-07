@@ -3,18 +3,37 @@ import PropTypes from "prop-types";
 import dishesinfo from "../../pages/mainPage/components/Dishes/menu";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Rate = ({ count, rating, color, onRating, indexreit }) => {
-    const [hoverRating, setHoverRating] = useState(0);
+Rate.propTypes = {
+  count: PropTypes.number,
+  rating: PropTypes.number,
+  onChange: PropTypes.func,
+  // color: {
+  //   filled: PropTypes.string,
+  //   unfilled: PropTypes.string,
+  // },
+};
 
-    const getColor = (index) => {
-        if (hoverRating >= index) {
-            return color.filled;
-        } else if (!hoverRating && rating >= index) {
-            return color.filled;
-        }
+Rate.defaultProps = {
+  count: 5,
+  rating: 0,
+  color: {
+    filled: "#F9AD3D",
+    unfilled: "#4D4D4D",
+  },
+};
 
-        return color.unfilled;
-    };
+function Rate({ count, rating, color, onRating,}) {
+  const [hoverRating, setHoverRating] = useState(0);
+
+  const getColor = (index) => {
+      if (hoverRating >= index) {
+          return color.filled;
+      } else if (!hoverRating && rating >= index) {
+          return color.filled;
+      }
+
+      return color.unfilled;
+  };
 
   const starRating = useMemo(() => {
     return Array(count)
@@ -36,25 +55,6 @@ const Rate = ({ count, rating, color, onRating, indexreit }) => {
   }, [count, rating, hoverRating]);
 
   return <div>{starRating}</div>;
-};
-
-Rate.propTypes = {
-  count: PropTypes.number,
-  rating: PropTypes.number,
-  onChange: PropTypes.func,
-  color: {
-    filled: PropTypes.string,
-    unfilled: PropTypes.string,
-  },
-};
-
-Rate.defaultProps = {
-  count: 5,
-  rating: 0,
-  color: {
-    filled: "#F9AD3D",
-    unfilled: "#4D4D4D",
-  },
 };
 
 export default Rate;

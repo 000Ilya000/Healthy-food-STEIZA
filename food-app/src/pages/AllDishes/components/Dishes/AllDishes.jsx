@@ -2,42 +2,34 @@ import React, {useState} from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { MainDishCards, DishCard, CardContent, MainDishesCardTitle, DishesCardTitleDescr, DishesDescr, DishesCardFoot, DishesReiting } from '../../../mainPage/components/Dishes/Dishes';
-// import star from '../../../mainPage/components/Dishes/images/star.svg';
 import WhiteARR from '../../../mainPage/components/Dishes/images/WhiteARR.svg';
 import { MainTitle, BackgroundTitle } from '../../../mainPage/components/About/About';
-// import dishesinfo from "../../../mainPage/components/Dishes/menu";
 import Rate from "../../../../сomponents/Rate/Rate";
+// import { DishButton } from "../../../mainPage/components/Dishes/Dishes";
+import DishButton from "../../../mainPage/components/Dishes/DishButton/DishButton";
+import dishesinfo from "../../../mainPage/components/Dishes/menu";
 
 
 function MainDishes( {dishes, loading}) {
-    const [but0, setBut0] = useState(false);
-    const [but1, setBut1] = useState(false);
-    const [but2, setBut2] = useState(false);
-    const [but3, setBut3] = useState(false);
-    const [but4, setBut4] = useState(false);
-    const [but5, setBut5] = useState(false);
-
-    const but = [but0,but1,but2,but3, but4, but5]
-
     const [rating, setRating] = useState(0);
     const [rating1, setRating1] = useState(0);
     const [rating2, setRating2] = useState(0);
     const [rating3, setRating3] = useState(0);
     const [rating4, setRating4] = useState(0);
     const [rating5, setRating5] = useState(0);
+    const [rating6, setRating6] = useState(0);
+    const [rating7, setRating7] = useState(0);
+    const [rating8, setRating8] = useState(0);
+    const [rating9, setRating9] = useState(0);
+    const [rating10, setRating10] = useState(0);
+    const [rating11, setRating11] = useState(0);
+    const [rating12, setRating12] = useState(0);
+    const [rating13, setRating13] = useState(0);
+    const [rating14, setRating14] = useState(0);
+    const [rating15, setRating15] = useState(0);
 
-    const setRait = [setRating, setRating1, setRating2, setRating3, setRating4, setRating5]
-    const rait = [rating, rating1, rating2, rating3, rating4, rating5]
-
-    function ChangeButton(e, index) {
-        index == 0 ? setBut0(!but0) : setBut0(but0)
-        index == 1 ? setBut1(!but1) : setBut1(but1)
-        index == 2 ? setBut2(!but2) : setBut2(but2)
-        index == 3 ? setBut3(!but3) : setBut3(but3)
-        index == 4 ? setBut4(!but4) : setBut4(but4)
-        index == 5 ? setBut5(!but5) : setBut5(but5)
-
-    }
+    const setRait = [setRating, setRating1, setRating2, setRating3, setRating4, setRating5, setRating6, setRating7, setRating8, setRating9, setRating10, setRating11, setRating12, setRating13, setRating14, setRating15]
+    const rait = [rating, rating1, rating2, rating3, rating4, rating5, rating6, rating7, rating8, rating9, rating10, rating11, rating12, rating13, rating14, rating15]
 
     if(loading) {
         return <h2>Loading...</h2>
@@ -66,7 +58,9 @@ function MainDishes( {dishes, loading}) {
                                         <Rate rating={rait[index]} indexreit={index} onRating={(rate) => setRait[index](rate)}/>
                                         <p>{dishes.reviews.length}</p>
                                     </DishesReiting>
-                                        <button key={index} onClick={(e) => ChangeButton(e, index)} className={but[index] ? 'push_but' : ''}>ORDER</button>
+                                        {/* <button key={index} onClick={(e) => ChangeButton(e, index)} className={but[index] ? 'push_but' : ''}></button> */}
+                                    <DishButton index={index}/>
+                                    {console.log(index)}
                                 </DishesCardFoot>
                             </CardContent>
                         </DishCard>
